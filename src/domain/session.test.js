@@ -1,6 +1,7 @@
 import { test, expect } from '@jest/globals';
 import { cards as builtinCards } from '../data/cards';
-import { startSession, chooseCardKind, currentTurn, resolveTurn, changePlayerStatus, getSessionSummary, isValidSession, migrateSession, stopSession } from './session';
+import { startSession, chooseCardKind, currentTurn, resolveTurn, changePlayerStatus, getSessionSummary, isValidSession, migrateSession, stopSession, spinAssignment } from './session';
+import { eligibleBodyParts } from './assignments';
 import { createPresetSnapshot, validatePreset } from './presets';
 // Solo cards keep the single-active-player paths testable; built-in content needs two players.
 const soloCards = [1, 2, 3, 4].flatMap(n => [
@@ -235,4 +236,15 @@ test('two male players can draw challenges at level 1 without getting no_cards',
   expect(cChosen.phase).toBe('playing');
   expect(cChosen.waitReason).toBeNull();
   expect(cChosen.currentCardId).toBeTruthy();
+});
+
+test('blockedBodyParts excludes body parts from eligibleBodyParts and spinAssignment', () => {
+  const p1 = { id: 'p1', name: 'P1', preferences: { blockedBodyParts: ['hand', 'neck'] } };
+  const p2 = { id: 'p2', name: 'P2', preferences: { blockedBodyParts: ['cheek'] } };
+  const eligible = eligibleBodyParts(1, [p1, p2]);
+  const ids = eligible.map(p => p.id);
+  expect(ids).not.toContain('hand');
+  expect(ids).not.toContain('neck');
+  expect(ids).not.toContain('cheek');
+  expect(ids.length).toBeGreaterThan(0);
 });

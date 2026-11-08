@@ -4,13 +4,13 @@ export const activityCategories = ['oral', 'penetration', 'anal', 'fetish'];
 export const clothingTypes = ['shirt', 'trousers', 'skirt', 'dress', 'bra', 'underwear', 'socks', 'shoes', 'other'];
 export const fetishTypes = ['blindfold', 'roleplay', 'feet'];
 export function defaultPreferences() {
-  return { genderActivities: {femaleSameGender:null,maleSameGender:null}, blockedIds: [], activities: Object.fromEntries(activityCategories.map(key => [key, { give: true, receive: true, givePolicy: 'all', receivePolicy: 'all', giveIds: [], receiveIds: [], giveBlockedIds: [], receiveBlockedIds: [] }])), fetishes: [] };
+  return { genderActivities: {femaleSameGender:null,maleSameGender:null}, blockedIds: [], blockedBodyParts: [], activities: Object.fromEntries(activityCategories.map(key => [key, { give: true, receive: true, givePolicy: 'all', receivePolicy: 'all', giveIds: [], receiveIds: [], giveBlockedIds: [], receiveBlockedIds: [] }])), fetishes: [] };
 }
 export function normalizeProfile(profile) {
   const defaults = defaultPreferences();
   const preferences = profile.preferences ? JSON.parse(JSON.stringify(profile.preferences)) : {};
   return { id: profile.id, name: profile.name, gender: profile.gender ?? null, partnerId: profile.partnerId ?? null,
-    preferences: { ...defaults, ...preferences, genderActivities: {...defaults.genderActivities,...preferences.genderActivities}, activities: Object.fromEntries(activityCategories.map(key => [key, { ...defaults.activities[key], ...preferences.activities?.[key] }])) },
+    preferences: { ...defaults, ...preferences, blockedBodyParts: Array.isArray(preferences.blockedBodyParts) ? preferences.blockedBodyParts : [], genderActivities: {...defaults.genderActivities,...preferences.genderActivities}, activities: Object.fromEntries(activityCategories.map(key => [key, { ...defaults.activities[key], ...preferences.activities?.[key] }])) },
     wardrobe: Array.isArray(profile.wardrobe) ? profile.wardrobe.map(item => ({ ...item })) : [] };
 }
 export function profileErrors(input) {
@@ -21,7 +21,7 @@ export function profileErrors(input) {
     if (!genders.includes(p.gender)) errors.push('Érvénytelen profilbeállítás.');
     if (p.partnerId && (p.partnerId === p.id || !ids.has(p.partnerId) || input.find(q => q.id === p.partnerId)?.partnerId !== p.id)) errors.push('A párkapcsolatnak kölcsönösnek kell lennie.');
     const validIds = list => Array.isArray(list) && new Set(list).size === list.length && list.every(id => id !== p.id && ids.has(id));
-    if (!validIds(p.preferences.blockedIds) || !Array.isArray(p.preferences.fetishes) || p.preferences.fetishes.some(id => !fetishTypes.includes(id))) errors.push('Érvénytelen profilbeállítás.');
+    if (!validIds(p.preferences.blockedIds) || !Array.isArray(p.preferences.blockedBodyParts) || p.preferences.blockedBodyParts.some(id => typeof id !== 'string') || !Array.isArray(p.preferences.fetishes) || p.preferences.fetishes.some(id => !fetishTypes.includes(id))) errors.push('Érvénytelen profilbeállítás.');
     if(Object.values(p.preferences.genderActivities).some(value=>value!==null&&typeof value!=='boolean'))errors.push('Érvénytelen profilbeállítás.');
     for (const rule of Object.values(p.preferences.activities)) {
       if (typeof rule.give !== 'boolean' || typeof rule.receive !== 'boolean' || !['all','partner','selected'].includes(rule.givePolicy) || !['all','partner','selected'].includes(rule.receivePolicy) || !validIds(rule.giveIds) || !validIds(rule.receiveIds) || !validIds(rule.giveBlockedIds) || !validIds(rule.receiveBlockedIds)) errors.push('Érvénytelen profilbeállítás.');

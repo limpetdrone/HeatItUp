@@ -11,6 +11,8 @@
     "lint": "expo lint",
     "test": "jest --runInBand",
     "export": "expo export --platform all",
+    "build:ios:local": "xcodebuild -workspace ios/HeatItUp.xcworkspace -scheme HeatItUp -configuration Release -destination 'generic/platform=iOS' archive -archivePath build/HeatItUp.xcarchive && rm -rf dist-ios && xcodebuild -exportArchive -archivePath build/HeatItUp.xcarchive -exportPath dist-ios -exportOptionsPlist exportOptions.plist",
+    "submit:ios": "eas submit -p ios --path dist-ios/HeatItUp.ipa",
     "set-icon": "python3 scripts/apply-icon.py"
   },
   "dependencies": {

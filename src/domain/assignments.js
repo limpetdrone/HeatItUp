@@ -6,6 +6,12 @@ export const bodyParts = [
  {id:'chest',level:4,label:'Mellkas'},{id:'buttocks',level:4,label:'Fenék'},
  {id:'genitals',level:5,label:'Intim zóna'}
 ];
+
+export function eligibleBodyParts(level, profiles = []) {
+  const blocked = new Set(profiles.filter(Boolean).flatMap(p => p?.preferences?.blockedBodyParts || []));
+  const pool = bodyParts.filter(p => p.level <= level && !blocked.has(p.id));
+  return pool.length > 0 ? pool : bodyParts.filter(p => p.level <= level);
+}
 export function metadata(card) {
  return {category:'general',role:'give',partnerCount:card.minPlayers>1?1:0,parallelSafe:false,bodyParts:false,durationSeconds:0,...card.interaction};
 }

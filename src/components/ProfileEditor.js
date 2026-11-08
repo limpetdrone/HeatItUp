@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import { Text, TextInput, Switch } from '../i18n/ui';
 import { useTranslation } from '../i18n/context';
 import { normalizeProfile, activityCategories, clothingTypes, fetishTypes } from '../domain/profiles';
+import { bodyParts } from '../domain/assignments';
 import ActionButton from './ActionButton';
 import { ui, colors } from '../theme';
 export const categoryLabels = { oral:'Orális szex', penetration:'Behatolás', anal:'Anális szex', femaleSameGender:'Nő–nő feladatok', maleSameGender:'Férfi–férfi feladatok' };
@@ -58,6 +59,22 @@ export default function ProfileEditor({ profile, profiles, onChange, onPair, mak
         <ActionButton title="Közös beállítások öröklése" secondary onPress={()=>preferences({genderActivities:{femaleSameGender:null,maleSameGender:null}})} />
         <Text style={ui.heading}>Akikkel nem szeretnék interakciót</Text>
         {profiles.filter(other=>other.id!==p.id).map(other=><View key={other.id} style={ui.row}><Text verbatim style={ui.text}>{other.name}</Text><Switch accessibilityLabel={other.name} value={p.preferences.blockedIds.includes(other.id)} onValueChange={()=>preferences({blockedIds:toggle(p.preferences.blockedIds,other.id)})} /></View>)}
+        <Text style={ui.heading}>Kizárt testrészek a sorsolásból</Text>
+        <Text style={ui.muted}>Jelöld be azokat a testrészeket, amiket szeretnél kihagyni a sorsolásból:</Text>
+        <View style={{flexDirection: 'row', flexWrap: 'wrap', gap: 8}}>
+          {bodyParts.map(bp => {
+            const isBlocked = (p.preferences.blockedBodyParts || []).includes(bp.id);
+            return (
+              <ActionButton
+                key={bp.id}
+                title={(isBlocked ? '✕ ' : '') + bp.label}
+                selected={isBlocked}
+                secondary
+                onPress={() => preferences({ blockedBodyParts: toggle(p.preferences.blockedBodyParts || [], bp.id) })}
+              />
+            );
+          })}
+        </View>
         {activityCategories.filter(category => category !== 'fetish').map(category=><View key={category} style={ui.panel}><Text style={ui.heading}>{categoryLabels[category]}</Text>
           {category === 'penetration' ? (() => {
             const isEnabled = Boolean(p.preferences.activities.penetration.give || p.preferences.activities.penetration.receive);

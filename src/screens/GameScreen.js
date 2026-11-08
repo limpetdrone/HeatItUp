@@ -7,7 +7,7 @@ import RouletteWheel from '../components/RouletteWheel';
 import TaskTimer from '../components/TaskTimer';
 import { useTranslation } from '../i18n/context';
 import { renderCard } from '../domain/renderCard';
-import { bodyParts } from '../domain/assignments';
+import { bodyParts, eligibleBodyParts } from '../domain/assignments';
 import { twistText } from '../domain/twists';
 import { colors, ui, levels } from '../theme';
 
@@ -191,9 +191,14 @@ export default function GameScreen({
   const groups = a?.groups || [];
 
   // Wheel labels for partner or body spin
+  const targetIds = (a?.groups || []).flatMap(g => g.receiverIds).filter(id => id !== turn.playerId);
+  const targetProfiles = targetIds.map(id => game.roster.find(p => p.id === id)).filter(Boolean);
+  const actorProfile = game.roster.find(p => p.id === turn.playerId);
+  const eligibleParts = eligibleBodyParts(game.settings.maxIntensity, [actorProfile, ...targetProfiles]);
+
   const wheelLabels = a?.partnerPending
     ? (a.wheelOptions || []).map(option => names(option.playerIds.filter(id => id !== turn.playerId)))
-    : bodyParts.filter(p => p.level <= game.settings.maxIntensity).map(p => t(p.label));
+    : eligibleParts.map(p => t(p.label));
 
   return (
     <ScreenShell label={`${turn.round}. KÖR`} headerRight={headerActions}>

@@ -1,4 +1,4 @@
-import { metadata, eligibleAssignments, chooseAssignment, bodyParts } from './assignments';
+import { metadata, eligibleAssignments, chooseAssignment, bodyParts, eligibleBodyParts } from './assignments';
 import { normalizeProfile } from './profiles';
 import { validateSettings } from './validation';
 import { pickTwist } from './twists';
@@ -56,7 +56,11 @@ function draw(s, cards, rng) {
   const next={...s,phase:'playing',waitReason:null,currentCardId:card.id,remainingCardIds:[...otherRemaining,...deck.slice(1)],cardRevision:s.cardRevision+1};
   const turn=currentTurn(next);const m=metadata(card);
   const wheelOptions=[...choices].sort((a,b)=>a.score-b.score).slice(0,8);
-  turn.assignment={...assignment,wheelOptions,partnerPending:Boolean(s.settings.options?.partnerWheel&&m.partnerCount>0&&card.kind==='challenge'),bodyPending:Boolean(s.settings.options?.bodyWheel!==false&&m.bodyParts),bodyPartId:m.bodyParts&&s.settings.options?.bodyWheel===false?bodyParts.filter(p=>p.level<=s.settings.maxIntensity)[Math.floor(rng()*bodyParts.filter(p=>p.level<=s.settings.maxIntensity).length)].id:null,answeredIds:[]};
+  const targetIds = (assignment?.groups || []).flatMap(g => g.receiverIds).filter(id => id !== turn.playerId);
+  const targetProfiles = targetIds.map(id => next.roster.find(p => p.id === id)).filter(Boolean);
+  const actorProfile = next.roster.find(p => p.id === turn.playerId);
+  const bodyPool = eligibleBodyParts(next.settings.maxIntensity, [actorProfile, ...targetProfiles]);
+  turn.assignment={...assignment,wheelOptions,partnerPending:Boolean(s.settings.options?.partnerWheel&&m.partnerCount>0&&card.kind==='challenge'),bodyPending:Boolean(s.settings.options?.bodyWheel!==false&&m.bodyParts),bodyPartId:m.bodyParts&&s.settings.options?.bodyWheel===false?bodyPool[Math.floor(rng()*bodyPool.length)].id:null,answeredIds:[]};
   turn.cardId=card.id;turn.durationSeconds=assignment.groups.length>1?(m.parallelDurationSeconds||m.durationSeconds):m.durationSeconds;
   turn.timer=null;
   // A card family already played in this game returns with a twist instead of verbatim.
@@ -299,7 +303,14 @@ export function spinAssignment(session,part,cards,rng=Math.random,selectedIndex=
  const next=clone(session), turn=currentTurn(next), card=cards.find(c=>c.id===next.currentCardId);
  if(!turn||!card||next.phase!=='playing')return failure('Hibás lépés.');
  if(part==='partner'&&turn.assignment?.partnerPending){const legal=eligibleAssignments({...next,history:(next.history||[]).filter(h=>h.turnId!==turn.id||h.revision!==next.cardRevision)},card,turn.playerId);const option=Number.isInteger(selectedIndex)?turn.assignment.wheelOptions?.[selectedIndex]:null;const selected=option&&legal.some(c=>JSON.stringify(c.groups)===JSON.stringify(option.groups))?option:chooseAssignment(legal,rng);if(!selected)return failure('Nincs megfelelő párosítás.');turn.assignment={...selected,partnerPending:false,bodyPending:turn.assignment.bodyPending,bodyPartId:turn.assignment.bodyPartId,answeredIds:[]};}
- else if(part==='body'&&turn.assignment?.bodyPending&&!turn.assignment.partnerPending){const pool=bodyParts.filter(p=>p.level<=next.settings.maxIntensity);turn.assignment.bodyPartId=pool[Number.isInteger(selectedIndex)&&selectedIndex>=0&&selectedIndex<pool.length?selectedIndex:Math.floor(rng()*pool.length)].id;turn.assignment.bodyPending=false;}
+ else if(part==='body'&&turn.assignment?.bodyPending&&!turn.assignment.partnerPending){
+  const targetIds = (turn.assignment?.groups || []).flatMap(g => g.receiverIds).filter(id => id !== turn.playerId);
+  const targetProfiles = targetIds.map(id => next.roster.find(p => p.id === id)).filter(Boolean);
+  const actorProfile = next.roster.find(p => p.id === turn.playerId);
+  const pool = eligibleBodyParts(next.settings.maxIntensity, [actorProfile, ...targetProfiles]);
+  turn.assignment.bodyPartId=pool[Number.isInteger(selectedIndex)&&selectedIndex>=0&&selectedIndex<pool.length?selectedIndex:Math.floor(rng()*pool.length)].id;
+  turn.assignment.bodyPending=false;
+ }
  else return {ok:true,session};
  if(!turn.assignment.partnerPending&&!turn.assignment.bodyPending)recordOffer(next,card);
  return {ok:true,session:next};

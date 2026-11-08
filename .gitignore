@@ -1,4 +1,6 @@
 node_modules/
+build/
+*.mobileprovision
 dist/
 dist-ios/
 dist-android/

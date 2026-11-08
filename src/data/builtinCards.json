@@ -4892,9 +4892,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Have the selected player lie back and kiss your way from their lips down to their hips, finishing with slow kisses on their intimate area.",
-        "hu": "A kijelölt játékos dőljön hátra, te pedig csókolj végig az ajkától a csípőjéig, és fejezd be lassú puszikkal az intim részén.",
-        "de": "Lass die gewählte Person sich zurücklehnen und küsse dich von ihren Lippen bis zu den Hüften hinab, zum Schluss mit langsamen Küssen auf ihrem Intimbereich."
+        "en": "Have the selected player lie back and kiss along their lower belly from the navel down, finishing with slow kisses on their intimate area.",
+        "hu": "A kijelölt játékos dőljön hátra, te pedig csókold végig a hasát a köldökétől lefelé, és fejezd be lassú puszikkal az intim részén.",
+        "de": "Lass die gewählte Person sich zurücklehnen und küsse ihren Unterbauch vom Nabel abwärts, zum Schluss mit langsamen Küssen auf ihrem Intimbereich."
       },
       "category": "oral",
       "role": "give",
@@ -5465,9 +5465,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Kiss the selected player from head to toe, finishing between their legs.",
-        "hu": "Csókold a kijelölt játékost tetőtől talpig, és a lábai között fejezd be.",
-        "de": "Küsse die gewählte Person von Kopf bis Fuß und ende zwischen ihren Beinen."
+        "en": "Kiss the selected player along their belly and inner thighs, finishing between their legs.",
+        "hu": "Csókold végig a kijelölt játékos hasát és a belső combjait, és a lábai között fejezd be.",
+        "de": "Küsse den Bauch und die Innenseiten der Oberschenkel der gewählten Person und ende zwischen ihren Beinen."
       },
       "category": "oral",
       "role": "give",
@@ -8160,6 +8160,279 @@
         "en": "Stand between the two selected players: gently caress their waist or hips at the same time with both hands for 25 seconds!",
         "de": "Stell dich zwischen die beiden gewählten Personen: streichle 25 Sekunden lang mit beiden Händen gleichzeitig ihre Taille oder Hüften!"
       }
+    },
+    {
+      "id": "intro-body-003",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Blow gently with warm breath onto the selected player here: {bodyPart}.",
+        "hu": "Lehelj gyengéden meleg levegőt a kijelölt játékosra ide: {bodyPart}.",
+        "de": "Hauche der gewählten Person sanft warmen Atem hierhin: {bodyPart}."
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-body-004",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Trace gentle circles with your fingertips on the selected player here: {bodyPart}.",
+        "hu": "Rajzolj lágy köröket az ujjbegyeiddel a kijelölt játékosra itt: {bodyPart}.",
+        "de": "Zeichne sanfte Kreise mit deinen Fingerspitzen auf die gewählte Person hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-body-005",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Press your cheek softly against the selected player here: {bodyPart}.",
+        "hu": "Szorítsd gyengéden az arcodat a kijelölt játékoshoz ide: {bodyPart}.",
+        "de": "Drücke deine Wange sanft an die gewählte Person hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 25
+    },
+    {
+      "id": "flirt-body-003",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 25,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Whisper a compliment while brushing your lips against the selected player here: {bodyPart}.",
+        "hu": "Suttogj egy bókot, miközben az ajkaiddal súrolod a kijelölt játékost itt: {bodyPart}.",
+        "de": "Flüstere ein Kompliment, während deine Lippen die gewählte Person hier berühren: {bodyPart}."
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-body-004",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Run your fingernails very lightly over the selected player here: {bodyPart}.",
+        "hu": "Húzd végig a körmeidet egészen finoman a kijelölt játékoson itt: {bodyPart}.",
+        "de": "Fahre ganz sanft mit deinen Fingernägeln über die gewählte Person hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 35
+    },
+    {
+      "id": "flirt-body-005",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Give three slow, warm kisses to the selected player here: {bodyPart}.",
+        "hu": "Adj három lassú, meleg csókot a kijelölt játékosnak ide: {bodyPart}.",
+        "de": "Gib der gewählten Person drei langsame, warme Küsse hierhin: {bodyPart}."
+      },
+      "parallelDurationSeconds": 35
+    },
+    {
+      "id": "spark-body-003",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Tease the selected player with tiny nibbles and warm breaths here for 30 seconds: {bodyPart}.",
+        "hu": "Csiklandozd és harapdáld apró mozdulatokkal a kijelölt játékost 30 másodpercig itt: {bodyPart}.",
+        "de": "Necke die gewählte Person mit sanften Knabbereien und warmem Atem 30 Sekunden lang hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 50
+    },
+    {
+      "id": "spark-body-004",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Press your bare skin and slide slowly against the selected player here: {bodyPart}.",
+        "hu": "Simulj meztelen bőrrel a kijelölt játékoshoz, és mozogj lassan rajta itt: {bodyPart}.",
+        "de": "Schmiege dich mit nackter Haut an die gewählte Person und bewege dich langsam hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 50
+    },
+    {
+      "id": "connection-body-003",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 40,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Leave a trail of slow, wet kisses leading directly to the selected player's {bodyPart}.",
+        "hu": "Hagyj lassú, nedves csókok sorát a kijelölt játékoson, amik ide vezetnek: {bodyPart}.",
+        "de": "Hinterlasse eine Spur langsamer, feuchter Küsse, die hierhin führen: {bodyPart}."
+      },
+      "parallelDurationSeconds": 60
+    },
+    {
+      "id": "connection-body-004",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 45,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Massage with firm, sensual pressure for 45 seconds here: {bodyPart}.",
+        "hu": "Masszírozd érzéki, határozott mozdulatokkal 45 másodpercig itt: {bodyPart}.",
+        "de": "Massiere mit sinnlichem, festem Druck 45 Sekunden lang hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 75
+    },
+    {
+      "id": "trust-body-003",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 60,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "oral",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Devote your lips and tongue exclusively to the selected player here for 60 seconds: {bodyPart}.",
+        "hu": "Kényeztesd kizárólag az ajkaiddal és a nyelveddel a kijelölt játékost 60 másodpercig itt: {bodyPart}.",
+        "de": "Widme deine Lippen und deine Zunge 60 Sekunden lang der gewählten Person hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 90
+    },
+    {
+      "id": "trust-body-004",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 60,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Touch and tease with maximum intensity for 60 seconds here: {bodyPart}.",
+        "hu": "Érintsd és kényeztesd maximális szenvedéllyel 60 másodpercig itt: {bodyPart}.",
+        "de": "Berühre und verwöhne mit voller Leidenschaft 60 Sekunden lang hier: {bodyPart}."
+      },
+      "parallelDurationSeconds": 90
+    },
+    {
+      "id": "trust-body-005",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 45,
+      "parallelSafe": true,
+      "bodyParts": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "body-wheel"
+      ],
+      "text": {
+        "en": "Whisper what you want to do to the selected player while kissing them deeply here: {bodyPart}.",
+        "hu": "Suttogd el, mit szeretnél tenni a kijelölt játékossal, miközben hosszan csókolod itt: {bodyPart}.",
+        "de": "Flüstere, was du tun möchtest, während du die gewählte Person hier intensiv küsst: {bodyPart}."
+      },
+      "parallelDurationSeconds": 75
     }
   ]
 }
