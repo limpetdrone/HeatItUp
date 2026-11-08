@@ -16,7 +16,7 @@ export default function ProfileEditor({ profile, profiles, onChange, onPair, mak
   const toggle = (list,id) => list.includes(id) ? list.filter(x=>x!==id) : [...list,id];
   return <View style={{gap:12}}>
     {!wardrobeOnly && <>
-      <TextInput accessibilityLabel="Név" placeholder="Név" placeholderTextColor={colors.muted} autoCorrect={false} value={p.name} onChangeText={name=>patch({name})} style={{color:colors.text,borderColor:colors.muted,borderWidth:1,borderRadius:12,padding:12,fontSize:16}} />
+      <TextInput accessibilityLabel="Név" autoCorrect={false} value={p.name} onChangeText={name=>patch({name})} style={{color:colors.text,borderColor:colors.muted,borderWidth:1,borderRadius:12,padding:12,fontSize:16}} />
       <Text style={ui.heading}>Nem / identitás</Text><View style={ui.row}>{[[null,'Nincs megadva'],['male','Férfi'],['female','Nő'],['nonbinary','Nem bináris']].map(([value,label])=><ActionButton key={String(value)} title={label} selected={p.gender===value} secondary onPress={()=>patch({gender:value})} />)}</View>
       <Text style={ui.heading}>Pár megjelölése</Text><ActionButton title="Nincs pár" secondary selected={!p.partnerId} onPress={()=>onPair(null)} />
       {profiles.filter(other=>other.id!==p.id).map(other=><ActionButton key={other.id} verbatim title={other.name || t('Nincs megadva')} selected={p.partnerId===other.id} secondary onPress={()=>onPair(other.id)} />)}

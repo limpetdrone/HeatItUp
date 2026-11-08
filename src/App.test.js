@@ -31,7 +31,7 @@ test('preset mentés, névsorváltozás, folytatás és preset elszigetelése a 
   });
   let tree;
   const press = async title => {
-    const button = tree.root.findAllByType(ActionButton).find(b => b.props.title === title);
+    const button = tree.root.findAllByType(ActionButton).find(b => b.props.title === title || b.props.accessibilityLabel === title);
     expect(button).toBeTruthy();
     await act(async () => {
       await button.props.onPress();
@@ -41,10 +41,9 @@ test('preset mentés, névsorváltozás, folytatás és preset elszigetelése a 
     await act(async () => {
       tree = renderer.create(<App />);
     });
-    await act(async () => tree.root.findByType(Switch).props.onValueChange(true));
     await press('Kezdjük →');
-    await act(async () => tree.root.findAllByType(TextInput).find(n => n.props.accessibilityLabel === 'Preset neve').props.onChangeText('Esténk'));
-    await press('Preset mentése');
+    await act(async () => tree.root.findAllByType(TextInput).find(n => n.props.accessibilityLabel === 'Összeállítás neve').props.onChangeText('Esténk'));
+    await press('Összeállítás mentése');
     const presetBefore = mockData.get('presets');
     expect(JSON.parse(presetBefore)[0].members).toHaveLength(2);
     await press('Játék indítása →');
@@ -52,8 +51,6 @@ test('preset mentés, névsorváltozás, folytatás és preset elszigetelése a 
     expect(JSON.parse(mockData.get('session')).roster.every(p=>p.sourceMemberId)).toBe(true);
     await press('Felelsz');
     await press('Passz →');
-    await press('Csak ezt a feladatot most');
-    await press('Passz és beállítás alkalmazása');
     const saved = JSON.parse(mockData.get('session'));
     expect(saved.turns.some(t => t.status === 'passed')).toBe(true);
     await press('Játékosok');
@@ -65,7 +62,6 @@ test('preset mentés, névsorváltozás, folytatás és preset elszigetelése a 
     await act(async () => {
       tree = renderer.create(<App />);
     });
-    await act(async () => tree.root.findByType(Switch).props.onValueChange(true));
     await press('Játék folytatása');
     expect(mockData.get('presets')).toBe(presetBefore);
     await press('Játék befejezése');

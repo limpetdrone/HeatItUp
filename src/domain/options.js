@@ -1,5 +1,5 @@
 import { activityDefaults, fetishTypes } from './profiles';
-export const defaultGameOptions = {activities:activityDefaults,fetishes:[],parallel:false,questionsForAll:false,partnerWheel:false,bodyWheel:true,trackWardrobe:false};
+export const defaultGameOptions = {activities:activityDefaults,fetishes:[],parallel:false,questionsForAll:false,partnerWheel:false,bodyWheel:true,trackWardrobe:true};
 export function optionErrors(options){
  if(!options||typeof options!=='object'||Array.isArray(options))return ['Érvénytelen játékbeállítás.'];
  const flags=['parallel','questionsForAll','partnerWheel','bodyWheel','trackWardrobe'];

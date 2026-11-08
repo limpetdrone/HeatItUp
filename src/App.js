@@ -19,8 +19,7 @@ import GameScreen from './screens/GameScreen';
 import SummaryScreen from './screens/SummaryScreen';
 import PlayersScreen from './screens/PlayersScreen';
 import PresetsScreen from './screens/PresetsScreen';
-import MusicSettingsScreen from './screens/MusicSettingsScreen';
-import MusicPanel from './components/MusicPanel';
+import SettingsScreen from './screens/SettingsScreen';
 import ScreenShell from './components/ScreenShell';
 import ActionButton from './components/ActionButton';
 import { useTranslation } from './i18n/context';
@@ -185,15 +184,10 @@ export default function App() {
   };
   let content;
   if (!ready) content = <ScreenShell><Text style={ui.title}>Betöltés…</Text></ScreenShell>;else if (screen === 'welcome') content = <WelcomeScreen hasSession={session && session.phase !== 'finished'} onResume={() => {
-    setMusic({
-      ...musicDefaults,
-      ...session.settings.music,
-      autoStart: false
-    });
     setScreen('game');
   }} onContinue={() => {
     if (session && session.phase !== 'finished') setReplace(true);else showSetup();
-  }} onClearSession={() => setClearRequested(true)} onPresets={() => setScreen('presets')} onMusic={openMusic} onContent={()=>setScreen('content')} onLanguage={() => setScreen('language')} />;else if (screen === 'content') content = <ContentScreen cards={cards} onBack={()=>setScreen('welcome')} onImport={async envelope=>{const checked=validateContent(envelope,cards.map(c=>c.id),cards);if(!checked.ok)return checked;const next={schemaVersion:1,cards:[...customContent.cards,...envelope.cards]};if(!validateContent(next,builtinCards.map(c=>c.id),builtinCards).ok)return {ok:false,error:'Érvénytelen tartalomfájl.'};if(!await persist(keys.content,next,()=>{registerCardTranslations(checked.cards);setCustomContent(next);}))return {ok:false,error:'A mentés nem sikerült.'};return {ok:true};}} />;else if (screen === 'language') content = <LanguageSettingsScreen onBack={() => setScreen('welcome')} />;else if (screen === 'setup' || screen === 'editor') content = <SetupScreen key={`${screen}:${editing?.id || source?.id || ''}`} draft={draft} onStart={begin} onBack={goBack} startError={error} onSavePreset={savePreset} initialPresetName={screen === 'editor' ? editing?.name || '' : ''} editing={screen === 'editor'} />;else if (screen === 'presets') content = <PresetsScreen presets={presets} onUse={p => {
+  }} onClearSession={() => setClearRequested(true)} onPresets={() => setScreen('presets')} onSettings={() => setScreen('settings')} />;else if (screen === 'settings') content = <SettingsScreen onBack={goBack} />;else if (screen === 'setup' || screen === 'editor') content = <SetupScreen key={`${screen}:${editing?.id || source?.id || ''}`} draft={draft} onStart={begin} onBack={goBack} startError={error} onSavePreset={savePreset} initialPresetName={screen === 'editor' ? editing?.name || '' : ''} editing={screen === 'editor'} onSettings={() => setScreen('settings')} />;else if (screen === 'presets') content = <PresetsScreen presets={presets} onUse={p => {
     setSource(p);
     if (session && session.phase !== 'finished') {
       setDraft({
@@ -214,7 +208,6 @@ export default function App() {
       players: p.members.map(m => m.name),
       profiles: copy(p.members)
     });
-    if (validMusic(p.defaults.music)) setMusic(copy(p.defaults.music));
     setScreen('editor');
   }} onCopy={p => {
     setEditing(null);
@@ -223,19 +216,8 @@ export default function App() {
       players: p.members.map(m => m.name),
       profiles: copy(p.members)
     });
-    if (validMusic(p.defaults.music)) setMusic(copy(p.defaults.music));
     setScreen('editor');
-  }} onDelete={p => setDeleteId(p.id)} onBack={goBack} />;else if (screen === 'music') content = <MusicSettingsScreen music={music} onMusic={m => {
-    setMusic(m);
-    persist(keys.music, m);
-    if (sessionRef.current && sessionRef.current.phase !== 'finished') commit({
-      ...sessionRef.current,
-      settings: {
-        ...sessionRef.current.settings,
-        music: copy(m)
-      }
-    });
-  }} catalog={catalog} onCatalog={next => persist(keys.catalog, next, () => setCatalog(next))} cards={cards} cardId={session?.currentCardId} makeId={makeId} onBack={goBack} />;else if (screen === 'decline') content = <DeclineScreen session={session} card={cards.find(c=>c.id===session.currentCardId)} onConfirm={confirmDecline} onBack={()=>setScreen('game')} />;else if (screen === 'players') content = <PlayersScreen makeId={makeId} onWardrobe={(id,wardrobe)=>outcome(updateWardrobe(sessionRef.current,id,wardrobe,cards))} session={session} onChange={(id, status) => outcome(changePlayerStatus(sessionRef.current, id, status, cards))} onBack={() => setScreen(sessionRef.current.phase === 'finished' ? 'summary' : 'game')} />;else if (screen === 'summary' || session?.phase === 'finished') content = <SummaryScreen game={session} onRestart={setupFromSession} onSettings={setupFromSession} />;else content = <GameScreen game={session} card={cards.find(c => c.id === session.currentCardId)} onLevel={level=>outcome(changeLevel(sessionRef.current,level,cards))} onDismissLevel={()=>commit({...sessionRef.current,levelSuggestion:null})} onSpin={(part,index)=>{if(sessionRef.current.cardRevision===session.cardRevision&&currentTurn(sessionRef.current)?.id===currentTurn(session)?.id)outcome(spinAssignment(sessionRef.current,part,cards,Math.random,index));}} onAnswered={id=>outcome(setAnswered(sessionRef.current,id))} onTimer={(action,now)=>outcome(timerAction(sessionRef.current,{action,now,turnId:currentTurn(session)?.id,revision:session.cardRevision}))} onDecline={()=>setScreen('decline')} onChoose={kind => outcome(chooseCardKind(sessionRef.current, {
+  }} onDelete={p => setDeleteId(p.id)} onBack={goBack} />;else if (screen === 'decline') content = <DeclineScreen session={session} card={cards.find(c=>c.id===session.currentCardId)} onConfirm={confirmDecline} onBack={()=>setScreen('game')} />;else if (screen === 'players') content = <PlayersScreen makeId={makeId} onWardrobe={(id,wardrobe)=>outcome(updateWardrobe(sessionRef.current,id,wardrobe,cards))} session={session} onChange={(id, status) => outcome(changePlayerStatus(sessionRef.current, id, status, cards))} onBack={() => setScreen(sessionRef.current.phase === 'finished' ? 'summary' : 'game')} />;else if (screen === 'summary' || session?.phase === 'finished') content = <SummaryScreen game={session} onRestart={setupFromSession} onSettings={setupFromSession} />;else content = <GameScreen game={session} card={cards.find(c => c.id === session.currentCardId)} onLevel={level=>outcome(changeLevel(sessionRef.current,level,cards))} onDismissLevel={()=>commit({...sessionRef.current,levelSuggestion:null})} onSpin={(part,index)=>{if(sessionRef.current.cardRevision===session.cardRevision&&currentTurn(sessionRef.current)?.id===currentTurn(session)?.id)outcome(spinAssignment(sessionRef.current,part,cards,Math.random,index));}} onAnswered={id=>outcome(setAnswered(sessionRef.current,id))} onTimer={(action,now)=>outcome(timerAction(sessionRef.current,{action,now,turnId:currentTurn(session)?.id,revision:session.cardRevision}))} onDecline={()=>setScreen('decline')} onChoose={kind => outcome(chooseCardKind(sessionRef.current, {
     kind,
     turnId: currentTurn(session)?.id
   }, cards))} onResolve={value => outcome(resolveTurn(sessionRef.current, {
@@ -245,10 +227,7 @@ export default function App() {
   }, cards))} onStop={() => {
     commit(stopSession(sessionRef.current));
     setScreen('summary');
-  }} onPlayers={() => setScreen('players')} onMusic={openMusic} musicPanel={<MusicPanel music={music} catalog={catalog} cardId={session.currentCardId} onUserPause={() => setMusic(value => ({
-    ...value,
-    autoStart: false
-  }))} requestKey={`${session.id}:${currentTurn(session)?.id}:${session.cardRevision}`} />} />;
+  }} onPlayers={() => setScreen('players')} />;
   return <View style={{
     flex: 1, backgroundColor: colors.background
   }}>
@@ -258,7 +237,7 @@ export default function App() {
     {!!notice && <Text accessibilityLiveRegion="polite" style={[ui.muted, {
       paddingHorizontal: 16
     }]}>{notice}</Text>}
-    {clearRequested ? <ScreenShell><Text style={ui.heading}>Törlöd a mentett játékot? A presetek és a dalok megmaradnak.</Text><ActionButton title="Igen, törlöm a játékot" onPress={async () => {
+    {clearRequested ? <ScreenShell><Text style={ui.heading}>Törlöd a mentett játékot? Az összeállítások megmaradnak.</Text><ActionButton title="Igen, törlöm a játékot" onPress={async () => {
         if (await persist(keys.session, null, () => {
           sessionRef.current = null;
           setSession(null);
@@ -269,7 +248,7 @@ export default function App() {
       }} /><ActionButton title="Új összeállítást készítek" onPress={() => {
         setReplace(false);
         showSetup(source);
-      }} /><ActionButton title="Mégse" secondary onPress={() => setReplace(false)} /></ScreenShell> : deleteId ? <ScreenShell><Text style={ui.heading}>Törlöd ezt a presetet? A futó játék megmarad.</Text><ActionButton title="Preset törlése" onPress={async () => {
+      }} /><ActionButton title="Mégse" secondary onPress={() => setReplace(false)} /></ScreenShell> : deleteId ? <ScreenShell><Text style={ui.heading}>Törlöd ezt az összeállítást? A futó játék megmarad.</Text><ActionButton title="Összeállítás törlése" onPress={async () => {
         const next = presets.filter(p => p.id !== deleteId);
         if (await persist(keys.presets, next, () => setPresets(next))) setDeleteId(null);
       }} /><ActionButton title="Mégse" secondary onPress={() => setDeleteId(null)} /></ScreenShell> : content}

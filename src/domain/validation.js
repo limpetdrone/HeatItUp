@@ -21,7 +21,8 @@ export function validateSettings(input, {
     if (!Array.isArray(input.profiles) || input.profiles.length !== names.length) errors.push('Érvénytelen profilbeállítás.');
     else errors.push(...profileErrors(input.profiles));
   }
-  if (![3, 5, 10, 20].includes(input?.rounds)) errors.push('A körszám 3, 5, 10 vagy 20 lehet.');
+  const rounds = input?.rounds !== undefined ? input.rounds : 50;
+  if (![3, 5, 10, 20, 50].includes(rounds)) errors.push('A körszám 3, 5, 10, 20 vagy 50 lehet.');
   return errors.length ? {
     ok: false,
     errors
@@ -30,7 +31,7 @@ export function validateSettings(input, {
     settings: {
       players,
       maxIntensity: input.maxIntensity,
-      rounds: input.rounds,
+      rounds,
       ...(input.profiles ? {profiles: input.profiles.map((p,i) => ({...normalizeProfile(p), name: players[i]}))} : {}),
       ...(input.options ? {options: JSON.parse(JSON.stringify(input.options))} : {})
     }

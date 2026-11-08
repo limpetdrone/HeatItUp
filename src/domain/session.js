@@ -58,14 +58,44 @@ function advance(s, cards, rng) {
     if(existing&&eligibleAssignments(withoutCurrent,existing,open.playerId).length&&(!open.assignment||open.assignment.playerIds.every(id=>s.roster.some(p=>p.id===id&&p.status==='active'))))return s;
     return draw(s,cards,rng);
   }
-  const pending = s.turns.filter(t => t.status === 'pending');
-  if (!pending.length) return {
-    ...s,
-    phase: 'finished',
-    currentCardId: null,
-    waitReason: null,
-    endReason: s.roster.every(p => p.status === 'removed') ? 'no_players' : 'rounds'
-  };
+  let pending = s.turns.filter(t => t.status === 'pending');
+  if (!pending.length) {
+    if (s.roster.every(p => p.status === 'removed')) return {
+      ...s,
+      phase: 'finished',
+      currentCardId: null,
+      waitReason: null,
+      endReason: 'no_players'
+    };
+    const lastRound = s.turns.length ? Math.max(...s.turns.map(t => t.round)) : 0;
+    const activeRoster = s.roster.filter(p => p.status === 'active');
+    if (s.settings.openEnded && activeRoster.length > 0) {
+      const nextTurns = activeRoster.map(p => ({
+        id: `${lastRound + 1}:${p.id}`,
+        round: lastRound + 1,
+        playerId: p.id,
+        status: 'pending',
+        omittedReason: null
+      }));
+      s = {
+        ...s,
+        settings: {
+          ...s.settings,
+          rounds: lastRound + 1
+        },
+        turns: [...s.turns, ...nextTurns]
+      };
+      pending = nextTurns;
+    } else {
+      return {
+        ...s,
+        phase: 'finished',
+        currentCardId: null,
+        waitReason: null,
+        endReason: 'rounds'
+      };
+    }
+  }
   if (!pending.some(t => playerFor(s, t).status === 'active')) return {
     ...s,
     phase: 'waiting',
@@ -108,8 +138,9 @@ export function startSession(id, input, roster, cards, sourcePresetId = null, rn
     name: valid.settings.players[i],
     status: 'active'
   }));
+  const initialRounds = input.rounds || 50;
   const turns = Array.from({
-    length: input.rounds
+    length: initialRounds
   }, (_, r) => players.map(p => ({
     id: `${r + 1}:${p.id}`,
     round: r + 1,
@@ -124,7 +155,8 @@ export function startSession(id, input, roster, cards, sourcePresetId = null, rn
     roster: players,
     settings: {
       maxIntensity: input.maxIntensity,
-      rounds: input.rounds,
+      rounds: initialRounds,
+      openEnded: input.openEnded !== undefined ? Boolean(input.openEnded) : (input.rounds === undefined),
       music: clone(input.music || {}),
       options: clone(input.options || {})
     },
