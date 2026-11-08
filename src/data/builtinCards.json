@@ -558,7 +558,10 @@
         "en": "Stand behind the chosen player, wrap both hands around their waist, and pull them close against your body for 20 seconds!",
         "hu": "Állj a kijelölt játékos mögé, fogd át a derekát két kézzel, és húzd szorosan a testedhez 20 másodpercre!",
         "de": "Stell dich hinter die gewählte Person, fasse ihre Taille mit beiden Händen und ziehe sie für 20 Sekunden eng an deinen Körper!"
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-002",
@@ -577,7 +580,10 @@
         "en": "Sit right next to the selected player and slowly slide your hand from their knee up along their thigh while looking into their eyes.",
         "hu": "Ülj közvetlenül a kijelölt játékos mellé, és lassan csúsztasd végig a kezed a térdétől felfelé a combján, miközben a szemébe nézel!",
         "de": "Setz dich direkt neben die gewählte Person und gleite mit deiner Hand langsam vom Knie aufwärts über ihren Oberschenkel, während du ihr in die Augen schaust."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-003",
@@ -593,10 +599,13 @@
         "hands"
       ],
       "text": {
-        "en": "Run your fingertips slowly from the selected player's shoulder down the full length of their bare arm until your fingers intertwine with theirs.",
-        "hu": "Simítsd végig lassan az ujjhegyedet a kijelölt játékos vállától egészen a karján át a kezéig, majd kulcsold össze az ujjaidat az övéivel!",
-        "de": "Fahre mit den Fingerspitzen langsam von der Schulter der gewählten Person über ihren Arm hinab, bis sich eure Finger ineinander verschränken."
-      }
+        "hu": "Simogasd lassan az ujjhegyeddel a kijelölt játékos belső csuklóját és tenyerét 20 másodpercig, majd kulcsold össze az ujjaidat az övéivel!",
+        "en": "Slowly stroke the selected player's inner wrist and palm with your fingertips for 20 seconds, then intertwine your fingers with theirs!",
+        "de": "Streichle 20 Sekunden lang langsam mit den Fingerspitzen die Innenseite des Handgelenks und die Handfläche der gewählten Person und verschränke dann eure Finger!"
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-004",
@@ -615,7 +624,10 @@
         "en": "Stand chest-to-chest with the selected player, rest your palms on their hips, and hold a close gaze for 20 seconds.",
         "hu": "Állj mellkas-mellkasnak feszülve a kijelölt játékossal, pihentesd a tenyered a csípőjén, és nézzetek mélyen egymás szemébe 20 másodpercig!",
         "de": "Steh Brust an Brust mit der gewählten Person, lege deine Hände auf ihre Hüften und haltet 20 Sekunden lang tiefen Blickkontakt."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-005",
@@ -634,7 +646,10 @@
         "en": "Gently tilt the selected player's head to the side with your hand and let your warm breath linger along the side of their neck for 15 seconds.",
         "hu": "Finoman döntsd oldalra a kijelölt játékos fejét a kezeddel, és engedd, hogy a forró leheleted 15 másodpercig végigsimítsa a nyakát!",
         "de": "Neige den Kopf der gewählten Person sanft zur Seite und lass deinen warmen Atem 15 Sekunden lang an ihrem Hals entlangstreichen."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 30
     },
     {
       "id": "intro-challenge-006",
@@ -653,7 +668,10 @@
         "en": "Place both hands on the selected player's shoulders from behind and give them a slow, sensual shoulder and neck massage for 30 seconds.",
         "hu": "Állj a kijelölt játékos mögé, és 30 másodpercig adj neki lassú, érzéki váll- és nyakmasszázst!",
         "de": "Stell dich hinter die gewählte Person und gib ihr 30 Sekunden lang eine langsame, sinnliche Schulter- und Nackenmassage."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 60
     },
     {
       "id": "intro-challenge-007",
@@ -672,7 +690,10 @@
         "en": "Trace the outline of the selected player's collarbone with two fingers while leaning in close enough for your cheeks to brush.",
         "hu": "Simíts végig két ujjaddal a kijelölt játékos nyakán és vállán, miközben olyan közel hajolsz hozzá, hogy az arcotok egymáshoz érjen!",
         "de": "Zeichne mit zwei Fingern das Schlüsselbein der gewählten Person nach, während du dich ihr so weit näherst, dass sich eure Wangen berühren."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-008",
@@ -691,7 +712,10 @@
         "en": "Sit close to the selected player, drape one of your legs over theirs, and keep your hand resting high on their knee for 25 seconds.",
         "hu": "Ülj szorosan a kijelölt játékos mellé, tedd át az egyik lábad az övén, a kezedet pedig pihentesd a térde felett 25 másodpercig!",
         "de": "Setz dich eng neben die gewählte Person, lege eines deiner Beine über ihre und lass deine Hand 25 Sekunden lang oberhalb ihres Knies ruhen."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 50
     },
     {
       "id": "intro-challenge-009",
@@ -710,7 +734,9 @@
         "en": "Take the selected player's hand, bring it to your lips, and kiss the inside of their wrist slowly while keeping eye contact.",
         "hu": "Fogd meg a kijelölt játékos kezét, emeld az ajkaidhoz, és csókold meg lassan a csuklója belső oldalát, miközben a szemébe nézel!",
         "de": "Nimm die Hand der gewählten Person, führe sie zu deinen Lippen und küsse langsam die Innenseite ihres Handgelenks bei vollem Blickkontakt."
-      }
+      },
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "intro-challenge-010",
@@ -729,7 +755,10 @@
         "en": "Wrap your arm around the chosen player's waist and press closely against their side for 30 seconds!",
         "hu": "Fond a karodat a kijelölt játékos dereka köré, és simulj szorosan az oldalához 30 másodpercre!",
         "de": "Schlinge deinen Arm um die Taille der gewählten Person und schmiege dich für 30 Sekunden eng an ihre Seite!"
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 60
     },
     {
       "id": "intro-challenge-011",
@@ -748,7 +777,10 @@
         "en": "Brush the hair away from the selected player's neck and slowly run your fingertips from behind their ear down to their shoulder.",
         "hu": "Simítsd félre a hajat a kijelölt játékos nyakából, és simítsd végig lassan az ujjhegyedet a füle mögül egészen a válláig!",
         "de": "Streiche das Haar vom Hals der gewählten Person beiseite und fahre mit den Fingerspitzen langsam von hinter dem Ohr bis zur Schulter hinab."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-012",
@@ -767,7 +799,10 @@
         "en": "Place your palm flat over the selected player's chest to feel their heartbeat while standing inches apart for 20 seconds.",
         "hu": "Simítsd a tenyeredet a kijelölt játékos mellkasára, hogy érezd a szívverését, miközben pár centire álltok egymástól 20 másodpercig!",
         "de": "Lege deine Handfläche flach auf die Brust der gewählten Person, um ihren Herzschlag zu spüren, während ihr 20 Sekunden lang dicht voreinander steht."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-013",
@@ -786,7 +821,10 @@
         "en": "Hold the selected player's chin gently between your thumb and forefinger, leaning in until your noses touch for 15 seconds.",
         "hu": "Fogd meg finoman a kijelölt játékos állát a hüvelyk- és mutatóujjad között, és hajolj hozzá olyan közel, hogy az orrotok összeérjen 15 másodpercig!",
         "de": "Fasse das Kinn der gewählten Person sanft zwischen Daumen und Zeigefinger und beuge dich vor, bis sich eure Nasen 15 Sekunden lang berühren."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 30
     },
     {
       "id": "intro-challenge-014",
@@ -802,10 +840,13 @@
         "caress"
       ],
       "text": {
-        "en": "Slide your hands slowly down the selected player's back from their shoulder blades to the curve of their waist.",
-        "hu": "Csúsztasd végig mindkét kezedet lassan a kijelölt játékos hátán fentről lefelé, egészen a dereka ívéig!",
-        "de": "Gleite mit beiden Händen langsam den Rücken der gewählten Person von den Schulterblättern bis zur Taillenrundung hinab."
-      }
+        "hu": "Helyezd mindkét tenyeredet a kijelölt játékos deréktájára közvetlenül a fehérneműje vonala felett, és 20 másodpercig lassú, körkörös mozdulatokkal simogasd!",
+        "en": "Place both palms on the selected player's lower back right above their underwear line, and caress that spot in slow circles for 20 seconds!",
+        "de": "Lege beide Handflächen direkt über dem Unterwäschebund auf den unteren Rücken der gewählten Person und streichle diese Stelle 20 Sekunden lang in langsamen Kreisen!"
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-015",
@@ -824,7 +865,10 @@
         "en": "Sit knee-to-knee facing the selected player and slowly caress the sides of their calves and knees with both hands for 20 seconds.",
         "hu": "Ülj szembe a kijelölt játékossal úgy, hogy a térdetek összeérjen, és két kézzel lassan simogasd a vádliját és a térdét 20 másodpercig!",
         "de": "Setz dich Knie an Knie gegenüber der gewählten Person und streichle 20 Sekunden lang langsam mit beiden Händen ihre Waden und Knie."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-016",
@@ -843,7 +887,9 @@
         "en": "Press a soft, lingering kiss onto the selected player's bare shoulder while resting your hand on their opposite hip.",
         "hu": "Adj egy puha, elidőző csókot a kijelölt játékos csupasz vállára, miközben a kezedet az ellentétes csípőjén pihenteted!",
         "de": "Drücke einen sanften, verweilenden Kuss auf die bloße Schulter der gewählten Person, während deine Hand auf ihrer gegenüberliegenden Hüfte ruht."
-      }
+      },
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "intro-challenge-017",
@@ -862,7 +908,10 @@
         "en": "Guide the selected player's hands onto your waist and step in close so your bodies are touching for 20 seconds.",
         "hu": "Vezesd a kijelölt játékos mindkét kezét a saját derekadra, és lépj hozzá olyan közel, hogy a testetek összeérjen 20 másodpercig!",
         "de": "Führe beide Hände der gewählten Person an deine Taille und tritt so nah heran, dass sich eure Körper 20 Sekunden lang berühren."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-018",
@@ -881,7 +930,10 @@
         "en": "With the back of your hand and fingers, slowly stroke the chosen player's face from their ear down to their chin!",
         "hu": "A kézfejeddel és az ujjaid hátoldalával lassan simítsd végig a kijelölt játékos arcát a fülétől az álláig!",
         "de": "Streiche mit deinem Handrücken und den Fingern langsam über das Gesicht der gewählten Person vom Ohr bis zum Kinn!"
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 30
     },
     {
       "id": "intro-challenge-019",
@@ -900,7 +952,10 @@
         "en": "Stand face-to-face with the selected player and slowly sway your hips together with your hands resting on their lower back for 25 seconds.",
         "hu": "Állj szembe a kijelölt játékossal, tedd a kezed a dereka alsó részére, és 25 másodpercig lassan, egymáshoz simulva ringassátok a csípőtöket!",
         "de": "Steh der gewählten Person gegenüber, lege deine Hände auf ihren unteren Rücken und wiegt eure Hüften 25 Sekunden lang langsam aneinander."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 50
     },
     {
       "id": "intro-challenge-020",
@@ -919,7 +974,9 @@
         "en": "Lean in to the selected player's neck, inhale their scent deeply right against their skin, and brush your lips lightly below their ear.",
         "hu": "Hajolj egészen közel a kijelölt játékos nyakához, szívd be mélyen a bőre illatát, majd érintsd az ajkaidat finoman a füle alá!",
         "de": "Beuge dich dicht an den Hals der gewählten Person, atme ihren Duft direkt an der Haut tief ein und streife mit den Lippen sanft die Stelle unter ihrem Ohr."
-      }
+      },
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "intro-challenge-021",
@@ -938,7 +995,10 @@
         "en": "Place your hand over the selected player's hand, guide it onto your own thigh, and hold it there for 20 seconds.",
         "hu": "Fogd meg a kijelölt játékos kezét, vezesd a saját combodra, és tartsd ott a tenyered alatt 20 másodpercig!",
         "de": "Nimm die Hand der gewählten Person, führe sie auf deinen eigenen Oberschenkel und halte sie dort 20 Sekunden lang fest."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-022",
@@ -957,7 +1017,10 @@
         "en": "Cradle the back of the selected player's neck with one hand, pull their forehead gently against yours, and share three slow breaths.",
         "hu": "Tedd az egyik kezed a kijelölt játékos tarkójára, húzd a homlokát finoman a tiédhez, és vegyetek három mély, közös lélegzetet!",
         "de": "Lege eine Hand in den Nacken der gewählten Person, zieh ihre Stirn sanft an deine und teilt drei langsame, tiefe Atemzüge."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-023",
@@ -973,10 +1036,13 @@
         "curves"
       ],
       "text": {
-        "en": "With both hands at once, in a slow, deep stroke, trace from the chosen player's ribs all the way down to their hips!",
-        "hu": "Mindkét kezeddel egyszerre, lassú, mély mozdulattal simíts végig a kijelölt játékos oldalától le egészen a csípőjéig!",
-        "de": "Streiche mit beiden Händen gleichzeitig in einer langsamen, tiefen Bewegung von den Rippen der gewählten Person bis hinunter zu ihren Hüften!"
-      }
+        "hu": "Fogd közre két kézzel a kijelölt játékos csípőcsontját, és a hüvelykujjaddal lassan, mélyen simogasd a csípője ívét 15 másodpercig!",
+        "en": "Hold the selected player's hip bones with both hands and slowly, deeply stroke the curve of their hips with your thumbs for 15 seconds!",
+        "de": "Fasse mit beiden Händen die Hüftknochen der gewählten Person und streichle mit den Daumen 15 Sekunden lang langsam die Rundung ihrer Hüften!"
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 30
     },
     {
       "id": "intro-challenge-024",
@@ -995,7 +1061,10 @@
         "en": "Press a slow kiss onto the palm of the selected player's hand, then press that same palm against your cheek for 15 seconds.",
         "hu": "Nyomj egy lassú csókot a kijelölt játékos tenyerébe, majd simítsd ugyanazt a tenyerét a saját arcodhoz 15 másodpercre!",
         "de": "Drücke einen langsamen Kuss in die Handfläche der gewählten Person und lege dieselbe Handfläche anschließend 15 Sekunden lang an deine Wange."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 30
     },
     {
       "id": "intro-challenge-025",
@@ -1014,7 +1083,10 @@
         "en": "Sit right behind the selected player so their back rests against your chest, and wrap your arms around their torso for 25 seconds.",
         "hu": "Ülj közvetlenül a kijelölt játékos mögé úgy, hogy a háta a mellkasodnak dőljön, és öleld át szorosan a derekát 25 másodpercig!",
         "de": "Setz dich direkt hinter die gewählte Person, sodass ihr Rücken an deiner Brust lehnt, und schlinge deine Arme für 25 Sekunden um ihren Oberkörper."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 50
     },
     {
       "id": "intro-challenge-026",
@@ -1033,7 +1105,10 @@
         "en": "Lightly trace circles with your fingernails along the selected player's forearm and inner elbow for 20 seconds.",
         "hu": "Húzogass finoman köröket a körmeiddel a kijelölt játékos karján és csuklóján 20 másodpercig!",
         "de": "Zeichne 20 Sekunden lang sanft mit den Fingernägeln Kreise auf Unterarm und Armbeuge der gewählten Person."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-027",
@@ -1052,7 +1127,9 @@
         "en": "Step in close to the selected player, hook a finger into the waistband of their underwear, and tug them gently against your body.",
         "hu": "Lépj egészen közel a kijelölt játékoshoz, akaszd be az ujjad a fehérneműje pántjába, és húzd finoman a saját testedhez!",
         "de": "Tritt dicht an die gewählte Person heran, hake einen Finger in den Bund ihrer Unterwäsche ein und zieh sie sanft an deinen Körper."
-      }
+      },
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "intro-challenge-028",
@@ -1071,7 +1148,9 @@
         "en": "Touch your lips softly to the corner of the selected player's mouth—just missing their lips—and linger there for 10 seconds.",
         "hu": "Érintsd az ajkaidat finoman a kijelölt játékos szája sarkához – épp csak elkerülve az ajkait –, és időzz ott 10 másodpercig!",
         "de": "Berühre mit deinen Lippen sanft den Mundwinkel der gewählten Person – knapp neben ihren Lippen – und verweile dort für 10 Sekunden."
-      }
+      },
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "intro-challenge-029",
@@ -1090,7 +1169,10 @@
         "en": "Rest your chin on the selected player's shoulder from behind while sliding your hands along the outside of their thighs.",
         "hu": "Hátulról támaszd az álladat a kijelölt játékos vállára, miközben a kezeidet lassan végigcsúsztatod a combja külső oldalán!",
         "de": "Stütze dein Kinn von hinten auf die Schulter der gewählten Person, während deine Hände langsam an der Außenseite ihrer Oberschenkel entlanggleiten."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 40
     },
     {
       "id": "intro-challenge-030",
@@ -1109,7 +1191,10 @@
         "en": "Hold both of the selected player's wrists gently in front of you, lean down to their neck, and exhale warmly against their collarbone.",
         "hu": "Fogd meg finoman a kijelölt játékos mindkét csuklóját, hajolj hozzá közel, és fújd a forró leheletedet a nyakára!",
         "de": "Halte sanft beide Handgelenke der gewählten Person fest, beuge dich zu ihrem Hals hinab und hauche warm über ihr Schlüsselbein."
-      }
+      },
+      "category": "general",
+      "role": "give",
+      "parallelDurationSeconds": 30
     },
     {
       "id": "flirt-question-001",
@@ -1675,7 +1760,9 @@
         "hu": "Emeld meg a kijelölt játékos állát, és lassan húzd végig a hüvelykujjad az alsó ajkán, miközben olyan közel hajolsz, hogy a szátok szinte összeér!",
         "de": "Hebe das Kinn der gewählten Person an und streiche langsam mit dem Daumen über ihre Unterlippe, während du dich ihr bis kurz vor einem Kuss näherst."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-002",
@@ -1695,7 +1782,9 @@
         "hu": "Hajolj a kijelölt játékos füléhez, harapdáld meg finoman a fülcimpáját, majd engedd, hogy a forró leheleted végigsimítsa a nyakát!",
         "de": "Beuge dich zum Ohr der gewählten Person, knabbere sanft an ihrem Ohrläppchen und lass deinen Atem an ihrem Hals entlangstreichen."
       },
-      "parallelDurationSeconds": 50
+      "parallelDurationSeconds": 50,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-003",
@@ -1715,7 +1804,9 @@
         "hu": "Tedd a kezed a kijelölt játékos belső combjának felső részére, és 20 másodpercig lassan simogasd le a térdéig, majd vissza felfelé!",
         "de": "Lege deine Hand weit oben auf die Innenseite des Oberschenkels der gewählten Person und streichle 20 Sekunden lang langsam zum Knie und wieder hinauf."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-004",
@@ -1735,7 +1826,9 @@
         "hu": "Adj három lassú, egymást követő csókot a kijelölt játékos állától lefelé haladva egészen a nyaka tövéig!",
         "de": "Gib der gewählten Person drei langsame Küsse nacheinander, vom Kinn abwärts bis zum Ansatz des Halses!"
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-005",
@@ -1755,7 +1848,9 @@
         "hu": "Állj a kijelölt játékos mögé, csúsztasd előre a kezeidet a derekára és a hasára, majd húzd a csípőjét szorosan a tiédhez 25 másodpercre!",
         "de": "Stell dich hinter die gewählte Person, lege deine Hände von hinten auf ihre Taille und ihren Unterbauch und zieh ihre Hüften 25 Sekunden lang eng an deine."
       },
-      "parallelDurationSeconds": 50
+      "parallelDurationSeconds": 50,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-006",
@@ -1775,7 +1870,9 @@
         "hu": "Túrj bele a kijelölt játékos hajába a tarkójánál, döntsd finoman hátra a fejét, és adj egy érzéki csókot a nyaka oldalára!",
         "de": "Fahre mit den Fingern in das Haar am Hinterkopf der gewählten Person, neige ihren Kopf leicht zurück und küsse sie seitlich auf den Hals."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-007",
@@ -1795,7 +1892,9 @@
         "hu": "Ülj lovaglóülésben a kijelölt játékos egyik combjára a kanapén, és 25 másodpercig lassan simogasd a mellkasát és a vállát!",
         "de": "Setz dich rittlings auf einen Oberschenkel der gewählten Person auf dem Sofa und streichle 25 Sekunden lang langsam ihre Brust und Schultern."
       },
-      "parallelDurationSeconds": 50
+      "parallelDurationSeconds": 50,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-008",
@@ -1815,7 +1914,9 @@
         "hu": "Húzd végig lassan két ujjadat a kijelölt játékos vállán és a mellkasa közepén 20 másodpercig!",
         "de": "Streiche mit zwei Fingern 20 Sekunden lang langsam über das bloße Schlüsselbein und die Mitte der Brust der gewählten Person."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-009",
@@ -1835,7 +1936,9 @@
         "hu": "Adj a kijelölt játékosnak egy lassú csókot a szája sarkára úgy, hogy visszahúzódva az ajkaid finoman végigsúrolják az övéit!",
         "de": "Gib der gewählten Person einen langsamen Kuss auf den Mundwinkel und lass deine Lippen beim Zurückziehen sanft über ihre streifen."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-010",
@@ -1855,7 +1958,9 @@
         "hu": "Ragadd meg a kijelölt játékos csípőjét, és húzd magadhoz úgy, hogy a csípőtök 20 másodpercig szorosan összeérjen!",
         "de": "Fasse die Hüften der gewählten Person und ziehe sie heran, sodass eure Becken für 20 Sekunden eng aneinander gepresst bleiben!"
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-011",
@@ -1871,11 +1976,13 @@
         "massage"
       ],
       "text": {
-        "en": "Have the selected player extend their leg onto your lap, and slowly massage their calf and thigh up toward their hip for 30 seconds.",
-        "hu": "Fektesse a kijelölt játékos a lábát az öledbe, te pedig 30 másodpercig lassan, érzékien masszírozd végig a vádlijától felfelé a combját!",
-        "de": "Lass die gewählte Person ihr Bein auf deinen Schoß legen und massiere 30 Sekunden lang langsam ihre Wade und den Oberschenkel hinauf Richtung Hüfte."
+        "hu": "Fektesse a kijelölt játékos a lábát az öledbe, te pedig 30 másodpercig lassan, érzékien masszírozd a térdhajlatát és a combja alsó részét!",
+        "en": "Have the selected player rest their leg across your lap, and slowly, sensually massage the back of their knee and lower thigh for 30 seconds.",
+        "de": "Lass die gewählte Person ihr Bein auf deinen Schoß legen und massiere 30 Sekunden lang langsam und sinnlich ihre Kniekehle und den unteren Oberschenkel."
       },
-      "parallelDurationSeconds": 60
+      "parallelDurationSeconds": 60,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-012",
@@ -1895,7 +2002,9 @@
         "hu": "Nyomd az ajkaidat a kijelölt játékos nyakának pulzáló pontjára, és tartsd ott 10 másodpercig, miközben forrón a bőrére lélegzel!",
         "de": "Drücke deine Lippen für 10 Sekunden auf den Pulspunkt am Hals der gewählten Person und atme dabei warm auf ihre Haut."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-013",
@@ -1915,7 +2024,9 @@
         "hu": "Csúsztasd a kezed a kijelölt játékos derekának hátoldalára, és finoman markolj rá a csípője és a feneke felső ívére!",
         "de": "Gleite mit der Hand an den unteren Rücken der gewählten Person und drücke sanft die Rundung von Hüfte und oberem Po."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-014",
@@ -1935,7 +2046,9 @@
         "hu": "Hajolj a kanapén ülő kijelölt játékos fölé úgy, hogy két kézzel kétoldalt megtámaszkodsz mellette, és csókold meg a homlokát, az arcát és az állát!",
         "de": "Beuge dich über eine sitzende Person, stütze dich links und rechts neben ihr ab und küsse ihre Stirn, ihre Wange und ihr Kinn."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-015",
@@ -1955,7 +2068,9 @@
         "hu": "Fogd meg a kijelölt játékos mutatóujját, csókold meg az ujjhegyét, majd lassan húzd végig a saját ajkaidon!",
         "de": "Nimm den Zeigefinger der gewählten Person, küsse die Fingerspitze und führe den Finger langsam über deine eigenen Lippen."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-016",
@@ -1975,7 +2090,9 @@
         "hu": "Húzd végig lassan az ujjhegyeidet a kijelölt játékos hasán, közvetlenül a fehérneműje vonala felett!",
         "de": "Fahre mit den Fingerspitzen langsam über den bloßen Unterbauch der gewählten Person, direkt über dem Bund ihrer Unterwäsche."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-017",
@@ -1995,7 +2112,9 @@
         "hu": "Öleld át elölről a kijelölt játékos nyakát, simulj a mellkasához, és súgd a fülébe, mi tetszik a legjobban a testén!",
         "de": "Schlinge deine Arme von vorn um den Hals der gewählten Person, drücke deine Brust an ihre und flüstere ihr ins Ohr, was dir an ihrem Körper am besten gefällt."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-018",
@@ -2015,7 +2134,9 @@
         "hu": "Csókold meg a kijelölt játékos karját, majd lassan haladj felfelé az ajkaiddal a válláig!",
         "de": "Küsse die Innenseite des Unterarms der gewählten Person und wandere mit deinen Lippen langsam hinauf bis in die Armbeuge."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-019",
@@ -2035,7 +2156,9 @@
         "hu": "Ülj csípő-csípőnek feszülve a kijelölt játékos mellé, tedd a kezét a combodra, majd a saját kezeddel rásegítve lassan húzd felfelé!",
         "de": "Setz dich Hüfte an Hüfte neben die gewählte Person, lege ihre Hand auf deinen Oberschenkel und führe sie mit deiner eigenen Hand langsam weiter nach oben."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-020",
@@ -2055,7 +2178,9 @@
         "hu": "Az ujjaiddal finoman húzd meg a kijelölt játékos fehérneműjének pántját vagy szegélyét, miközben mélyen a szemébe nézel!",
         "de": "Zieh sanft mit den Fingern am Träger oder Bund der Unterwäsche der gewählten Person, während du ihr tief in die Augen schaust."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-021",
@@ -2071,11 +2196,13 @@
         "hips"
       ],
       "text": {
-        "en": "Place both hands on the selected player's chest and slowly slide them down over their ribs and stomach to their hips.",
-        "hu": "Tedd mindkét tenyeredet a kijelölt játékos mellkasára, majd lassan, érzékien csúsztasd végig az oldalán és a hasán át egészen a csípőjéig!",
-        "de": "Lege beide Handflächen auf die Brust der gewählten Person und gleite langsam über Rippen und Bauch hinab bis zu ihren Hüften."
+        "hu": "Tedd mindkét tenyeredet a kijelölt játékos oldalára a bordái alatt, és 20 másodpercig lassan, érzékien simogasd a dereka ívét!",
+        "en": "Place both palms on the sides of the selected player's waist just below their ribs, and slowly caress the curve of their waist for 20 seconds.",
+        "de": "Lege beide Handflächen seitlich unter den Rippen an die Taille der gewählten Person und streichle diese Stelle 20 Sekunden lang langsam."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-022",
@@ -2095,7 +2222,9 @@
         "hu": "Simítsd végig az ajkaidat lassan a kijelölt játékos halántékától az arcán át egészen a szája sarkáig, majd nyomj oda egy csókot!",
         "de": "Streife mit deinen Lippen langsam von der Schläfe der gewählten Person über die Wange bis zum Mundwinkel und küsse ihn."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-023",
@@ -2115,7 +2244,9 @@
         "hu": "Ültesd le a kijelölt játékost, állj mögé, hajolj le a válla fölött, és csókold meg a csupasz bőrt ott, ahol a nyaka és a válla találkozik!",
         "de": "Lass die gewählte Person sich setzen, stell dich hinter sie, beuge dich über ihre Schulter und küsse die bloße Haut am Übergang zwischen Hals und Schulter."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-024",
@@ -2135,7 +2266,9 @@
         "hu": "Fogd meg két kézzel a kijelölt játékos csípőjét, miközben 20 másodpercig hozzád simulva ringatózik, az arcodat pedig tartsd pár centire a nyakától!",
         "de": "Halte die Hüften der gewählten Person mit beiden Händen fest, während sie sich 20 Sekunden lang an dir wiegt, dein Gesicht dicht an ihrem Hals."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-025",
@@ -2155,7 +2288,9 @@
         "hu": "Rajzolj egy lassú kört az ujjhegyeddel a kijelölt játékos ajkai körül, majd nyomd a hüvelykujjadat finoman az alsó ajkára!",
         "de": "Kreise mit der Fingerspitze langsam um die Lippen der gewählten Person und drücke deinen Daumen anschließend sanft auf ihre Unterlippe."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-026",
@@ -2175,7 +2310,9 @@
         "hu": "Csúsztasd be egy ujjadat a kijelölt játékos fehérneműjének pántja vagy szegélye alá a csípőjénél vagy a vállánál, és csókold meg mellette a bőrt!",
         "de": "Schiebe einen Finger an Hüfte oder Schulter unter den Träger oder Rand der Unterwäsche der gewählten Person und küsse die Haut direkt daneben."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-027",
@@ -2195,7 +2332,9 @@
         "hu": "Ülj szembe a kijelölt játékossal, kulcsold a lábaidat az övéi mögé, hogy egészen közel húzd magadhoz, és két kézzel simogasd a nyakát!",
         "de": "Setz dich der gewählten Person gegenüber, hake deine Beine hinter ihren ein, um sie nah heranzuziehen, und streichle mit beiden Händen ihren Hals."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-028",
@@ -2215,7 +2354,9 @@
         "hu": "Támaszd a homlokodat a kijelölt játékos halántékához, miközben a kezeddel lassan fel-le simogatod a combja külső oldalát és a csípőjét!",
         "de": "Lehne deine Stirn an die Schläfe der gewählten Person, während deine Hand langsam an der Außenseite von Oberschenkel und Hüfte auf und ab streichelt."
       },
-      "parallelDurationSeconds": 40
+      "parallelDurationSeconds": 40,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-029",
@@ -2235,7 +2376,9 @@
         "hu": "Simítsd a kijelölt játékos tenyerét a válladra vagy a mellkasodra, majd csókold meg a kézfejét, miközben érzi a bőrödet!",
         "de": "Lege die Handfläche der gewählten Person auf dein Schlüsselbein oder deine Brust und küsse ihren Handrücken, während sie deine Haut spürt."
       },
-      "parallelDurationSeconds": 30
+      "parallelDurationSeconds": 30,
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "flirt-challenge-030",
@@ -2254,7 +2397,9 @@
         "en": "Give the selected player a lingering, soft kiss Directly on the lips for 5 seconds—no tongue yet, just slow lip contact.",
         "hu": "Adj a kijelölt játékosnak egy 5 másodperces, lassú, puha csókot egyenesen a szájára – még nyelv nélkül, tisztán az ajkaitokkal!",
         "de": "Gib der gewählten Person einen 5 Sekunden langen, weichen Kuss direkt auf den Mund – noch ohne Zunge, nur Lippen an Lippen."
-      }
+      },
+      "category": "general",
+      "role": "give"
     },
     {
       "id": "spark-question-001",
@@ -4020,9 +4165,9 @@
         "navel"
       ],
       "text": {
-        "en": "Kiss the selected player's bare skin starting between their chest, trailing slowly down their stomach all the way to their navel.",
-        "hu": "Csókold végig a kijelölt játékos csupasz bőrét a mellkasa között kezdve, lassan lefelé haladva a hasán egészen a köldökéig!",
-        "de": "Küsse die bloße Haut der gewählten Person beginnend zwischen der Brust langsam über den Bauch hinab bis zum Bauchnabel."
+        "hu": "Csókold és nyald lassan a kijelölt játékos köldökét és közvetlenül a köldöke alatti kis területet 25 másodpercig!",
+        "en": "Slowly kiss and lick the selected player's navel and the small spot right below their navel for 25 seconds.",
+        "de": "Küsse und lecke 25 Sekunden lang langsam den Bauchnabel der gewählten Person und die kleine Stelle direkt darunter."
       },
       "category": "general",
       "role": "give",
@@ -4260,9 +4405,9 @@
         "cleavage"
       ],
       "text": {
-        "en": "Kiss your way from the selected player's lips down their chin, throat, and chest until you reach the top of their torso or cleavage.",
-        "hu": "Csókold végig a kijelölt játékost az ajkaitól indulva az állán és a nyakán át egészen a mellkasáig!",
-        "de": "Küsse dich von den Lippen der gewählten Person über Kinn und Hals hinab bis zu ihrer Brust oder ihrem Dekolleté."
+        "hu": "Csókold és szívogasd lassan a kijelölt játékos nyakának tövét és a kulcscsontja feletti kis mélyedést 25 másodpercig!",
+        "en": "Slowly kiss and suck the base of the selected player's neck and the hollow right above their collarbone for 25 seconds.",
+        "de": "Küsse und sauge 25 Sekunden lang langsam am Halsansatz und an der kleinen Grube über dem Schlüsselbein der gewählten Person."
       },
       "category": "general",
       "role": "give",
@@ -4613,9 +4758,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Kiss the selected player's whole naked body from neck to knees for 60 seconds.",
-        "hu": "Csókold végig a kijelölt játékos egész meztelen testét a nyakától a térdéig 60 másodpercig.",
-        "de": "Küsse 60 Sekunden lang den ganzen nackten Körper der gewählten Person vom Hals bis zu den Knien."
+        "hu": "Csókold és nyald lassan a kijelölt játékos egyik belső combjának legfelső, legérzékenyebb részét 45 másodpercig.",
+        "en": "Slowly kiss and lick the very top, most sensitive spot of the selected player's inner thigh for 45 seconds.",
+        "de": "Küsse und lecke 45 Sekunden lang langsam die oberste, empfindlichste Stelle an der Oberschenkelinnenseite der gewählten Person."
       },
       "category": "general",
       "role": "give",
@@ -4952,9 +5097,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Let the two selected players kiss and caress your naked body together for 45 seconds, hands everywhere.",
-        "hu": "Hagyd, hogy a két kijelölt játékos együtt csókolja és simogassa a meztelen testedet 45 másodpercig, mindenhol.",
-        "de": "Lass die beiden gewählten Personen 45 Sekunden lang gemeinsam deinen nackten Körper überall küssen und streicheln."
+        "hu": "Hagyd, hogy a két kijelölt játékos 45 másodpercig egyszerre kényeztesse a mellkasodat: mindketten egy-egy mellbimbódat csókolják és nyalják.",
+        "en": "Let the two selected players pleasure your chest simultaneously for 45 seconds, each focusing their lips and tongue on one of your nipples.",
+        "de": "Lass die beiden gewählten Personen 45 Sekunden lang gleichzeitig deine Brust verwöhnen, indem sich jede mit Lippen und Zunge einer Brustwarze widmet."
       },
       "category": "general",
       "role": "receive"
@@ -5070,9 +5215,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Tie the selected player's wrists with a piece of clothing and caress their whole naked body, intimate area included, for 45 seconds.",
-        "hu": "Kösd meg a kijelölt játékos csuklóját egy ruhadarabbal, és simogasd az egész meztelen testét, az intim részét is, 45 másodpercig.",
-        "de": "Fessle der gewählten Person die Handgelenke mit einem Kleidungsstück und streichle 45 Sekunden lang ihren ganzen nackten Körper, auch den Intimbereich."
+        "hu": "Kösd meg a kijelölt játékos csuklóját, és 45 másodpercig kizárólag az intim zónáját és a combhajlatát simogasd lassan az ujjaiddal.",
+        "en": "Tie the selected player's wrists and spend 45 seconds slowly caressing only their intimate area and groin crease with your fingertips.",
+        "de": "Fessle der gewählten Person die Handgelenke und streichle 45 Sekunden lang mit den Fingerspitzen gezielt nur ihren Intimbereich und die Leiste."
       },
       "category": "general",
       "role": "give",
@@ -5090,9 +5235,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Let the selected player tie your wrists with a piece of clothing and caress your whole naked body for 45 seconds.",
-        "hu": "Hagyd, hogy a kijelölt játékos megkösse a csuklódat egy ruhadarabbal, és 45 másodpercig simogassa az egész meztelen testedet.",
-        "de": "Lass dir von der gewählten Person die Handgelenke mit einem Kleidungsstück fesseln und dich 45 Sekunden lang am ganzen nackten Körper streicheln."
+        "hu": "Hagyd, hogy a kijelölt játékos megkösse a csuklódat, és 45 másodpercig kizárólag a nyakadat és a mellbimbóidat izgassa az ajkaival és az ujjaival.",
+        "en": "Let the selected player tie your wrists and spend 45 seconds teasing only your neck and nipples with their lips and fingers.",
+        "de": "Lass dir von der gewählten Person die Handgelenke fesseln und dich 45 Sekunden lang nur an Hals und Brustwarzen mit Lippen und Fingern reizen."
       },
       "category": "general",
       "role": "receive",
@@ -5348,9 +5493,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Tie the selected player's wrists above their head with a piece of clothing and kiss every part of their body for one minute.",
-        "hu": "Kösd meg a kijelölt játékos csuklóját a feje fölött egy ruhadarabbal, és csókold a testének minden részét egy percig.",
-        "de": "Fessle die Handgelenke der gewählten Person über dem Kopf mit einem Kleidungsstück und küsse eine Minute lang jeden Teil ihres Körpers."
+        "hu": "Kösd meg a kijelölt játékos csuklóját a feje fölött, és egy percig kizárólag a mellbimbóit és a nyaka oldalsó részét izgasd a nyelveddel.",
+        "en": "Tie the selected player's wrists above their head and spend one minute teasing only their nipples and the side of their neck with your tongue.",
+        "de": "Fessle die Handgelenke der gewählten Person über dem Kopf und reize eine Minute lang mit der Zunge gezielt nur ihre Brustwarzen und den Hals."
       },
       "category": "general",
       "role": "give",
@@ -5413,7 +5558,8 @@
         "de": "Masturbiere eine Minute lang vor der gewählten Person."
       },
       "category": "general",
-      "role": "give"
+      "role": "give",
+      "parallelDurationSeconds": 120
     },
     {
       "id": "trust-challenge-012",
@@ -5432,7 +5578,8 @@
         "de": "Sieh der gewählten Person eine Minute lang beim Masturbieren zu und sage ihr, was dir gefällt."
       },
       "category": "general",
-      "role": "receive"
+      "role": "receive",
+      "parallelDurationSeconds": 120
     },
     {
       "id": "trust-challenge-013",
@@ -5451,7 +5598,8 @@
         "de": "Gib der gewählten Person eine Minute lang völlig nackt einen Lapdance."
       },
       "category": "general",
-      "role": "give"
+      "role": "give",
+      "parallelDurationSeconds": 120
     },
     {
       "id": "trust-challenge-014",
@@ -5465,9 +5613,9 @@
         "explicit"
       ],
       "text": {
-        "en": "Kiss the selected player along their belly and inner thighs, finishing between their legs.",
-        "hu": "Csókold végig a kijelölt játékos hasát és a belső combjait, és a lábai között fejezd be.",
-        "de": "Küsse den Bauch und die Innenseiten der Oberschenkel der gewählten Person und ende zwischen ihren Beinen."
+        "hu": "Csókold és nyald 60 másodpercig a kijelölt játékos combhajlatát közvetlenül az intim része két oldalán, majd zárd egy csókkal a lábai között.",
+        "en": "Kiss and lick the crease right on either side of the selected player's intimate area for 60 seconds, finishing with a kiss right between their legs.",
+        "de": "Küsse und lecke 60 Sekunden lang die Leiste direkt neben dem Intimbereich der gewählten Person und ende mit einem Kuss zwischen ihren Beinen."
       },
       "category": "oral",
       "role": "give",
@@ -5627,7 +5775,8 @@
         "de": "Lass dich zwei Minuten lang von der gewählten Person anleiten: tu genau, was sie sagt."
       },
       "category": "general",
-      "role": "give"
+      "role": "give",
+      "parallelDurationSeconds": 240
     },
     {
       "id": "trust-challenge-023",
@@ -6069,9 +6218,9 @@
         "imported"
       ],
       "text": {
-        "en": "Lick and kiss a slow, wet trail from the selected player's neck, right between their chest, all the way down to the top edge of their underwear.",
-        "hu": "A nyelveddel és az ajkaiddal húzz egy lassú, nedves csíkot a kijelölt játékos nyakától a mellkasa között egészen a fehérneműje felső szegélyéig!",
-        "de": "Küsse und lecke eine langsame, feuchte Spur vom Hals der gewählten Person zwischen der Brust hinab bis direkt an den oberen Rand ihrer Unterwäsche."
+        "hu": "A nyelveddel és az ajkaiddal 25 másodpercig kényeztesd a kijelölt játékos két mellbimbója közötti területet!",
+        "en": "Use your tongue and lips for 25 seconds to focus purely on the sensitive spot right between the selected player's nipples.",
+        "de": "Verwöhne 25 Sekunden lang mit Lippen und Zunge gezielt die empfindliche Stelle genau zwischen den Brustwarzen der gewählten Person."
       },
       "parallelDurationSeconds": 50
     },
@@ -6568,9 +6717,9 @@
         "imported"
       ],
       "text": {
-        "en": "Pull the selected player's underwear completely off and spend 30 seconds kissing their bare hips, thighs, and lower belly.",
-        "hu": "Húzd le a kijelölt játékos fehérneműjét, és 30 másodpercig csókold végig a csípőjét, a belső combját és a hasát!",
-        "de": "Zieh der gewählten Person die Unterwäsche komplett aus und küsse 30 Sekunden lang ihre nackten Hüften, Innenschenkel und den Unterbauch."
+        "hu": "Húzd le a kijelölt játékos fehérneműjét, és 30 másodpercig kizárólag a csípőcsontját és a combhajlatát csókolgasd!",
+        "en": "Pull the selected player's underwear off and spend 30 seconds kissing only their hip bones and groin crease.",
+        "de": "Zieh der gewählten Person die Unterwäsche aus und küsse 30 Sekunden lang gezielt nur ihre Hüftknochen und die Hüftbeuge."
       },
       "parallelDurationSeconds": 60
     },
@@ -6868,9 +7017,9 @@
         "imported"
       ],
       "text": {
-        "en": "Sit on the couch and have the selected player straddle your chest (facing you) so you can kiss and lick their stomach, ribs, and chest for 30 seconds.",
-        "hu": "Feküdj hanyatt, a kijelölt játékos pedig térdeljen a mellkasod fölé lovaglóülésben, hogy 30 másodpercig alulról csókold és nyald a hasát és a mellkasát!",
-        "de": "Leg dich hin, lass die gewählte Person rittlings über deiner Brust knien und küsse und lecke 30 Sekunden lang von unten Bauch, Rippen und Brust."
+        "hu": "Feküdj hanyatt, a kijelölt játékos pedig térdeljen a mellkasod fölé lovaglóülésben, hogy 30 másodpercig alulról a két mellbimbóját csókold és nyald!",
+        "en": "Lie on your back and have the selected player straddle your chest facing you, so you can kiss and lick their nipples from below for 30 seconds.",
+        "de": "Leg dich auf den Rücken und lass die gewählte Person rittlings über deiner Brust knien, sodass du 30 Sekunden lang von unten ihre Brustwarzen küssen und lecken kannst."
       },
       "parallelDurationSeconds": 60
     },
@@ -6988,9 +7137,9 @@
         "imported"
       ],
       "text": {
-        "en": "Place the selected player's leg over your shoulder while they sit back, and kiss and lick all the way down the back of their thigh to their bare glute.",
-        "hu": "Tedd a válladra a hátradőlő kijelölt játékos lábát, és csókold, illetve nyald végig a combja hátoldalát egészen a csupasz feneke ívéig!",
-        "de": "Lege das Bein der zurückgelehnten gewählten Person über deine Schulter und küsse und lecke die Rückseite ihres Schenkels bis zum nackten Po."
+        "hu": "Tedd a válladra a hátradőlő kijelölt játékos lábát, és 25 másodpercig csókold és harapdáld a combja hátsó részét közvetlenül a feneke íve alatt!",
+        "en": "Place the selected player's leg over your shoulder while they sit back, and kiss and gently bite the spot right where the back of their thigh meets their ass for 25 seconds.",
+        "de": "Lege das Bein der zurückgelehnten gewählten Person über deine Schulter und küsse und beiße 25 Sekunden lang sanft genau die Stelle direkt unter ihrem Po."
       },
       "parallelDurationSeconds": 50
     },
@@ -7290,7 +7439,8 @@
         "en": "Stand naked behind the selected player in front of the group, reach around with both hands—one on their chest, one stroking between their thighs—for 45 seconds.",
         "hu": "Állj meztelenül a kijelölt játékos mögé a többiek előtt: az egyik kezeddel a mellbimbóját, a másikkal a combjai közét izgasd 45 másodpercig!",
         "de": "Stell dich nackt hinter die gewählte Person vor der Gruppe: Verwöhne 45 Sekunden lang mit einer Hand ihre Brustwarzen und mit der anderen die Stelle zwischen ihren Schenkeln."
-      }
+      },
+      "parallelDurationSeconds": 90
     },
     {
       "id": "trust-import-008",
@@ -7660,9 +7810,9 @@
         "blindfold"
       ],
       "text": {
-        "en": "Blindfold the selected player with a piece of clothing and slowly caress their naked body from neck to thighs for 45 seconds.",
-        "hu": "Kösd be a kijelölt játékos szemét egy ruhadarabbal, és 45 másodpercig simogasd lassan a meztelen testét a nyakától a combjáig.",
-        "de": "Verbinde der gewählten Person mit einem Kleidungsstück die Augen und streichle 45 Sekunden lang langsam ihren nackten Körper vom Hals bis zu den Oberschenkeln."
+        "hu": "Kösd be a kijelölt játékos szemét, és 45 másodpercig kizárólag a két belső combja felső részét simogasd és csókolgasd lassan.",
+        "en": "Blindfold the selected player and spend 45 seconds slowly kissing and stroking only the upper inside of their thighs.",
+        "de": "Verbinde der gewählten Person die Augen und küsse und streichle 45 Sekunden lang langsam nur die obere Innenseite ihrer Oberschenkel."
       }
     },
     {
@@ -8057,9 +8207,9 @@
         "trio"
       ],
       "text": {
-        "hu": "Hunyja be a szemed, miközben a két melletted lévő játékos egyszerre, finoman végigsimítja a két karodat 20 másodpercig!",
-        "en": "Close your eyes while the two players next to you gently stroke both of your arms simultaneously for 20 seconds!",
-        "de": "Schließe die Augen, während die beiden Personen neben dir 20 Sekunden lang sanft gleichzeitig deine beiden Arme streicheln!"
+        "hu": "Hunyd be a szemed, miközben a két melletted ülő játékos egyszerre, finoman a csuklód belső oldalát és a kézfejedet simogatja 20 másodpercig!",
+        "en": "Close your eyes while the two players next to you gently stroke your inner wrists and hands simultaneously for 20 seconds!",
+        "de": "Schließe die Augen, während die beiden Personen neben dir 20 Sekunden lang sanft gleichzeitig deine Handgelenke und Hände streicheln!"
       }
     },
     {
@@ -8159,6 +8309,1736 @@
         "hu": "Állj a két kijelölt játékos közé: mindkét kezeddel simogasd egyszerre a derekukat vagy a csípőjüket 25 másodpercig!",
         "en": "Stand between the two selected players: gently caress their waist or hips at the same time with both hands for 25 seconds!",
         "de": "Stell dich zwischen die beiden gewählten Personen: streichle 25 Sekunden lang mit beiden Händen gleichzeitig ihre Taille oder Hüften!"
+      }
+    },
+    {
+      "id": "intro-challenge-035",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "lips"
+      ],
+      "text": {
+        "en": "Blindfold yourself! One of the two selected players gives a soft kiss to the side of your neck—guess which one it was!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos közül az egyik ad egy puha puszit a nyakad oldalára – találd ki, melyikük volt!",
+        "de": "Verbinde dir die Augen! Eine der beiden gewählten Personen gibt dir einen sanften Kuss seitlich auf den Hals – rate, wer es war!"
+      }
+    },
+    {
+      "id": "intro-challenge-036",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "hands"
+      ],
+      "text": {
+        "en": "Close your eyes! The two selected players take turns stroking your inner wrist for 10 seconds each—guess the order!",
+        "hu": "Csukd be a szemed! A két kijelölt játékos egymás után 10-10 másodpercig simogatja a csuklód belső oldalát – találd ki a sorrendet!",
+        "de": "Schließe die Augen! Die beiden gewählten Personen streicheln nacheinander je 10 Sekunden lang die Innenseite deines Handgelenks – errate die Reihenfolge!"
+      }
+    },
+    {
+      "id": "intro-challenge-037",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "breath"
+      ],
+      "text": {
+        "en": "Blindfold yourself! A secretly chosen player breathes warmly right behind your ear for 15 seconds—guess who it is without touching!",
+        "hu": "Kösd be a szemed! Egy titokban kiválasztott játékos 15 másodpercig melegen a füled mögé lehel – érintés nélkül találd ki, ki az!",
+        "de": "Verbinde dir die Augen! Eine heimlich gewählte Person haucht 15 Sekunden lang warm hinter dein Ohr – errate ohne Berührung, wer es ist!"
+      }
+    },
+    {
+      "id": "intro-challenge-038",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "spot"
+      ],
+      "text": {
+        "en": "Close your eyes! The selected player touches one exact spot on your neck or shoulder with a fingertip; keeping your eyes closed, find and kiss that exact same spot on them!",
+        "hu": "Csukd be a szemed! A kijelölt játékos egyetlen ujjheggyel megérinti egy ponton a nyakadat vagy a válladat, neked pedig csukott szemmel kell megcsókolnod ugyanazt a pontot az ő testén!",
+        "de": "Schließe die Augen! Die gewählte Person berührt mit der Fingerspitze einen Punkt an deinem Hals oder deiner Schulter – finde und küsse denselben Punkt bei ihr!"
+      }
+    },
+    {
+      "id": "intro-challenge-039",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "earlobe",
+        "touch",
+        "micro"
+      ],
+      "text": {
+        "en": "Gently massage and stroke one of the selected player's earlobes between your thumb and forefinger for 15 seconds while holding eye contact!",
+        "hu": "A hüvelyk- és mutatóujjad között 15 másodpercig finoman masszírozd és simogasd a kijelölt játékos egyik fülcimpáját, miközben a szemébe nézel!",
+        "de": "Massiere und streichle 15 Sekunden lang sanft ein Ohrläppchen der gewählten Person zwischen Daumen und Zeigefinger bei vollem Blickkontakt!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-challenge-040",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "nape",
+        "hair",
+        "micro"
+      ],
+      "text": {
+        "en": "Slide your fingers onto the nape of the selected player's neck right at the hairline, and gently stroke only that small spot for 20 seconds!",
+        "hu": "Csúsztasd az ujjaidat a kijelölt játékos tarkójára közvetlenül a hajvonala alá, és 20 másodpercig csak ezt a kis területet cirógasd!",
+        "de": "Gleite mit den Fingern direkt an den Haaransatz im Nacken der gewählten Person und kraule 20 Sekunden lang nur diese kleine Stelle!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-041",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "collarbone",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Press a slow, 10-second kiss right into the small hollow between the selected player's collarbones!",
+        "hu": "Nyomj egy lassú, 10 másodperces csókot pontosan a kijelölt játékos két kulcscsontja közötti kis mélyedésbe!",
+        "de": "Drücke einen langsamen, 10 Sekunden langen Kuss genau in die kleine Grube zwischen den Schlüsselbeinen der gewählten Person!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-challenge-042",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "palm",
+        "fingers",
+        "micro"
+      ],
+      "text": {
+        "en": "Take one of the selected player's hands and trace slow, ticklish circles right in the center of their palm with a single fingertip for 20 seconds!",
+        "hu": "Fogd meg a kijelölt játékos egyik kezét, és egyetlen ujjheggyel 20 másodpercig csiklandozóan lassan rajzolj köröket a tenyere közepébe!",
+        "de": "Nimm eine Hand der gewählten Person und zeichne 20 Sekunden lang mit einer Fingerspitze langsame Kreise genau in die Mitte ihrer Handfläche!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-043",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "knee",
+        "thigh",
+        "micro"
+      ],
+      "text": {
+        "en": "Sit next to the selected player and use your palm to warm and stroke only the inner side of their knee for 20 seconds!",
+        "hu": "Ülj a kijelölt játékos mellé, és a tenyereddel 20 másodpercig melegítsd és simogasd kizárólag a térde belső oldalát!",
+        "de": "Setz dich neben die gewählte Person und wärme und streichle mit deiner Handfläche 20 Sekunden lang nur die Innenseite ihres Knies!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-044",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "lips",
+        "chin",
+        "micro"
+      ],
+      "text": {
+        "en": "Touch your index finger to the selected player's chin right below their lower lip and stroke that spot for 15 seconds while staring at their mouth!",
+        "hu": "Érintsd a mutatóujjadat a kijelölt játékos állára közvetlenül az alsó ajka alatt, és simogasd meg 15 másodpercig, miközben pár centiről a száját nézed!",
+        "de": "Lege deinen Zeigefinger direkt unter die Unterlippe ans Kinn der gewählten Person und streichle die Stelle 15 Sekunden lang, während du auf ihren Mund schaust!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-challenge-045",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "shoulder",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Stand behind the selected player and place three tiny, slow kisses right on the tip of their left shoulder!",
+        "hu": "Állj a kijelölt játékos mögé, és adj három apró, lassú puszit pontosan a bal vállcsúcsára!",
+        "de": "Stell dich hinter die gewählten Person und gib ihr drei kleine, langsame Küsse genau auf die linke Schulterspitze!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-046",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "ribs",
+        "waist",
+        "micro"
+      ],
+      "text": {
+        "en": "Place both thumbs on the sides of the selected player's waist and massage just those two points in small circles for 20 seconds!",
+        "hu": "Tedd a két hüvelykujjadat a kijelölt játékos derekának két oldalára, és 20 másodpercig kis körökkel masszírozd csak ezt a két pontot!",
+        "de": "Lege beide Daumen seitlich an die Taille der gewählten Person und massiere 20 Sekunden lang nur diese zwei Punkte in kleinen Kreisen!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-047",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "scent"
+      ],
+      "text": {
+        "en": "Blindfold yourself! The two selected players lean within two inches of your face one after the other—guess who was first and second purely by their scent and breath!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egymás után 5 centire hajol az arcodhoz – az illatuk és a leheletük alapján találd ki, ki volt az első és ki a második!",
+        "de": "Verbinde dir die Augen! Die beiden gewählten Personen beugen sich nacheinander dicht an dein Gesicht – errate allein an Duft und Atem die Reihenfolge!"
+      }
+    },
+    {
+      "id": "intro-challenge-048",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "elbow",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Hold the selected player's forearm and press a soft, 10-second kiss right into the crook of their elbow!",
+        "hu": "Fogd meg a kijelölt játékos alkarját, és nyomj egy puha, 10 másodperces csókot pontosan a könyökhajlatába!",
+        "de": "Halte den Unterarm der gewählten Person und drücke einen sanften, 10 Sekunden langen Kuss genau in ihre Armbeuge!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-challenge-049",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "jawline",
+        "breath",
+        "micro"
+      ],
+      "text": {
+        "en": "Lean in to the angle of the selected player's jaw just below their ear, alternating warm breath and light touches with the tip of your nose for 20 seconds!",
+        "hu": "Hajolj a kijelölt játékos állkapcsának szögletéhez a füle alatt, és 20 másodpercig felváltva lehelj rá melegen és érintsd meg az orrod hegyével!",
+        "de": "Beuge dich zum Kieferwinkel unter dem Ohr der gewählten Person und wechsle 20 Sekunden lang zwischen warmem Atem und sanften Berührungen mit der Nasenspitze!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-050",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "spine",
+        "touch",
+        "micro"
+      ],
+      "text": {
+        "en": "Use two fingers for 20 seconds to gently tap and stroke a single palm-sized spot on the selected player's spine between their shoulder blades!",
+        "hu": "Két ujjaddal 20 másodpercig finoman kopogtasd és simogasd a kijelölt játékos gerincének egyetlen tenyérnyi szakaszát a lapockái között!",
+        "de": "Streichle und klopfe 20 Sekunden lang mit zwei Fingern sanft eine kleine Stelle auf der Wirbelsäule zwischen den Schulterblättern der gewählten Person!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-051",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "finger"
+      ],
+      "text": {
+        "en": "Close your eyes! The selected player kisses one of your fingertips, then touches your lips with one of their own fingers—guess which finger it was!",
+        "hu": "Csukd be a szemed! A kijelölt játékos megcsókolja az egyik ujjad begyét – csukott szemmel találd el, melyik ujjával érinti meg utána az ajkadat!",
+        "de": "Schließe die Augen! Die gewählte Person küsst eine deiner Fingerspitzen und berührt dann mit einem ihrer Finger deine Lippen – errate, welcher Finger es war!"
+      }
+    },
+    {
+      "id": "intro-challenge-052",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "hips",
+        "underwear",
+        "micro"
+      ],
+      "text": {
+        "en": "Hook both index fingers into the side straps of the selected player's underwear right at their hip bones, gently tugging them toward you for 20 seconds!",
+        "hu": "Akaszd be a két mutatóujjadat a kijelölt játékos fehérneműjének oldalsó pántjába a csípőcsontjánál, és 20 másodpercig finoman húzogasd magad felé!",
+        "de": "Hake beide Zeigefinger seitlich an den Hüftknochen in den Unterwäschebund der gewählten Person ein und ziehe sie 20 Sekunden lang sanft zu dir heran!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "intro-challenge-053",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "neck",
+        "pulse",
+        "micro"
+      ],
+      "text": {
+        "en": "Find the pulse on the selected player's neck with two fingers, then press a 10-second kiss directly onto that exact beating spot!",
+        "hu": "Keresd meg két ujjaddal a pulzust a kijelölt játékos nyakán, majd pontosan arra a lüktető pontra nyomj egy 10 másodperces csókot!",
+        "de": "Suche mit zwei Fingern den Puls am Hals der gewählten Person und drücke genau auf diesen pochenden Punkt einen 10 Sekunden langen Kuss!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "intro-challenge-054",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "ankle",
+        "calf",
+        "micro"
+      ],
+      "text": {
+        "en": "Sit by the selected player's feet and spend 20 seconds massaging and stroking only their ankle and lower calf with both hands!",
+        "hu": "Ülj a kijelölt játékos lábához, és 20 másodpercig két kézzel simogasd és masszírozd kizárólag a bokáját és a vádlija alsó részét!",
+        "de": "Setz dich zu den Füßen der gewählten Person und massiere und streichle 20 Sekunden lang mit beiden Händen nur ihre Knöchel und untere Wade!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-035",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "kiss"
+      ],
+      "text": {
+        "en": "Blindfold yourself! The two selected players each give you a 5-second kiss on the lips one after the other—guess who kissed you first!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egymás után ad egy-egy 5 másodperces csókot a szádra – találd ki, melyikük csókolt először!",
+        "de": "Verbinde dir die Augen! Die beiden gewählten Personen geben dir nacheinander einen 5 Sekunden langen Kuss auf den Mund – errate, wer zuerst war!"
+      }
+    },
+    {
+      "id": "flirt-challenge-036",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "body-part"
+      ],
+      "text": {
+        "en": "Close your eyes! The selected player guides your lips to a bare spot on their body (e.g., shoulder, hip, forearm)—kiss it and guess which body part it was!",
+        "hu": "Csukd be a szemed! A kijelölt játékos odavezeti az ajkadat a saját testének egy csupasz pontjára (pl. váll, csípő, alkar) – csókold meg, és találd ki, melyik testrészét csókoltad!",
+        "de": "Schließe die Augen! Die gewählte Person führt deine Lippen an eine bloße Stelle ihres Körpers – küsse sie und errate, welches Körperteil es war!"
+      }
+    },
+    {
+      "id": "flirt-challenge-037",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "earlobe"
+      ],
+      "text": {
+        "en": "Blindfold yourself! A secretly chosen player gently nibbles and kisses your earlobe for 15 seconds—guess who it was!",
+        "hu": "Kösd be a szemed! Egy titokban kijelölt játékos 15 másodpercig finoman megharapdálja és megcsókolja a fülcimpádat – találd ki, ki volt az!",
+        "de": "Verbinde dir die Augen! Eine heimlich gewählte Person knabbert 15 Sekunden lang sanft an deinem Ohrläppchen – errate, wer es war!"
+      }
+    },
+    {
+      "id": "flirt-challenge-038",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "thigh"
+      ],
+      "text": {
+        "en": "Blindfold yourself! One selected player strokes your left inner thigh above the knee, and the other strokes your right for 20 seconds—guess who is on which side!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egyike a bal, másika a jobb belső combodat simogatja a térded felett 20 másodpercig – találd ki, ki melyik oldalon van!",
+        "de": "Verbinde dir die Augen! Zwei Personen streicheln 20 Sekunden lang je einen deiner Innenschenkel oberhalb des Knies – errate, wer auf welcher Seite sitzt!"
+      }
+    },
+    {
+      "id": "flirt-challenge-039",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "navel",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Press three slow, warm kisses right around the selected player's navel, focusing entirely on that small palm-sized spot!",
+        "hu": "Nyomj három lassú, meleg csókot közvetlenül a kijelölt játékos köldöke köré, egyetlen tenyérnyi területre koncentrálva!",
+        "de": "Drücke drei langsame, warme Küsse direkt rund um den Bauchnabel der gewählten Person!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-040",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "hip-bone",
+        "bite",
+        "micro"
+      ],
+      "text": {
+        "en": "Kiss and gently nibble one of the selected player's hip bones right along the edge of their underwear for 15 seconds!",
+        "hu": "Csókold meg, majd az ajkaiddal és a fogaiddal 15 másodpercig finoman harapdáld a kijelölt játékos egyik csípőcsontját a fehérneműje szegélyénél!",
+        "de": "Küsse und knabbere 15 Sekunden lang sanft an einem Hüftknochen der gewählten Person direkt am Rand ihrer Unterwäsche!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-041",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "lower-back",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Kneel or sit behind the selected player and spend 20 seconds kissing only the two small dimples on their lower back right above their underwear!",
+        "hu": "Térdelj vagy ülj a kijelölt játékos mögé, és 20 másodpercig csókolgasd kizárólag a dereka alsó részén lévő két kis gödröcskét a fehérneműje felett!",
+        "de": "Setz oder knie dich hinter die gewählte Person und küsse 20 Sekunden lang nur die zwei kleinen Grübchen am unteren Rücken direkt über der Unterwäsche!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-042",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "lips",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Touch the tip of your tongue gently to the seam between the selected player's upper and lower lips for 10 seconds without opening your mouths fully!",
+        "hu": "Érintsd a nyelved hegyét 10 másodpercig finoman a kijelölt játékos felső és alsó ajkának találkozásához anélkül, hogy teljesen kinyitnátok a szátokat!",
+        "de": "Berühre 10 Sekunden lang mit der Zungenspitze sanft die Linie zwischen Ober- und Unterlippe der gewählten Person!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "flirt-challenge-043",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "inner-wrist",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Hold the selected player's wrist and spend 15 seconds alternating soft kisses and touches with the tip of your tongue on their inner wrist!",
+        "hu": "Fogd meg a kijelölt játékos csuklóját, és a csuklója belső oldalát 15 másodpercig felváltva csókold és érintsd meg a nyelved hegyével!",
+        "de": "Halte das Handgelenk der gewählten Person und verwöhne die Innenseite 15 Sekunden lang abwechselnd mit Küssen und deiner Zungenspitze!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-044",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "ribs",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Lift one of the selected player's arms above their head and spend 20 seconds kissing the side of their ribs!",
+        "hu": "Emeld fel a kijelölt játékos egyik karját a feje fölé, és 20 másodpercig csókolgasd az oldalát közvetlenül a bordái felső részénél!",
+        "de": "Hebe einen Arm der gewählten Person über ihren Kopf und küsse 20 Sekunden lang seitlich ihre oberen Rippen!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-045",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "tool"
+      ],
+      "text": {
+        "en": "Close your eyes! The selected player touches your stomach three times—using a fingertip, lips, or nose tip—and you must guess which one it was each time!",
+        "hu": "Csukd be a szemed! A kijelölt játékos háromszor megérinti a hasadat – ujjheggyel, ajakkal vagy orrheggyel –, neked pedig mindháromszor el kell találnod, mivel ért hozzád!",
+        "de": "Schließe die Augen! Die gewählte Person berührt dreimal deinen Bauch – mit Fingerspitze, Lippen oder Nasenspitze – und du musst jedes Mal erraten, womit!"
+      }
+    },
+    {
+      "id": "flirt-challenge-046",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "nape",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Tilt the selected player's head slightly forward and spend 20 seconds kissing and gently sucking the center of the nape of their neck!",
+        "hu": "Hajtsd kicsit előre a kijelölt játékos fejét, és 20 másodpercig csókold és szívogasd finoman a tarkója közepét!",
+        "de": "Neige den Kopf der gewählten Person leicht nach vorn und küsse und sauge 20 Sekunden lang sanft an der Mitte ihres Nackens!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-047",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "inner-knee",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Kneel in front of the selected player and spend 20 seconds placing tiny, teasing kisses exclusively on the inner side of their knee!",
+        "hu": "Térdelj a kijelölt játékos elé, és 20 másodpercig adj apró, csiklandós csókokat kizárólag a térde belső oldalára!",
+        "de": "Knie dich vor die gewählte Person und gib ihr 20 Sekunden lang kleine, neckende Küsse nur auf die Innenseite ihres Knies!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-048",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "chest",
+        "sternum",
+        "micro"
+      ],
+      "text": {
+        "en": "Press your lips right to the center of the selected player's chest (their sternum) and spend 20 seconds pampering that single spot with tiny kisses and warm breath!",
+        "hu": "Nyomd az ajkaidat pontosan a kijelölt játékos mellkasának közepére (a szegycsontjára), és 20 másodpercig apró csókokkal és forró lehelettel kényeztesd ezt az egy pontot!",
+        "de": "Drücke deine Lippen genau auf die Mitte der Brust der gewählten Person und verwöhne diesen einen Punkt 20 Sekunden lang mit kleinen Küssen und warmem Atem!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-049",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "glute-curve",
+        "squeeze",
+        "micro"
+      ],
+      "text": {
+        "en": "Place both hands on the lower curve of the selected player's glutes (where they meet the thighs) and gently massage just that line for 20 seconds!",
+        "hu": "Tedd mindkét kezed a kijelölt játékos fenekének alsó ívére (ahol a combjával találkozik), és 20 másodpercig finoman masszírozd csak ezt a vonalat!",
+        "de": "Lege beide Hände an die untere Rundung des Pos der gewählten Person (am Übergang zum Schenkel) und massiere 20 Sekunden lang nur diese Linie!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-050",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 15,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "chin",
+        "bite",
+        "micro"
+      ],
+      "text": {
+        "en": "Kiss the selected player's chin, then gently catch the skin right below their lower lip between your teeth for 10 seconds!",
+        "hu": "Csókold meg a kijelölt játékos állát, majd finoman fogd a fogaid közé az alsó ajka alatti bőrt 10 másodpercre!",
+        "de": "Küsse das Kinn der gewählten Person und fasse die Haut direkt unter ihrer Unterlippe 10 Sekunden lang ganz sanft mit den Zähnen!"
+      },
+      "parallelDurationSeconds": 30
+    },
+    {
+      "id": "flirt-challenge-051",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "collarbone",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Use the tip of your tongue to trace slow circles on the inner end of the selected player's right collarbone for 15 seconds!",
+        "hu": "A nyelved hegyével rajzolj lassú köröket a kijelölt játékos jobb kulcscsontjának belső végére 15 másodpercig!",
+        "de": "Zeichne 15 Sekunden lang mit der Zungenspitze langsame Kreise auf das innere Ende des rechten Schlüsselbeins der gewählten Person!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-052",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "hands"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Feel the hands and wrists of two players and identify who is who purely by touch!",
+        "hu": "Kösd be a szemed! Tapogasd végig két játékos kézfejét és csuklóját, és pusztán az érintésük alapján mondd meg, melyik kié!",
+        "de": "Verbinde dir die Augen! Ertaste die Hände und Handgelenke von zwei Personen und erkenne allein durch Fühlen, wer wer ist!"
+      }
+    },
+    {
+      "id": "flirt-challenge-053",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "underwear-edge",
+        "fingers",
+        "micro"
+      ],
+      "text": {
+        "en": "Use two fingers for 20 seconds to stroke back and forth along the 4-inch strip of lower belly right where the front of the selected player's underwear meets their skin!",
+        "hu": "Két ujjaddal 20 másodpercig simogasd oda-vissza azt a 10 centis szakaszt a kijelölt játékos alhasán, ahol a fehérneműje elöl a bőréhez ér!",
+        "de": "Streichle 20 Sekunden lang mit zwei Fingern genau den schmalen Streifen am Unterbauch entlang, wo der vordere Unterwäschebund der gewählten Person auf der Haut liegt!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "flirt-challenge-054",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "ear",
+        "whisper",
+        "micro"
+      ],
+      "text": {
+        "en": "Press your lips directly into the small hollow right beneath the selected player's earlobe and hold a slow, seductive kiss there for 15 seconds!",
+        "hu": "Tapaszd az ajkaidat közvetlenül a kijelölt játékos fülcimpája alatti kis mélyedésre, és 15 másodpercig ott tarts egy halk, csábító csókot!",
+        "de": "Drücke deine Lippen genau in die kleine Kuhle direkt unter dem Ohrläppchen der gewählten Person und halte dort 15 Sekunden lang einen sanften Kuss!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-031",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "collarbone"
+      ],
+      "text": {
+        "en": "Blindfold yourself! The two selected players take turns kissing and licking the small hollow above your collarbone for 10 seconds each—guess who went first!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egymás után 10-10 másodpercig csókolja és nyalja a kulcscsontod feletti kis mélyedést – találd ki, melyikük volt az első!",
+        "de": "Verbinde dir die Augen! Die beiden gewählten Personen küssen und lecken nacheinander je 10 Sekunden lang die Grube über deinem Schlüsselbein – errate, wer zuerst war!"
+      }
+    },
+    {
+      "id": "spark-challenge-032",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "inner-thigh"
+      ],
+      "text": {
+        "en": "Blindfold yourself! A secretly chosen player places warm kisses on the middle of your inner thigh for 15 seconds—guess who it is purely from the feel of their lips!",
+        "hu": "Kösd be a szemed! Egy titokban kiválasztott játékos 15 másodpercig meleg csókokat ad a belső combod közepére – pusztán az ajkai érintéséből találd ki, ki az!",
+        "de": "Verbinde dir die Augen! Eine heimlich gewählte Person küsst 15 Sekunden lang die Mitte deines Innenschenkels – errate allein an den Lippen, wer es ist!"
+      }
+    },
+    {
+      "id": "spark-challenge-033",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "spot"
+      ],
+      "text": {
+        "en": "Close your eyes! The selected player places a single kiss on your stomach or hip; keeping your eyes closed, find and kiss that exact same spot on their body!",
+        "hu": "Csukd be a szemed! A kijelölt játékos egyetlen csókot nyom a hasadra vagy a csípődre, neked pedig csukott szemmel kell pontosan ugyanarra a pontra csókot adnod az ő testén!",
+        "de": "Schließe die Augen! Die gewählte Person gibt dir einen Kuss auf Bauch oder Hüfte – finde und küsse mit geschlossenen Augen genau dieselbe Stelle bei ihr!"
+      }
+    },
+    {
+      "id": "spark-challenge-034",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "waist"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Two players stand beside you, one kissing your left hip bone and the other your right for 15 seconds—guess who is on which side!",
+        "hu": "Kösd be a szemed! Két játékos egyszerre áll melléd: az egyik a bal, a másik a jobb csípőcsontodat csókolgatja 15 másodpercig – találd ki, ki melyik oldalon van!",
+        "de": "Verbinde dir die Augen! Zwei Personen küssen 15 Sekunden lang gleichzeitig je einen deiner Hüftknochen – errate, wer auf welcher Seite ist!"
+      }
+    },
+    {
+      "id": "spark-challenge-035",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "under-breast",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 20 seconds placing slow, warm kisses exclusively along the curve right beneath the selected player's chest!",
+        "hu": "20 másodpercen keresztül adj lassú, forró csókokat kizárólag a kijelölt játékos mellkasa alatti ívre (közvetlenül a mellkas alsó vonalára)!",
+        "de": "Gib der gewählten Person 20 Sekunden lang langsame, warme Küsse gezielt nur auf die Linie direkt unterhalb ihrer Brust!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-036",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "hip-crease",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Slide the side strap of the selected player's underwear aside by an inch and spend 20 seconds teasing that exact spot on their hip with the tip of your tongue!",
+        "hu": "Húzd félre egy ujjnyi szélességben a kijelölt játékos fehérneműjének oldalsó pántját, és 20 másodpercig a nyelved hegyével kényeztesd az alatta lévő csípőpontot!",
+        "de": "Schiebe den seitlichen Bund der Unterwäsche der gewählten Person ein Stück beiseite und reize genau diese Stelle an der Hüfte 20 Sekunden lang mit der Zungenspitze!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-037",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "glute-dimple",
+        "bite",
+        "micro"
+      ],
+      "text": {
+        "en": "Pull the back of the selected player's underwear down an inch and spend 20 seconds kissing and gently nibbling the base of their spine right above their glutes!",
+        "hu": "Húzd le két centivel hátul a kijelölt játékos fehérneműjét, és 20 másodpercig csókold, majd finoman harapdáld a gerince alsó végét közvetlenül a feneke felett!",
+        "de": "Ziehe die Unterwäsche der gewählten Person hinten ein kleines Stück tiefer und küsse und knabbere 20 Sekunden lang sanft am unteren Ende ihrer Wirbelsäule!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-038",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "inner-thigh",
+        "breath",
+        "micro"
+      ],
+      "text": {
+        "en": "Kneel between the selected player's legs and spend 20 seconds alternating warm breath and tiny kisses on the center of their left inner thigh!",
+        "hu": "Térdelj a kijelölt játékos lábai közé, és 20 másodpercig felváltva lehelj forrón és adj apró csókokat a bal belső combja közepére!",
+        "de": "Knie dich zwischen die Beine der gewählten Person und verwöhne 20 Sekunden lang die Mitte ihres linken Innenschenkels abwechselnd mit heißem Atem und kleinen Küssen!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-039",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "ear",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 20 seconds teasing only one of the selected player's earlobes and the sensitive spot right behind their ear using your lips and tongue tip!",
+        "hu": "20 másodpercen keresztül kizárólag a kijelölt játékos egyik fülcimpáját és a füle mögötti érzékeny kis pontot izgasd a nyelved hegyével és az ajkaiddal!",
+        "de": "Reize 20 Sekunden lang mit Lippen und Zungenspitze gezielt nur ein Ohrläppchen und die empfindliche Stelle direkt hinter dem Ohr der gewählten Person!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-040",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "torso"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Touch and feel a secretly chosen player's bare shoulders and collarbone for 15 seconds, then guess who is standing in front of you!",
+        "hu": "Kösd be a szemed! Tapogasd meg egy titokban kijelölt játékos csupasz vállát és kulcscsontját 15 másodpercig, és találd ki, ki áll előtted!",
+        "de": "Verbinde dir die Augen! Ertaste 15 Sekunden lang die bloßen Schultern und das Schlüsselbein einer heimlich gewählten Person und errate, wer vor dir steht!"
+      }
+    },
+    {
+      "id": "spark-challenge-041",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "navel-below",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Pull the front of the selected player's underwear down an inch and spend 20 seconds kissing only the small triangle of skin right below their navel!",
+        "hu": "Húzd le elöl két centivel a kijelölt játékos fehérneműjét, és 20 másodpercig csókolgasd kizárólag a köldöke alatti kis háromszöget!",
+        "de": "Ziehe den vorderen Bund der Unterwäsche der gewählten Person ein Stück tiefer und küsse 20 Sekunden lang nur die kleine Fläche direkt unter dem Bauchnabel!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-042",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "neck",
+        "suck",
+        "micro"
+      ],
+      "text": {
+        "en": "Pick a single coin-sized spot on the side of the selected player's neck and spend 20 seconds kissing, licking, and sucking only that spot!",
+        "hu": "Válassz ki egyetlen érme nagyságú pontot a kijelölt játékos nyakának oldalán, és 20 másodpercig csókold, nyald és szívogasd csak ezt a pontot!",
+        "de": "Wähle eine münzgroße Stelle seitlich am Hals der gewählten Person und küsse, lecke und sauge 20 Sekunden lang nur an diesem einen Punkt!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-043",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "glute-fold",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Have the selected player lie on their stomach and spend 20 seconds kissing and gently biting only the crease where their right glute meets their thigh!",
+        "hu": "Hasaljon le a kijelölt játékos: 20 másodpercig csókold és finoman harapdáld kizárólag azt a vonalat, ahol a jobb farpofája a combjával találkozik!",
+        "de": "Lass die gewählte Person sich auf den Bauch legen und küsse und knabbere 20 Sekunden lang nur an der Falte zwischen rechter Pobacke und Oberschenkel!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-044",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "french-kiss"
+      ],
+      "text": {
+        "en": "Blindfold yourself! A secretly chosen player shares a 10-second French kiss with you—keep your eyes covered and name who it was!",
+        "hu": "Kösd be a szemed! Egy titokban kiválasztott játékos 10 másodpercig nyelvvel megcsókol – amikor vége, csukott szemmel mondd meg, ki volt az!",
+        "de": "Verbinde dir die Augen! Eine heimlich gewählte Person gibt dir einen 10 Sekunden langen Zungenkuss – errate mit verbundenen Augen, wer es war!"
+      }
+    },
+    {
+      "id": "spark-challenge-045",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "chest",
+        "nipples",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 20 seconds teasing just one of the selected player's nipples and the skin immediately around it using a single fingertip and your warm breath!",
+        "hu": "20 másodpercen keresztül egyetlen ujjheggyel és a forró leheleteddel izgasd a kijelölt játékos egyik mellbimbóját és a közvetlenül körülötte lévő bőrt!",
+        "de": "Reize 20 Sekunden lang mit einer einzigen Fingerspitze und deinem warmen Atem gezielt nur eine Brustwarze der gewählten Person!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-046",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "waist",
+        "bite",
+        "micro"
+      ],
+      "text": {
+        "en": "Kneel beside the selected player and spend 20 seconds pampering the curve of their waist right above the hip bone with your lips and tongue!",
+        "hu": "Térdelj a kijelölt játékos mellé, és 20 másodpercig az ajkaiddal és a nyelveddel kényeztesd az oldalsó derékívét közvetlenül a csípőcsontja felett!",
+        "de": "Knie dich neben die gewählte Person und verwöhne 20 Sekunden lang mit Lippen und Zunge die Taillenrundung direkt über dem Hüftknochen!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-047",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "fingers",
+        "suck",
+        "micro"
+      ],
+      "text": {
+        "en": "Take just the tips of the selected player's index and middle fingers into your mouth, swirling your tongue around them and sucking gently for 20 seconds!",
+        "hu": "Vedd a szádba a kijelölt játékos mutató- és középső ujjának csak az első ujjpercét, és 20 másodpercig a nyelveddel körözve szívogasd!",
+        "de": "Nimm nur die Kuppen von Zeige- und Mittelfinger der gewählten Person in den Mund und umkreise und sauge sie 20 Sekunden lang mit der Zunge!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-048",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "hips"
+      ],
+      "text": {
+        "en": "Blindfold yourself! A secretly chosen player presses against your back and holds your hips with both hands for 15 seconds—guess who is behind you!",
+        "hu": "Kösd be a szemed! Egy titokban kiválasztott játékos hátulról hozzád simul, és két kézzel átfogja a csípődet 15 másodpercre – találd ki, ki áll mögötted!",
+        "de": "Verbinde dir die Augen! Eine heimlich gewählte Person schmiegt sich von hinten an dich und umfasst 15 Sekunden lang deine Hüften – errate, wer hinter dir steht!"
+      }
+    },
+    {
+      "id": "spark-challenge-049",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "knee-back",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Have the selected player lie on their stomach and spend 20 seconds kissing and tickling only the back of one of their knees with the tip of your tongue!",
+        "hu": "Hasaljon le a kijelölt játékos: 20 másodpercig csókold és a nyelved hegyével csiklandozd kizárólag az egyik térdhajlatát!",
+        "de": "Lass die gewählte Person auf dem Bauch liegen und küsse und kitzle 20 Sekunden lang mit der Zungenspitze nur eine ihrer Kniekehlen!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "spark-challenge-050",
+      "kind": "challenge",
+      "intensity": 3,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 20,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "lips",
+        "bite",
+        "micro"
+      ],
+      "text": {
+        "en": "Lean in close to the selected player and spend 15 seconds kissing, sucking, and gently nibbling exclusively on their lower lip!",
+        "hu": "Hajolj egészen közel a kijelölt játékoshoz, és 15 másodpercig kizárólag az alsó ajkát csókolgasd, szívogasd és harapdáld finoman!",
+        "de": "Beuge dich ganz nah zur gewählten Person und küsse, sauge und knabbere 15 Sekunden lang ausschließlich an ihrer Unterlippe!"
+      },
+      "parallelDurationSeconds": 40
+    },
+    {
+      "id": "connection-challenge-031",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 30,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "nipples"
+      ],
+      "text": {
+        "en": "Blindfold yourself! One selected player kisses and licks your left nipple while the other pleasures your right for 20 seconds—guess who was on which side!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egyike a bal, másika a jobb mellbimbódat csókolja és izgatja a nyelvével 20 másodpercig – találd ki, ki melyik oldalon volt!",
+        "de": "Verbinde dir die Augen! Zwei Personen verwöhnen 20 Sekunden lang gleichzeitig je eine deiner Brustwarzen mit Lippen und Zunge – errate, wer auf welcher Seite war!"
+      }
+    },
+    {
+      "id": "connection-challenge-032",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 30,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "ass"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Feel the bare glutes of two selected players for 15 seconds each and identify who is who purely by touch!",
+        "hu": "Kösd be a szemed! Tapogasd meg két játékos csupasz fenekét 15-15 másodpercig, és pusztán az érintés alapján mondd meg, melyik kié!",
+        "de": "Verbinde dir die Augen! Ertaste je 15 Sekunden lang den nackten Po von zwei gewählten Personen und erkenne allein durch Fühlen, wer wer ist!"
+      }
+    },
+    {
+      "id": "connection-challenge-033",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 30,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "thigh-kiss"
+      ],
+      "text": {
+        "en": "Blindfold yourself! The two selected players take turns kissing and licking the very top of your inner thigh crease for 15 seconds each—guess the order!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egymás után 15-15 másodpercig a belső combod legfelső részét (a combhajlatodat) csókolja és nyalja – találd ki a sorrendet!",
+        "de": "Verbinde dir die Augen! Zwei Personen küssen und lecken nacheinander je 15 Sekunden lang deine oberste Oberschenkelinnenseite – errate die Reihenfolge!"
+      }
+    },
+    {
+      "id": "connection-challenge-034",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "ice-tongue"
+      ],
+      "text": {
+        "en": "Close your eyes! The selected player touches your nipple or groin crease three times—using a wet fingertip, tongue tip, or lips—guess which one it was each time!",
+        "hu": "Csukd be a szemed! A kijelölt játékos háromszor megérinti a mellbimbódat vagy a combhajlatodat – nedves ujjheggyel, nyelvheggyel vagy ajakkal –, találd el mindháromszor, melyik volt!",
+        "de": "Schließe die Augen! Die gewählte Person berührt dreimal deine Brustwarze oder Hüftbeuge mit feuchtem Finger, Zungenspitze oder Lippen – errate jedes Mal, was es war!"
+      }
+    },
+    {
+      "id": "connection-challenge-035",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "nipples",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Focus exclusively on one of the selected player's nipples for 30 seconds, flicking it rapidly with the tip of your tongue and sucking gently!",
+        "hu": "30 másodpercen keresztül kizárólag a kijelölt játékos egyik mellbimbójára koncentrálj: a nyelved hegyével gyors köröket leírva és finoman szívogatva izgasd!",
+        "de": "Konzentriere dich 30 Sekunden lang ausschließlich auf eine Brustwarze der gewählten Person mit schnellen Zungenschlägen und sanftem Saugen!"
+      },
+      "parallelDurationSeconds": 60
+    },
+    {
+      "id": "connection-challenge-036",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "groin-crease",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Kneel between the selected player's parted legs and spend 30 seconds kissing and licking exclusively their right groin crease right next to their intimate area!",
+        "hu": "Térdelj a kijelölt játékos széttárt lábai közé, és 30 másodpercig kizárólag a jobb combhajlatát (közvetlenül az intim zónája mellett) csókold és nyald!",
+        "de": "Knie dich zwischen die Beine der gewählten Person und küsse und lecke 30 Sekunden lang gezielt nur ihre rechte Leiste direkt neben dem Intimbereich!"
+      },
+      "parallelDurationSeconds": 60
+    },
+    {
+      "id": "connection-challenge-037",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "glutes",
+        "bite",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 25 seconds kissing, licking, and gently biting only the lower curve of the selected player's bare glutes!",
+        "hu": "25 másodpercen keresztül csókold, nyald és finoman harapdáld kizárólag a kijelölt játékos csupasz fenekének alsó ívét!",
+        "de": "Küsse, lecke und beiße 25 Sekunden lang sanft ausschließlich die untere Rundung des nackten Pos der gewählten Person!"
+      },
+      "parallelDurationSeconds": 60
+    },
+    {
+      "id": "connection-challenge-038",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 30,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "chest"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Caress and feel the bare chests of two players for 15 seconds each, then guess who is who!",
+        "hu": "Kösd be a szemed! Tapogasd végig két játékos csupasz mellkasát 15-15 másodpercig, és találd ki, melyik kié!",
+        "de": "Verbinde dir die Augen! Streichle je 15 Sekunden lang die nackte Brust von zwei Personen und errate, wer wer ist!"
+      }
+    },
+    {
+      "id": "connection-challenge-039",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "pubic-bone",
+        "kiss",
+        "micro"
+      ],
+      "text": {
+        "en": "Pull the selected player's underwear down slightly and spend 30 seconds kissing and licking only the lowest spot of their belly right above their intimate area!",
+        "hu": "Húzd le a kijelölt játékos fehérneműjét pár centivel, és 30 másodpercig kizárólag az alhasa legalsó pontját (közvetlenül az intim része felett) csókold és nyald!",
+        "de": "Ziehe die Unterwäsche der gewählten Person ein Stück tiefer und küsse und lecke 30 Sekunden lang gezielt nur die tiefste Stelle des Unterbauchs direkt über dem Intimbereich!"
+      },
+      "parallelDurationSeconds": 60
+    },
+    {
+      "id": "connection-challenge-040",
+      "kind": "challenge",
+      "intensity": 4,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 30,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "inner-thigh-top",
+        "suck",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 30 seconds kissing and sucking the very top of the selected player's inner thigh so closely that your warm breath hits their intimate area!",
+        "hu": "30 másodpercen keresztül csókold és szívogasd a kijelölt játékos belső combjának legfelső pontját úgy, hogy a forró leheleted közben az intim részét érje!",
+        "de": "Küsse und sauge 30 Sekunden lang ganz oben an der Oberschenkelinnenseite der gewählten Person, sodass dein heißer Atem ihren Intimbereich streift!"
+      },
+      "parallelDurationSeconds": 60
+    },
+    {
+      "id": "trust-challenge-031",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 40,
+      "parallelSafe": false,
+      "category": "oral",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "oral"
+      ],
+      "text": {
+        "en": "Blindfold yourself! The two selected players take turns pleasuring you between your legs with their mouth and tongue for 20 seconds each—guess who was first and second!",
+        "hu": "Kösd be a szemed! A két kijelölt játékos egymás után 20-20 másodpercig a szájával és a nyelvével kényezteti a lábaid közét – találd ki, ki volt az első és ki a második!",
+        "de": "Verbinde dir die Augen! Zwei Personen verwöhnen dich nacheinander je 20 Sekunden lang mit Mund und Zunge zwischen den Beinen – errate die Reihenfolge!"
+      }
+    },
+    {
+      "id": "trust-challenge-032",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 40,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "fingers"
+      ],
+      "text": {
+        "en": "Blindfold yourself! A secretly chosen player stimulates your most sensitive intimate spot with their fingers for 30 seconds—guess who it is from their touch!",
+        "hu": "Kösd be a szemed! Egy titokban kiválasztott játékos 30 másodpercig az ujjaival izgatja a legérzékenyebb intim pontodat – találd ki a mozdulataiból, ki az!",
+        "de": "Verbinde dir die Augen! Eine heimlich gewählte Person verwöhnt 30 Sekunden lang mit den Fingern deine intimste Stelle – errate allein an der Berührung, wer es ist!"
+      }
+    },
+    {
+      "id": "trust-challenge-033",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 45,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "dual"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Two players pleasure you simultaneously for 30 seconds—one sucking your nipples, the other touching you between your legs—guess who was where!",
+        "hu": "Kösd be a szemed! Két játékos egyszerre izgat 30 másodpercig: az egyik a mellbimbódat szívogatja, a másik a lábaid között kényeztet – találd ki, melyikük hol volt!",
+        "de": "Verbinde dir die Augen! Zwei Personen verwöhnen dich 30 Sekunden lang gleichzeitig – eine an den Brustwarzen, eine zwischen den Beinen – errate, wer wo war!"
+      }
+    },
+    {
+      "id": "trust-challenge-034",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 45,
+      "parallelSafe": true,
+      "category": "oral",
+      "role": "give",
+      "tags": [
+        "oral",
+        "tongue",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 45 seconds using only the very tip of your tongue in tiny, rapid circles on the selected player's single most sensitive intimate spot!",
+        "hu": "45 másodpercen keresztül kizárólag a nyelved hegyével, apró, gyors körökkel izgasd a kijelölt játékos legérzékenyebb intim pontját!",
+        "de": "Stimuliere 45 Sekunden lang ausschließlich mit der Zungenspitze in kleinen, schnellen Kreisen den empfindlichsten Punkt im Intimbereich der gewählten Person!"
+      },
+      "parallelDurationSeconds": 90
+    },
+    {
+      "id": "trust-challenge-035",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 45,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "fingers",
+        "micro",
+        "spot"
+      ],
+      "text": {
+        "en": "Have the selected player point to their single most sensitive intimate spot, then spend 45 seconds stimulating exclusively that exact spot with two wet fingers!",
+        "hu": "Kérd meg a kijelölt játékost, hogy mutasson rá az intim zónája legérzékenyebb pontjára, majd 45 másodpercig két nedves ujjaddal kizárólag azt az egy pontot izgasd!",
+        "de": "Lass dir von der gewählten Person ihre empfindlichste Stelle im Intimbereich zeigen und stimuliere 45 Sekunden lang mit zwei feuchten Fingern genau diesen Punkt!"
+      },
+      "parallelDurationSeconds": 90
+    },
+    {
+      "id": "trust-challenge-036",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 40,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "straddle"
+      ],
+      "text": {
+        "en": "Blindfold yourself and lie on your back! A secretly chosen player straddles your hips naked and grinds on you for 25 seconds—guess who is riding you!",
+        "hu": "Kösd be a szemed és feküdj hanyatt! Egy titokban kiválasztott játékos meztelenül a csípődre ül lovaglóülésben, és 25 másodpercig mozog rajtad – találd ki, ki ül rajtad!",
+        "de": "Verbinde dir die Augen und leg dich auf den Rücken! Eine heimlich gewählte Person setzt sich nackt auf deine Hüften und bewegt sich 25 Sekunden lang auf dir – errate, wer es ist!"
+      }
+    },
+    {
+      "id": "trust-challenge-037",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 45,
+      "parallelSafe": true,
+      "category": "oral",
+      "role": "give",
+      "tags": [
+        "oral",
+        "lips",
+        "micro"
+      ],
+      "text": {
+        "en": "Kneel between the selected player's legs and spend 45 seconds using your lips to kiss and gently suck their most intimate spot!",
+        "hu": "Térdelj a kijelölt játékos lábai közé, és 45 másodpercig kizárólag az ajkaiddal csókold és finoman szívogasd a legintimebb pontját!",
+        "de": "Knie dich zwischen die Beine der gewählten Person und küsse und sauge 45 Sekunden lang gezielt ihren intimsten Punkt!"
+      },
+      "parallelDurationSeconds": 90
+    },
+    {
+      "id": "trust-challenge-038",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 40,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "blindfold",
+        "guess",
+        "intimate"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Touch and caress the selected player's intimate zone for 20 seconds while they whisper in your ear which exact motion feels best!",
+        "hu": "Kösd be a szemed! Érintsd meg és simogasd meg a kijelölt játékos intim zónáját 20 másodpercig, miközben ő a füledbe súgja, melyik mozdulat esik neki a legjobban!",
+        "de": "Verbinde dir die Augen! Berühre und streichle 20 Sekunden lang den Intimbereich der gewählten Person, während sie dir zuflüstert, welche Bewegung sich am besten anfühlt!"
+      }
+    },
+    {
+      "id": "trust-challenge-039",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 2,
+      "participantCount": 2,
+      "durationSeconds": 45,
+      "parallelSafe": true,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "nipples",
+        "fingers",
+        "micro"
+      ],
+      "text": {
+        "en": "Spend 45 seconds gently pinching one of the selected player's nipples with two fingers while your other hand strokes a single spot on their intimate area!",
+        "hu": "45 másodpercen keresztül az egyik kezed két ujjával a kijelölt játékos mellbimbóját csipkedd, a másik kezeddel pedig az intim pontját simogasd egyetlen helyen!",
+        "de": "Zupfe 45 Sekunden lang sanft an einer Brustwarze der gewählten Person, während deine andere Hand gezielt einen Punkt in ihrem Intimbereich streichelt!"
+      },
+      "parallelDurationSeconds": 90
+    },
+    {
+      "id": "trust-challenge-040",
+      "kind": "challenge",
+      "intensity": 5,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 45,
+      "parallelSafe": false,
+      "category": "oral",
+      "role": "receive",
+      "tags": [
+        "blindfold",
+        "guess",
+        "kiss-oral"
+      ],
+      "text": {
+        "en": "Blindfold yourself! Two players pleasure you for 30 seconds (one on your lips, one between your legs), then swap places for 15 seconds—guess who started where!",
+        "hu": "Kösd be a szemed! Két játékos 30 másodpercig kényeztet, majd helyet cserélnek és újabb 15 másodpercig folytatják (egyik a szádon, másik a lábaid között) – találd ki, ki hol kezdett!",
+        "de": "Verbinde dir die Augen! Zwei Personen verwöhnen dich 30 Sekunden lang (an Mund und zwischen den Beinen) und tauschen dann für 15 Sekunden die Plätze – errate, wer wo begonnen hat!"
       }
     },
     {
