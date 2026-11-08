@@ -1,0 +1,21 @@
+export const feedbackMessages = [
+ ['Kérdés', 'Question', 'Frage'],
+ ['Feladat', 'Challenge', 'Aufgabe'],
+ ['VISSZAJELZÉS', 'FEEDBACK', 'FEEDBACK'],
+ ['Hibajelzés', 'Report an issue', 'Problem melden'],
+ ['Hibajelzés erről a kártyáról', 'Report a problem with this card', 'Problem mit dieser Karte melden'],
+ ['Új kérdés vagy feladat javaslata', 'Suggest a question or challenge', 'Frage oder Aufgabe vorschlagen'],
+ ['Jelezd, ha gond van ezzel a kártyával. A leírás opcionális.', 'Report a problem with this card. A description is optional.', 'Melde ein Problem mit dieser Karte. Eine Beschreibung ist optional.'],
+ ['Írd le az ötletedet. A javaslat ellenőrzés után kerülhet a játékba.', 'Describe your idea. Suggestions may be added after review.', 'Beschreibe deine Idee. Vorschläge können nach Prüfung ins Spiel aufgenommen werden.'],
+ ['Leírás (opcionális)', 'Description (optional)', 'Beschreibung (optional)'],
+ ['Javaslat leírása', 'Describe your suggestion', 'Beschreibung des Vorschlags'],
+ ['Javasolt szint', 'Suggested level', 'Vorgeschlagene Stufe'],
+ ['A megjegyzés online tárolódik. Ne írj bele nevet vagy más személyes adatot. Játékosadatokat és válaszokat nem küldünk.', 'Your comment is stored online. Please omit names and personal information. Player data and answers are not sent.', 'Dein Kommentar wird online gespeichert. Bitte keine Namen oder persönlichen Daten angeben. Spielerdaten und Antworten werden nicht gesendet.'],
+ ['Köszönjük, megérkezett a visszajelzésed.', 'Thank you, your feedback was received.', 'Danke, dein Feedback ist angekommen.'],
+ ['Beküldés', 'Submit', 'Absenden'],
+ ['Küldés…', 'Sending…', 'Wird gesendet…'],
+ ['Az online visszajelzés még nincs beállítva.', 'Online feedback has not been configured yet.', 'Online-Feedback ist noch nicht eingerichtet.'],
+ ['A beküldés nem sikerült. Próbáld újra; a szöveg megmaradt.', 'Submission failed. Try again; your text has been kept.', 'Senden fehlgeschlagen. Versuche es erneut; dein Text bleibt erhalten.'],
+ ['A játék offline működik. A visszajelzések és javaslatok beküldéséhez internet szükséges.', 'The game works offline. Sending feedback and suggestions requires internet access.', 'Das Spiel funktioniert offline. Zum Senden von Feedback und Vorschlägen ist Internet erforderlich.'],
+ ['Érvénytelen visszajelzés.', 'Invalid feedback.', 'Ungültiges Feedback.']
+];

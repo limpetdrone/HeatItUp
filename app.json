@@ -16,7 +16,9 @@
       "bundleIdentifier": "com.limpetdrone.heatitup",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
-      }
+      },
+      "buildNumber": "9",
+      "appleTeamId": "6Z45F3A37G"
     },
     "android": {
       "adaptiveIcon": {
@@ -47,11 +49,14 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/splash.png",
+          "image": "./assets/icon.png",
           "resizeMode": "contain",
-          "backgroundColor": "#130D18"
+          "backgroundColor": "#130D18",
+          "imageWidth": 300
         }
-      ]
+      ],
+      "./plugins/with-ios-pod-signing",
+      "./plugins/with-ios-scenes"
     ],
     "extra": {
       "eas": {

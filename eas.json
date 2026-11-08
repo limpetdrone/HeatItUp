@@ -1,5 +1,8 @@
 {
-  "cli": { "version": ">= 16.0.0", "appVersionSource": "remote" },
+  "cli": {
+    "version": ">= 22.2.0",
+    "appVersionSource": "remote"
+  },
   "build": {
     "simulator": {
       "developmentClient": true,
@@ -8,15 +11,30 @@
         "simulator": true
       }
     },
-    "preview": { "distribution": "internal", "android": { "buildType": "apk" }, "ios": { "simulator": true } },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      }
+    },
     "production": {
       "autoIncrement": true,
-      "android": { "buildType": "app-bundle" }
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "uploadSourceMaps": true
     }
   },
   "submit": {
     "production": {
-      "android": { "track": "alpha", "releaseStatus": "draft" },
+      "android": {
+        "serviceAccountKeyPath": "$GOOGLE_SERVICE_ACCOUNT_KEY_PATH",
+        "track": "alpha",
+        "releaseStatus": "draft"
+      },
       "ios": {
         "ascAppId": "6832289493"
       }

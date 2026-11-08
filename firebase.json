@@ -1,0 +1,3 @@
+{
+  "firestore": [{ "database": "heatitup-feedback", "rules": "firebase/firestore.rules" }]
+}

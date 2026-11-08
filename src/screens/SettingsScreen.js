@@ -6,7 +6,7 @@ import ScreenShell from '../components/ScreenShell';
 import ActionButton from '../components/ActionButton';
 import { ui } from '../theme';
 
-export default function SettingsScreen({ onBack }) {
+export default function SettingsScreen({ onBack, onSuggest }) {
   const { preference, setPreference, error } = useLanguage();
 
   return (
@@ -33,10 +33,12 @@ export default function SettingsScreen({ onBack }) {
         {!!error && <Text style={ui.error}>{error}</Text>}
       </View>
 
+      <ActionButton title="Új kérdés vagy feladat javaslata" secondary onPress={onSuggest} />
+
       <View style={ui.panel}>
         <Text style={ui.heading}>Alkalmazás információ</Text>
         <Text style={ui.text}>Heat It Up · v1.0.0</Text>
-        <Text style={ui.muted}>100% Offline és privát működés. Nincs adatgyűjtés vagy felhős tárolás.</Text>
+        <Text style={ui.muted}>A játék offline működik. A visszajelzések és javaslatok beküldéséhez internet szükséges.</Text>
       </View>
 
       <ActionButton title="Vissza" onPress={onBack} />

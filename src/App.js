@@ -1,3 +1,4 @@
+import { useStartupInteractive } from './monitoring/observe';
 import { Text } from "./i18n/ui";
 import React, { useState, useEffect, useRef } from 'react';
 import { BackHandler, Platform, View, Modal } from 'react-native';
@@ -18,6 +19,7 @@ import SummaryScreen from './screens/SummaryScreen';
 import PlayersScreen from './screens/PlayersScreen';
 import PresetsScreen from './screens/PresetsScreen';
 import SettingsScreen from './screens/SettingsScreen';
+import FeedbackForm from './components/FeedbackForm';
 import ScreenShell from './components/ScreenShell';
 import ActionButton from './components/ActionButton';
 import { useTranslation } from './i18n/context';
@@ -31,6 +33,7 @@ let sequence = 0;
 const makeId = () => `${Date.now().toString(36)}-${(++sequence).toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
 export default function App() {
   const t = useTranslation();
+  const markInteractive = useStartupInteractive();
   const freshDefaults = () => ({
     ...defaults,
     players: defaults.players.map(name => t(name))
@@ -50,6 +53,8 @@ export default function App() {
   const [notice, setNotice] = useState('');
   const [music, setMusic] = useState(musicDefaults);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [feedbackTarget, setFeedbackTarget] = useState(null);
+  const [feedbackBusy, setFeedbackBusy] = useState(false);
   const [replace, setReplace] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
   const [clearRequested, setClearRequested] = useState(false);
@@ -81,6 +86,9 @@ export default function App() {
       live = false;
     };
   }, []);
+  useEffect(() => {
+    if (ready) markInteractive();
+  }, [ready, markInteractive]);
   async function persist(key, value, apply) {
     try {
       await repository.write(key, value);
@@ -210,7 +218,7 @@ export default function App() {
       profiles: copy(p.members)
     });
     setScreen('editor');
-  }} onDelete={p => setDeleteId(p.id)} onBack={goBack} />;else if (screen === 'decline') content = <DeclineScreen session={session} card={cards.find(c=>c.id===session.currentCardId)} onConfirm={confirmDecline} onBack={()=>setScreen('game')} />;else if (screen === 'players') content = <PlayersScreen makeId={makeId} onWardrobe={(id,wardrobe)=>outcome(updateWardrobe(sessionRef.current,id,wardrobe,cards))} session={session} onChange={(id, status) => outcome(changePlayerStatus(sessionRef.current, id, status, cards))} onBack={() => setScreen(sessionRef.current.phase === 'finished' ? 'summary' : 'game')} />;else if (screen === 'summary' || session?.phase === 'finished') content = <SummaryScreen game={session} onRestart={setupFromSession} onSettings={setupFromSession} />;else content = <GameScreen game={session} card={cards.find(c => c.id === session.currentCardId)} onLevel={level=>outcome(changeLevel(sessionRef.current,level,cards))} onDismissLevel={()=>commit({...sessionRef.current,levelSuggestion:null})} onSpin={(part,index)=>{if(sessionRef.current.cardRevision===session.cardRevision&&currentTurn(sessionRef.current)?.id===currentTurn(session)?.id)outcome(spinAssignment(sessionRef.current,part,cards,Math.random,index));}} onAnswered={id=>outcome(setAnswered(sessionRef.current,id))} onTimer={(action,now,deltaSeconds)=>outcome(timerAction(sessionRef.current,{action,now,deltaSeconds,turnId:currentTurn(session)?.id,revision:session.cardRevision}))} onDecline={()=>setScreen('decline')} onChoose={kind => outcome(chooseCardKind(sessionRef.current, {
+  }} onDelete={p => setDeleteId(p.id)} onBack={goBack} />;else if (screen === 'decline') content = <DeclineScreen session={session} card={cards.find(c=>c.id===session.currentCardId)} onConfirm={confirmDecline} onBack={()=>setScreen('game')} />;else if (screen === 'players') content = <PlayersScreen makeId={makeId} onWardrobe={(id,wardrobe)=>outcome(updateWardrobe(sessionRef.current,id,wardrobe,cards))} session={session} onChange={(id, status) => outcome(changePlayerStatus(sessionRef.current, id, status, cards))} onBack={() => setScreen(sessionRef.current.phase === 'finished' ? 'summary' : 'game')} />;else if (screen === 'summary' || session?.phase === 'finished') content = <SummaryScreen game={session} onRestart={setupFromSession} onSettings={setupFromSession} />;else content = <GameScreen onReport={card => setFeedbackTarget({ card })} game={session} card={cards.find(c => c.id === session.currentCardId)} onLevel={level=>outcome(changeLevel(sessionRef.current,level,cards))} onDismissLevel={()=>commit({...sessionRef.current,levelSuggestion:null})} onSpin={(part,index)=>{if(sessionRef.current.cardRevision===session.cardRevision&&currentTurn(sessionRef.current)?.id===currentTurn(session)?.id)outcome(spinAssignment(sessionRef.current,part,cards,Math.random,index));}} onAnswered={id=>outcome(setAnswered(sessionRef.current,id))} onTimer={(action,now,deltaSeconds)=>outcome(timerAction(sessionRef.current,{action,now,deltaSeconds,turnId:currentTurn(session)?.id,revision:session.cardRevision}))} onDecline={()=>setScreen('decline')} onChoose={kind => outcome(chooseCardKind(sessionRef.current, {
     kind,
     turnId: currentTurn(session)?.id
   }, cards))} onResolve={value => outcome(resolveTurn(sessionRef.current, {
@@ -224,9 +232,9 @@ export default function App() {
   return <View style={{
     flex: 1, backgroundColor: colors.background
   }}>
-    <Modal visible={settingsOpen} onRequestClose={() => setSettingsOpen(false)} animationType="slide">
+    <Modal visible={settingsOpen || Boolean(feedbackTarget)} onRequestClose={() => { if (!feedbackBusy) { if (feedbackTarget) setFeedbackTarget(null); else setSettingsOpen(false); } }} animationType="slide">
       <View style={{ flex: 1, backgroundColor: colors.background }}>
-        <SettingsScreen onBack={() => setSettingsOpen(false)} />
+        {feedbackTarget ? <FeedbackForm key={feedbackTarget.card?.id || 'suggestion'} card={feedbackTarget.card} onBusyChange={setFeedbackBusy} onClose={() => setFeedbackTarget(null)} /> : <SettingsScreen onSuggest={() => setFeedbackTarget({ card: null })} onBack={() => setSettingsOpen(false)} />}
       </View>
     </Modal>
     {!!error && <View style={{

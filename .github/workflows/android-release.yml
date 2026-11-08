@@ -1,0 +1,61 @@
+name: Android build and Play upload
+on:
+  workflow_dispatch:
+    inputs:
+      build_id:
+        description: Existing EAS Android build UUID (leave empty to build current revision)
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: google-play-alpha
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment: google-play
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - uses: expo/expo-github-action@v8
+        with:
+          eas-version: 22.2.0
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Prepare Google Play credentials
+        env:
+          PLAY_KEY_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$PLAY_KEY_JSON" ]; then
+            echo 'Missing GOOGLE_PLAY_SERVICE_ACCOUNT_JSON secret.' >&2
+            exit 1
+          fi
+          umask 077
+          key_path="$RUNNER_TEMP/heatitup-play-key.json"
+          printf '%s' "$PLAY_KEY_JSON" > "$key_path"
+          printf 'GOOGLE_SERVICE_ACCOUNT_KEY_PATH=%s\n' "$key_path" >> "$GITHUB_ENV"
+      - name: Build and submit, or submit the selected build
+        env:
+          BUILD_ID: ${{ inputs.build_id }}
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run check:android:release
+          if [ -n "$BUILD_ID" ]; then
+            npm run submit:android -- --id "$BUILD_ID"
+          else
+            npm run release:android
+          fi
+      - name: Remove temporary credentials
+        if: always()
+        shell: bash
+        run: |
+          node -e 'require("node:fs").rmSync(require("node:path").join(process.env.RUNNER_TEMP,"heatitup-play-key.json"),{force:true})'

@@ -1,6 +1,6 @@
 import { Text, Switch } from '../i18n/ui';
 import React, { useEffect, useRef, useState } from 'react';
-import { View, AccessibilityInfo, Platform, StyleSheet, Modal } from 'react-native';
+import { View, AccessibilityInfo, Platform, StyleSheet, Modal, Pressable } from 'react-native';
 import ScreenShell from '../components/ScreenShell';
 import ActionButton from '../components/ActionButton';
 import RouletteWheel from '../components/RouletteWheel';
@@ -23,7 +23,8 @@ export default function GameScreen({
   onSpin,
   onAnswered,
   onTimer,
-  onDecline
+  onDecline,
+  onReport
 }) {
   const t = useTranslation();
   const locked = useRef(false);
@@ -251,6 +252,9 @@ export default function GameScreen({
             <Text style={styles.twistText}>⚡ {t(twistText(turn.twistId))}</Text>
           </View>
         )}
+        <Pressable accessibilityRole="button" accessibilityLabel={t('Hibajelzés erről a kártyáról')} onPress={() => onReport(card)} style={{ alignSelf: 'flex-end', minHeight: 44, justifyContent: 'center', paddingHorizontal: 4 }}>
+          <Text style={{ color: colors.muted, fontSize: 12, textDecorationLine: 'underline' }}>Hibajelzés</Text>
+        </Pressable>
       </View>
 
       {/* PENDING ACTIONS: Spin button and Pass */}

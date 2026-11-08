@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /submissions/{id} {
+      // Submissions are private: only IAM-authorized administrators can read them.
+      allow read, update, delete: if false;
+      allow create: if id.matches('^[a-zA-Z0-9_-]{10,100}$')
+        && request.resource.data.keys().hasOnly(['schemaVersion', 'type', 'message', 'language', 'kind', 'level', 'cardId', 'cardFingerprint', 'appVersion', 'createdAt'])
+        && request.resource.data.keys().hasAll(['schemaVersion', 'type', 'message', 'language', 'kind', 'level', 'cardId', 'cardFingerprint', 'appVersion', 'createdAt'])
+        && request.resource.data.schemaVersion == 1
+        && request.resource.data.type in ['report', 'suggestion']
+        && request.resource.data.message is string && request.resource.data.message.size() <= 2000
+        && request.resource.data.language in ['hu', 'en', 'de']
+        && request.resource.data.kind in ['question', 'challenge']
+        && request.resource.data.level is int && request.resource.data.level >= 1 && request.resource.data.level <= 5
+        && request.resource.data.cardId is string && request.resource.data.cardId.size() <= 80
+        && request.resource.data.cardFingerprint is string && request.resource.data.cardFingerprint.size() <= 8
+        && request.resource.data.appVersion is string && request.resource.data.appVersion.size() <= 32
+        && request.resource.data.createdAt is timestamp
+        && request.resource.data.createdAt >= request.time - duration.value(24, 'h')
+        && request.resource.data.createdAt <= request.time + duration.value(24, 'h')
+        && ((request.resource.data.type == 'report' && request.resource.data.cardId.size() > 0 && request.resource.data.cardFingerprint.size() > 0)
+          || (request.resource.data.type == 'suggestion' && request.resource.data.message.size() > 0 && request.resource.data.cardId == '' && request.resource.data.cardFingerprint == ''));
+    }
+  }
+}

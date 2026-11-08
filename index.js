@@ -1,3 +1,4 @@
+import './src/monitoring/observe';
 import { registerRootComponent } from 'expo';
-import App from './App';
-registerRootComponent(App);
+import Startup from './Startup';
+registerRootComponent(Startup);

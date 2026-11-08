@@ -1,3 +1,4 @@
+import { feedbackMessages } from './feedbackMessages';
 import { featureMessages } from './featureMessages';
 import { messages } from './messages';
 import { cardMessages } from './cardMessages';
@@ -7,7 +8,7 @@ export function resolveLanguage(preference, locales) {
   if (languages.includes(preference)) return preference;
   return locales.map(locale => String(locale).toLowerCase().split(/[-_]/)[0]).find(code => languages.includes(code)) || 'en';
 }
-const rows = [...messages, ...featureMessages, ...cardMessages];
+const rows = [...messages, ...featureMessages, ...feedbackMessages, ...cardMessages];
 const exact = new Map(rows.map(([hu, en, de]) => [hu, {
   hu,
   en,

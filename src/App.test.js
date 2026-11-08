@@ -4,12 +4,15 @@ import { test, expect, jest } from '@jest/globals';
 import App from './App';
 import ActionButton from './components/ActionButton';
 import TaskTimer from './components/TaskTimer';
+import FeedbackForm from './components/FeedbackForm';
 import SetupScreen from './screens/SetupScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import { startSession, chooseCardKind, currentTurn } from './domain/session';
 import { validateContent } from './domain/content';
 import { TextInput, TouchableOpacity } from 'react-native';
 const mockData = new Map();
+const mockMarkInteractive = jest.fn();
+jest.mock('./monitoring/observe', () => ({ useStartupInteractive: () => mockMarkInteractive }));
 jest.mock('react-native-safe-area-context', () => ({
   SafeAreaView: 'SafeAreaView'
 }));
@@ -47,6 +50,7 @@ test('preset mentés, névsorváltozás, folytatás és preset elszigetelése a 
     await act(async () => {
       tree = renderer.create(<App />);
     });
+    expect(mockMarkInteractive).toHaveBeenCalled();
     await press('Kezdjük →');
     await act(async () => tree.root.findAllByType(TextInput).find(n => n.props.accessibilityLabel === 'Összeállítás neve').props.onChangeText('Esténk'));
     await press('Összeállítás mentése');
@@ -93,6 +97,9 @@ test('settings round-trip keeps unsaved setup names and the current player page'
     await press('Tovább a játékosokhoz →');
     await act(async () => tree.root.findAllByType(TextInput).find(input => input.props.accessibilityLabel === 'Név').props.onChangeText('Alicia'));
     await act(async () => tree.root.findByType(SetupScreen).props.onSettings());
+    await act(async () => tree.root.findByType(SettingsScreen).props.onSuggest());
+    expect(tree.root.findByType(FeedbackForm).props.card).toBeNull();
+    await act(async () => tree.root.findByType(FeedbackForm).props.onClose());
     await act(async () => tree.root.findByType(SettingsScreen).props.onBack());
     expect(tree.root.findAllByType(TextInput).find(input => input.props.accessibilityLabel === 'Név').props.value).toBe('Alicia');
   } finally {
@@ -120,6 +127,11 @@ test('timer adjustment reaches the saved session through the UI', async () => {
     await act(async () => tree.root.findAllByType(TouchableOpacity).find(b => b.props.accessibilityLabel === 'Időzítő beállítások').props.onPress());
     await act(async () => tree.root.findAllByType(ActionButton).find(b => b.props.title === '+30s').props.onPress());
     expect(currentTurn(JSON.parse(mockData.get('session'))).durationSeconds).toBe(90);
+    const saved = mockData.get('session');
+    await act(async () => tree.root.findAll(button => button.props.accessibilityLabel === 'Hibajelzés erről a kártyáról' && typeof button.props.onPress === 'function')[0].props.onPress());
+    expect(tree.root.findByType(FeedbackForm).props.card.id).toBe('timer-review');
+    await act(async () => tree.root.findByType(FeedbackForm).props.onClose());
+    expect(mockData.get('session')).toBe(saved);
   } finally {
     if (tree) await act(async () => tree.unmount());
     warning.mockRestore();
