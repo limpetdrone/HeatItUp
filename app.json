@@ -11,19 +11,22 @@
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
     "icon": "./assets/icon.png",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#130D18"
-    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.limpetdrone.heatitup",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#130D18"
-      }
+      },
+      "package": "com.limpetdrone.heatitup",
+      "permissions": [
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -39,7 +42,22 @@
           "enableBackgroundPlayback": false,
           "enableBackgroundRecording": false
         }
+      ],
+      "expo-asset",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#130D18"
+        }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "b48e6b4a-9805-47f4-9d00-8e069835cc12"
+      }
+    },
+    "owner": "limpetdrone"
   }
 }
