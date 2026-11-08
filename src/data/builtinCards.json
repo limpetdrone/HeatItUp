@@ -594,7 +594,7 @@
    ],
    "text": {
     "en": "Run your fingertips slowly from the selected player's shoulder down the full length of their bare arm until your fingers intertwine with theirs.",
-    "hu": "Futtasd végig lassan az ujjhegyedet a kijelölt játékos vállától egészen a karján át a kezéig, majd kulcsold össze az ujjaidat az övéivel!",
+    "hu": "Simítsd végig lassan az ujjhegyedet a kijelölt játékos vállától egészen a karján át a kezéig, majd kulcsold össze az ujjaidat az övéivel!",
     "de": "Fahre mit den Fingerspitzen langsam von der Schulter der gewählten Person über ihren Arm hinab, bis sich eure Finger ineinander verschränken."
    }
   },
@@ -670,7 +670,7 @@
    ],
    "text": {
     "en": "Trace the outline of the selected player's collarbone with two fingers while leaning in close enough for your cheeks to brush.",
-    "hu": "Rajzold körbe két ujjaddal a kijelölt játékos kulcscsontját, miközben olyan közel hajolsz hozzá, hogy az arcotok egymáshoz érjen!",
+    "hu": "Simíts végig két ujjaddal a kijelölt játékos nyakán és vállán, miközben olyan közel hajolsz hozzá, hogy az arcotok egymáshoz érjen!",
     "de": "Zeichne mit zwei Fingern das Schlüsselbein der gewählten Person nach, während du dich ihr so weit näherst, dass sich eure Wangen berühren."
    }
   },
@@ -746,7 +746,7 @@
    ],
    "text": {
     "en": "Brush the hair away from the selected player's neck and slowly run your fingertips from behind their ear down to their shoulder.",
-    "hu": "Simítsd félre a hajat a kijelölt játékos nyakából, és futtasd végig lassan az ujjhegyedet a füle mögül egészen a válláig!",
+    "hu": "Simítsd félre a hajat a kijelölt játékos nyakából, és simítsd végig lassan az ujjhegyedet a füle mögül egészen a válláig!",
     "de": "Streiche das Haar vom Hals der gewählten Person beiseite und fahre mit den Fingerspitzen langsam von hinter dem Ohr bis zur Schulter hinab."
    }
   },
@@ -803,7 +803,7 @@
    ],
    "text": {
     "en": "Slide your hands slowly down the selected player's back from their shoulder blades to the curve of their waist.",
-    "hu": "Csúsztasd végig mindkét kezedet lassan a kijelölt játékos hátán a lapockájától egészen a dereka ívéig!",
+    "hu": "Csúsztasd végig mindkét kezedet lassan a kijelölt játékos hátán fentről lefelé, egészen a dereka ívéig!",
     "de": "Gleite mit beiden Händen langsam den Rücken der gewählten Person von den Schulterblättern bis zur Taillenrundung hinab."
    }
   },
@@ -974,7 +974,7 @@
    ],
    "text": {
     "en": "With both hands at once, in a slow, deep stroke, trace from the chosen player's ribs all the way down to their hips!",
-    "hu": "Mindkét kezeddel egyszerre, lassú, mély mozdulattal simíts végig a kijelölt játékos bordáitól le egészen a csípőjéig!",
+    "hu": "Mindkét kezeddel egyszerre, lassú, mély mozdulattal simíts végig a kijelölt játékos oldalától le egészen a csípőjéig!",
     "de": "Streiche mit beiden Händen gleichzeitig in einer langsamen, tiefen Bewegung von den Rippen der gewählten Person bis hinunter zu ihren Hüften!"
    }
   },
@@ -1012,7 +1012,7 @@
    ],
    "text": {
     "en": "Sit right behind the selected player so their back rests against your chest, and wrap your arms around their torso for 25 seconds.",
-    "hu": "Ülj közvetlenül a kijelölt játékos mögé úgy, hogy a háta a mellkasodnak dőljön, és öleld át szorosan a felsőtestét 25 másodpercig!",
+    "hu": "Ülj közvetlenül a kijelölt játékos mögé úgy, hogy a háta a mellkasodnak dőljön, és öleld át szorosan a derekát 25 másodpercig!",
     "de": "Setz dich direkt hinter die gewählte Person, sodass ihr Rücken an deiner Brust lehnt, und schlinge deine Arme für 25 Sekunden um ihren Oberkörper."
    }
   },
@@ -1031,7 +1031,7 @@
    ],
    "text": {
     "en": "Lightly trace circles with your fingernails along the selected player's forearm and inner elbow for 20 seconds.",
-    "hu": "Húzogass finoman köröket a körmeiddel a kijelölt játékos alkarján és könyökhajlatán 20 másodpercig.",
+    "hu": "Húzogass finoman köröket a körmeiddel a kijelölt játékos karján és csuklóján 20 másodpercig.",
     "de": "Zeichne 20 Sekunden lang sanft mit den Fingernägeln Kreise auf Unterarm und Armbeuge der gewählten Person."
    }
   },
@@ -1107,7 +1107,7 @@
    ],
    "text": {
     "en": "Hold both of the selected player's wrists gently in front of you, lean down to their neck, and exhale warmly against their collarbone.",
-    "hu": "Fogd meg finoman a kijelölt játékos mindkét csuklóját, hajolj a nyakához, és fújd a forró leheletedet a kulcscsontjára!",
+    "hu": "Fogd meg finoman a kijelölt játékos mindkét csuklóját, hajolj hozzá közel, és fújd a forró leheletedet a nyakára!",
     "de": "Halte sanft beide Handgelenke der gewählten Person fest, beuge dich zu ihrem Hals hinab und hauche warm über ihr Schlüsselbein."
    }
   },
@@ -1524,7 +1524,7 @@
    ],
    "text": {
     "en": "How sensitive is your lower belly right above the edge of your underwear to kisses and fingertips?",
-    "hu": "Mennyire érzékeny az alhasad közvetlenül a fehérneműd vonala felett a csókokra és a cirógatásra?",
+    "hu": "Mennyire érzékeny a hasad a fehérneműd felett a csókokra és a cirógatásra?",
     "de": "Wie empfindlich reagiert dein Unterbauch direkt über dem Rand deiner Unterwäsche auf Küsse und Fingerspitzen?"
    }
   },
@@ -1752,7 +1752,7 @@
    ],
    "text": {
     "en": "Stand behind the selected player, slide your hands around the front of their waist and lower belly, and pull their hips back against yours for 25 seconds.",
-    "hu": "Állj a kijelölt játékos mögé, csúsztasd előre a kezeidet a derekára és az alhasára, majd húzd a csípőjét szorosan a tiédhez 25 másodpercre!",
+    "hu": "Állj a kijelölt játékos mögé, csúsztasd előre a kezeidet a derekára és a hasára, majd húzd a csípőjét szorosan a tiédhez 25 másodpercre!",
     "de": "Stell dich hinter die gewählte Person, lege deine Hände von hinten auf ihre Taille und ihren Unterbauch und zieh ihre Hüften 25 Sekunden lang eng an deine."
    },
    "parallelDurationSeconds": 50
@@ -1812,7 +1812,7 @@
    ],
    "text": {
     "en": "Trace two fingers slowly along the selected player's bare collarbone and down the center of their bare chest for 20 seconds.",
-    "hu": "Húzd végig lassan két ujjadat a kijelölt játékos csupasz kulcscsontján, majd lefelé a mellkasa közepén 20 másodpercig!",
+    "hu": "Húzd végig lassan két ujjadat a kijelölt játékos vállán és a mellkasa közepén 20 másodpercig!",
     "de": "Streiche mit zwei Fingern 20 Sekunden lang langsam über das bloße Schlüsselbein und die Mitte der Brust der gewählten Person."
    },
    "parallelDurationSeconds": 40
@@ -1852,7 +1852,7 @@
    ],
    "text": {
     "en": "Grip the chosen player's hips and pull them close so your pelvises remain pressed together for 20 seconds!",
-    "hu": "Ragadd meg a kijelölt játékos csípőjét, és húzd magadhoz úgy, hogy a medencétek 20 másodpercig szorosan összeérjen!",
+    "hu": "Ragadd meg a kijelölt játékos csípőjét, és húzd magadhoz úgy, hogy a csípőtök 20 másodpercig szorosan összeérjen!",
     "de": "Fasse die Hüften der gewählten Person und ziehe sie heran, sodass eure Becken für 20 Sekunden eng aneinander gepresst bleiben!"
    },
    "parallelDurationSeconds": 40
@@ -1972,7 +1972,7 @@
    ],
    "text": {
     "en": "Trace your fingertips slowly along the bare skin of the selected player's lower belly right above the waistband of their underwear.",
-    "hu": "Húzd végig lassan az ujjhegyeidet a kijelölt játékos csupasz alhasán, közvetlenül a fehérneműje vonala felett!",
+    "hu": "Húzd végig lassan az ujjhegyeidet a kijelölt játékos hasán, közvetlenül a fehérneműje vonala felett!",
     "de": "Fahre mit den Fingerspitzen langsam über den bloßen Unterbauch der gewählten Person, direkt über dem Bund ihrer Unterwäsche."
    },
    "parallelDurationSeconds": 40
@@ -2012,7 +2012,7 @@
    ],
    "text": {
     "en": "Kiss the inside of the selected player's forearm and slowly trail your lips up to the crook of their elbow.",
-    "hu": "Csókold meg a kijelölt játékos belső alkarját, majd lassan haladj felfelé az ajkaiddal egészen a könyökhajlatáig!",
+    "hu": "Csókold meg a kijelölt játékos karját, majd lassan haladj felfelé az ajkaiddal a válláig!",
     "de": "Küsse die Innenseite des Unterarms der gewählten Person und wandere mit deinen Lippen langsam hinauf bis in die Armbeuge."
    },
    "parallelDurationSeconds": 40
@@ -2072,7 +2072,7 @@
    ],
    "text": {
     "en": "Place both hands on the selected player's chest and slowly slide them down over their ribs and stomach to their hips.",
-    "hu": "Tedd mindkét tenyeredet a kijelölt játékos mellkasára, majd lassan, érzékien csúsztasd végig a bordáin és a hasán át egészen a csípőjéig!",
+    "hu": "Tedd mindkét tenyeredet a kijelölt játékos mellkasára, majd lassan, érzékien csúsztasd végig az oldalán és a hasán át egészen a csípőjéig!",
     "de": "Lege beide Handflächen auf die Brust der gewählten Person und gleite langsam über Rippen und Bauch hinab bis zu ihren Hüften."
    },
    "parallelDurationSeconds": 40
@@ -2232,7 +2232,7 @@
    ],
    "text": {
     "en": "Place the selected player's hand flat against your chest or collarbone and kiss the back of their hand while they feel your skin.",
-    "hu": "Simítsd a kijelölt játékos tenyerét a csupasz kulcscsontodra vagy a mellkasodra, majd csókold meg a kézfejét, miközben érzi a bőrödet!",
+    "hu": "Simítsd a kijelölt játékos tenyerét a válladra vagy a mellkasodra, majd csókold meg a kézfejét, miközben érzi a bőrödet!",
     "de": "Lege die Handfläche der gewählten Person auf dein Schlüsselbein oder deine Brust und küsse ihren Handrücken, während sie deine Haut spürt."
    },
    "parallelDurationSeconds": 30
@@ -3953,9 +3953,9 @@
     "inner-thigh"
    ],
    "text": {
-    "en": "Run your hand slowly up the chosen player's inner thigh while kissing them from their chin down to their neck!",
-    "hu": "Futtasd a kezed lassan felfelé a kijelölt játékos belső combján, miközben az állától egészen a nyakáig végigcsókolod!",
-    "de": "Lass deine Hand langsam am Innenschenkel der gewählten Person hochwandern, während du sie vom Kinn bis zum Hals küsst!"
+    "en": "Slide your hand slowly up the chosen player's inner thigh, then lean in close to their neck and kiss them softly.",
+    "hu": "Csúsztasd a kezed lassan felfelé a kijelölt játékos belső combján, majd hajolj a nyakához, és adj rá egy forró csókot!",
+    "de": "Lass deine Hand langsam am Innenschenkel der gewählten Person hochwandern, beuge dich an ihren Hals und küsse sie sanft."
    },
    "category": "general",
    "role": "give",
@@ -4043,7 +4043,7 @@
    ],
    "text": {
     "en": "Stand behind the selected player, wrap your hands around their front to cup and caress their bare chest and ribs for 25 seconds while kissing their neck.",
-    "hu": "Állj a kijelölt játékos mögé, nyúlj előre, és 25 másodpercig simogasd a mellkasát és a bordáit, miközben a nyakát csókolgatod!",
+    "hu": "Állj a kijelölt játékos mögé, nyúlj előre, és 25 másodpercig simogasd a mellkasát és az oldalát, miközben a nyakát csókolgatod!",
     "de": "Stell dich hinter die gewählte Person, greife nach vorn und streichle 25 Sekunden lang ihre Brust und Rippen, während du ihren Hals küsst."
    },
    "category": "general",
@@ -4153,7 +4153,7 @@
    ],
    "text": {
     "en": "Pull the front edge of the selected player's underwear down just an inch and kiss their bare lower stomach right along the bikini line.",
-    "hu": "Húzd lejjebb két centivel elöl a kijelölt játékos fehérneműjét, és csókold végig a csupasz alhasát közvetlenül a bikinivonalnál!",
+    "hu": "Húzd lejjebb kicsit a kijelölt játékos fehérneműjét, és csókold végig a hasát a csípője vonalánál!",
     "de": "Ziehe den vorderen Bund der Unterwäsche der gewählten Person ein kleines Stück tiefer und küsse ihren bloßen Unterbauch direkt an der Bikinilinie."
    },
    "category": "general",
@@ -4261,7 +4261,7 @@
    ],
    "text": {
     "en": "Kiss your way from the selected player's lips down their chin, throat, and chest until you reach the top of their torso or cleavage.",
-    "hu": "Csókold végig a kijelölt játékost az ajkaitól indulva az állán és a torkán át egészen a mellkasáig vagy a dekoltázsáig!",
+    "hu": "Csókold végig a kijelölt játékost az ajkaitól indulva az állán és a nyakán át egészen a mellkasáig!",
     "de": "Küsse dich von den Lippen der gewählten Person über Kinn und Hals hinab bis zu ihrer Brust oder ihrem Dekolleté."
    },
    "category": "general",
@@ -4327,7 +4327,7 @@
    ],
    "text": {
     "en": "Grip the chosen player's hips and grind your pelvis against theirs for 25 seconds while gently biting their lower lip or ear!",
-    "hu": "Ragadd meg a kijelölt játékos csípőjét, és 25 másodpercig dörgöld a medencédet az övéhez, miközben az alsó ajkát vagy a fülét harapdálod!",
+    "hu": "Ragadd meg a kijelölt játékos csípőjét, és 25 másodpercig dörgöld a csípődet az övéhez, miközben az alsó ajkát vagy a fülét harapdálod!",
     "de": "Fasse die Hüften der gewählten Person und reibe dein Becken für 25 Sekunden an ihrem, während du sanft in ihre Unterlippe oder ihr Ohr beißt!"
    },
    "category": "general",
@@ -4371,7 +4371,7 @@
    ],
    "text": {
     "en": "Lick or kiss slowly around the selected player's navel and lower abdomen for 20 seconds while holding their hips.",
-    "hu": "Fogd meg két kézzel a kijelölt játékos csípőjét, és 20 másodpercig a nyelveddel és az ajkaiddal kényeztesd a köldökét és az alhasát!",
+    "hu": "Fogd meg két kézzel a kijelölt játékos csípőjét, és 20 másodpercig a nyelveddel és az ajkaiddal kényeztesd a köldökét és a hasát!",
     "de": "Halte die Hüften der gewählten Person fest und verwöhne 20 Sekunden lang mit Lippen und Zunge ihren Bauchnabel und Unterbauch."
    },
    "category": "general",
@@ -4525,7 +4525,7 @@
    ],
    "text": {
     "en": "Slide your hand into the front of the chosen player's underwear onto their lower abdomen and inner thighs while deeply kissing for 30 seconds!",
-    "hu": "Csúsztasd be a kezed elöl a kijelölt játékos fehérneműje alá az alhasára és a combjai tövére, miközben 30 másodpercig mélyen csókolóztok!",
+    "hu": "Csúsztasd be a kezed elöl a kijelölt játékos fehérneműje alá a hasára és a combjára, miközben 30 másodpercig mélyen csókolóztok!",
     "de": "Gleite mit der Hand vorne unter die Unterwäsche der gewählten Person auf ihren Unterbauch und die Oberschenkelansätze, während ihr euch 30 Sekunden lang tief küsst!"
    },
    "category": "general",
@@ -6190,7 +6190,7 @@
    ],
    "text": {
     "en": "Pin the chosen player's wrists above their head against the wall, press your body tightly against theirs, and kiss their throat and chest for 25 seconds!",
-    "hu": "Szorítsd a kijelölt játékos mindkét csuklóját a feje fölé a falhoz, préseld a testedet szorosan az övéhez, és 25 másodpercig csókold a torkát és a mellkasát!",
+    "hu": "Szorítsd a kijelölt játékos mindkét csuklóját a falhoz, préseld a testedet szorosan az övéhez, és 25 másodpercig csókold a nyakát és a mellkasát!",
     "de": "Halte die Handgelenke der gewählten Person über ihrem Kopf an der Wand fest, presse deinen Körper eng an ihren und küsse 25 Sekunden lang Hals und Brust!"
    },
    "parallelDurationSeconds": 50
@@ -6250,7 +6250,7 @@
    ],
    "text": {
     "en": "Pull the back of the selected player's underwear down just enough to expose the top half of their bare glutes, and kiss and bite both sides.",
-    "hu": "Húzd lejjebb hátul a kijelölt játékos fehérneműjét annyira, hogy kilátszódjon a csupasz feneke, majd csókold és harapdáld meg mindkét farpofáját!",
+    "hu": "Húzd lejjebb hátul a kijelölt játékos fehérneműjét annyira, hogy kilátszódjon a feneke, majd csókold és harapdáld meg a popsiját mindkét oldalon!",
     "de": "Schiebe die Unterwäsche der gewählten Person hinten ein Stück hinunter, sodass der Po halb frei liegt, und küsse und beiße sanft in beide Pobacken."
    },
    "parallelDurationSeconds": 40
@@ -6569,7 +6569,7 @@
    ],
    "text": {
     "en": "Pull the selected player's underwear completely off and spend 30 seconds kissing their bare hips, thighs, and lower belly.",
-    "hu": "Húzd le teljesen a kijelölt játékos fehérneműjét, és 30 másodpercig csókold végig a meztelen csípőjét, a belső combját és az alhasát!",
+    "hu": "Húzd le a kijelölt játékos fehérneműjét, és 30 másodpercig csókold végig a csípőjét, a belső combját és a hasát!",
     "de": "Zieh der gewählten Person die Unterwäsche komplett aus und küsse 30 Sekunden lang ihre nackten Hüften, Innenschenkel und den Unterbauch."
    },
    "parallelDurationSeconds": 60
@@ -7406,7 +7406,7 @@
    ],
    "text": {
     "en": "Have the selected player bend over the arm of the couch naked: smack their bare ass, spread their hips slightly, and kiss and lick their glutes and inner thighs for 45 seconds.",
-    "hu": "Hajoljon át meztelenül a kanapé karfáján a kijelölt játékos: csapj a fenekére, majd 45 másodpercig csókold és nyald végig a farpofáit és a belső combját!",
+    "hu": "Hajoljon át a kanapé karfáján a kijelölt játékos: csapj a fenekére, majd 45 másodpercig csókold és kényeztesd a popsiját és a belső combját!",
     "de": "Lass die gewählte Person sich nackt über die Sofalehne beugen: Gib ihr einen Klaps auf den Po und küsse und lecke 45 Sekunden lang Pobacken und Innenschenkel."
    },
    "parallelDurationSeconds": 90
@@ -7564,7 +7564,7 @@
    ],
    "text": {
     "en": "Lie on your stomach naked while the selected player lies on top of your back, grinding their pelvis against your ass and kissing your neck for 45 seconds.",
-    "hu": "Feküdj hasra meztelenül, miközben a kijelölt játékos rád fekszik hátulról, a medencéjét a fenekedhez préselve mozog rajtad, és a nyakadat csókolja 45 másodpercig!",
+    "hu": "Feküdj hasra, miközben a kijelölt játékos rád fekszik hátulról, a csípőjét a fenekedhez préselve mozog rajtad, és a nyakadat csókolja 45 másodpercig!",
     "de": "Leg dich nackt auf den Bauch, während sich die gewählte Person von hinten auf dich legt, ihr Becken 45 Sekunden lang an deinem Po reibt und deinen Hals küsst."
    },
    "parallelDurationSeconds": 90
@@ -7642,7 +7642,7 @@
    ],
    "text": {
     "en": "Blindfold the selected player with a piece of clothing and kiss three different places on their upper body, slowly, one after the other.",
-    "hu": "Kösd be a kijelölt játékos szemét egy ruhadarabbal, és csókolj meg három különböző helyet a felsőtestén, lassan, egymás után.",
+    "hu": "Kösd be a kijelölt játékos szemét egy ruhadarabbal, és csókolj meg három különböző helyet a nyakán, vállán és hátán, lassan, egymás után.",
     "de": "Verbinde der gewählten Person mit einem Kleidungsstück die Augen und küsse nacheinander langsam drei verschiedene Stellen an ihrem Oberkörper."
    }
   },

@@ -24,7 +24,24 @@ export default function SetupScreen({
   onSettings
 }) {
   const t = useTranslation();
-  const [profiles, setProfiles] = useState(() => draft.profiles?.map(normalizeProfile) || draft.players.map(name => normalizeProfile({ id: localId(), name })));
+  const [profiles, setProfiles] = useState(() => {
+    if (draft.profiles?.length) {
+      return draft.profiles.map(p => ({
+        ...normalizeProfile(p),
+        name: (/^(játékos|player)\s*\d+$/i.test(p.name?.trim() || '')) ? '' : p.name
+      }));
+    }
+    if (draft.players?.length) {
+      return draft.players.map((name, i) => normalizeProfile({
+        id: localId(),
+        name: (/^(játékos|player)\s*\d+$/i.test(name?.trim() || '')) ? '' : name
+      }));
+    }
+    return [
+      normalizeProfile({ id: localId(), name: '' }),
+      normalizeProfile({ id: localId(), name: '' })
+    ];
+  });
   const [settings, setSettings] = useState(() => ({
     ...draft,
     options: { ...defaultGameOptions, ...draft.options }
@@ -44,24 +61,34 @@ export default function SetupScreen({
   }
 
   function add() {
-    const used = new Set(profiles.map(p => p.name.trim().toLocaleLowerCase('hu-HU')));
-    let n = 1;
-    while (used.has(t(`Játékos ${n}`).toLocaleLowerCase('hu-HU'))) n++;
-    const newP = normalizeProfile({ id: localId(), name: t(`Játékos ${n}`) });
+    if (profiles.length >= 8) return;
+    const newP = normalizeProfile({ id: localId(), name: '' });
     setProfiles(previous => [...previous, newP]);
     return newP;
   }
 
   function remove(id) {
-    setProfiles(previous => removeProfile(previous, id));
-    setCardIndex(value => Math.max(0, Math.min(value, profiles.length - 2)));
+    setProfiles(previous => {
+      const next = removeProfile(previous, id);
+      setCardIndex(value => Math.max(0, Math.min(value, next.length)));
+      return next;
+    });
   }
 
   function submit(save = false) {
     setSubmitted(true);
-    if (result.ok) {
-      if (save) onSavePreset(result.settings, presetName);
-      else onStart(result.settings);
+    const resolvedProfiles = profiles.map((p, i) => ({
+      ...p,
+      name: p.name.trim() || t(`Játékos ${i + 1}`)
+    }));
+    const validated = validateSettings({
+      ...settings,
+      profiles: resolvedProfiles,
+      players: resolvedProfiles.map(p => p.name)
+    });
+    if (validated.ok) {
+      if (save) onSavePreset(validated.settings, presetName);
+      else onStart(validated.settings);
     }
   }
 
@@ -147,9 +174,6 @@ export default function SetupScreen({
           title="Tovább a játékosokhoz →"
           onPress={() => setCardIndex(1)}
         />
-        {!editing && (
-          <ActionButton title="Játék indítása →" onPress={() => submit(false)} />
-        )}
         <ActionButton title="Vissza" secondary onPress={onBack} />
       </ScreenShell>
     );
@@ -239,7 +263,7 @@ export default function SetupScreen({
       {errors}
       {!!startError && <Text accessibilityRole="alert" style={ui.error}>{startError}</Text>}
 
-      {!editing && (
+      {!editing && playerIdx === profiles.length - 1 && (
         <ActionButton title="Játék indítása →" onPress={() => submit(false)} />
       )}
 

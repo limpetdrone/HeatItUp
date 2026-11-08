@@ -206,7 +206,7 @@ export function resolveTurn(session, event, cards, rng = Math.random) {
 
   return {
     ok: true,
-    session: (()=>{const advanced=advance(next,cards,rng);const round=currentTurn(advanced)?.round;if(round>turn.round&&turn.round%4===0&&advanced.settings.maxIntensity<5)advanced.levelSuggestion=advanced.settings.maxIntensity+1;return advanced;})()
+    session: (()=>{const advanced=advance(next,cards,rng);const round=currentTurn(advanced)?.round;const since=(round&&turn.round)?(turn.round-(advanced.lastLevelChangeRound||0)):0;if(round>turn.round&&since>0&&since%4===0&&advanced.settings.maxIntensity<5){advanced.levelSuggestion=advanced.settings.maxIntensity+1;advanced.lastLevelChangeRound=turn.round;}return advanced;})()
   };
 }
 export function changePlayerStatus(session, id, status, cards, rng = Math.random) {
@@ -280,7 +280,7 @@ export function spinAssignment(session,part,cards,rng=Math.random,selectedIndex=
  return {ok:true,session:next};
 }
 export function setAnswered(session,id){const next=clone(session),turn=currentTurn(next);if(!turn?.assignment?.responders.includes(id))return failure('Hibás játékosazonosító.');const list=turn.assignment.answeredIds;turn.assignment.answeredIds=list.includes(id)?list.filter(x=>x!==id):[...list,id];return {ok:true,session:next};}
-export function changeLevel(session,level,cards){if(![1,2,3,4,5].includes(level)||session.phase==='finished')return failure('Hibás lépés.');const next=clone(session);next.settings.maxIntensity=level;next.levelSuggestion=null;next.cardKind=null;next.currentCardId=null;next.remainingCardIds=[];const turn=currentTurn(next);if(turn){delete turn.assignment;turn.timer=null;next.phase='choosing';}return {ok:true,session:advance(next,cards,Math.random)};}
+export function changeLevel(session,level,cards){if(![1,2,3,4,5].includes(level)||session.phase==='finished')return failure('Hibás lépés.');const next=clone(session);next.settings.maxIntensity=level;next.levelSuggestion=null;next.cardKind=null;next.currentCardId=null;next.remainingCardIds=[];const turn=currentTurn(next);if(turn){next.lastLevelChangeRound=turn.round-1;delete turn.assignment;turn.timer=null;next.phase='choosing';}return {ok:true,session:advance(next,cards,Math.random)};}
 export function updateWardrobe(session,id,wardrobe,cards){const next=clone(session),p=next.roster.find(p=>p.id===id);if(!p)return failure('Hibás játékosazonosító.');p.wardrobe=clone(wardrobe);return {ok:true,session:cards&&next.phase!=='finished'?advance(next,cards,Math.random):next};}
 export function timerAction(session,event){const next=clone(session),turn=currentTurn(next);if(!turn||turn.id!==event.turnId||next.cardRevision!==event.revision)return {ok:true,session};const now=event.now;if(!Number.isFinite(now))return failure('Hibás lépés.');const duration=(turn.durationSeconds||0)*1000;if(!duration)return {ok:true,session};
  if(event.action==='start'||event.action==='reset')turn.timer={remainingMs:duration,deadline:event.action==='start'?now+duration:null,notified:false};

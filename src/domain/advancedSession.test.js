@@ -55,9 +55,22 @@ test('three-language content import validates identifiers and timing',()=>{
 });
 
 test('four completed rounds suggest a higher level without automatically changing it',()=>{
- const deck=Array.from({length:20},(_,i)=>({...card,id:`q${i}`,familyId:`q${i}`,kind:'question',interaction:{}}));let s=start({},roster(2),deck);
+ const deck=Array.from({length:30},(_,i)=>({...card,id:`q${i}`,familyId:`q${i}`,kind:'question',interaction:{}}));let s=start({},roster(2),deck);
  for(let i=0;i<8;i++){s=choose(s,deck,'question');s=resolveTurn(s,event(s),deck).session;}
  expect(currentTurn(s).round).toBe(5);expect(s.levelSuggestion).toBe(2);expect(s.settings.maxIntensity).toBe(1);
+});
+test('manual level change resets the 4-round level suggestion counter',()=>{
+ const deck=Array.from({length:60},(_,i)=>({...card,id:`q${i}`,familyId:`q${i}`,intensity:(i%3)+1,kind:'question',interaction:{}}));let s=startSession('s',{rounds:10,maxIntensity:1,options:{}},roster(2),deck,null,()=>.99).session;
+ for(let i=0;i<4;i++){s=choose(s,deck,'question');s=resolveTurn(s,event(s),deck).session;}
+ expect(currentTurn(s).round).toBe(3);
+ s=changeLevel(s,2,deck).session;
+ expect(s.levelSuggestion).toBeNull();
+ for(let i=0;i<4;i++){s=choose(s,deck,'question');s=resolveTurn(s,event(s),deck).session;}
+ expect(currentTurn(s).round).toBe(5);
+ expect(s.levelSuggestion).toBeNull();
+ for(let i=0;i<4;i++){s=choose(s,deck,'question');s=resolveTurn(s,event(s),deck).session;}
+ expect(currentTurn(s).round).toBe(7);
+ expect(s.levelSuggestion).toBe(3);
 });
 test('multi-giver groups respect exclusions between all members',()=>{
  const people=roster(3);people[1].preferences.blockedIds=['2'];const multi={...card,interaction:{category:'general',role:'receive',partnerCount:2}};

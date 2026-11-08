@@ -46,6 +46,8 @@ test('preset mentés, névsorváltozás, folytatás és preset elszigetelése a 
     await press('Összeállítás mentése');
     const presetBefore = mockData.get('presets');
     expect(JSON.parse(presetBefore)[0].members).toHaveLength(2);
+    await press('Tovább a játékosokhoz →');
+    await press('Következő játékos →');
     await press('Játék indítása →');
     expect(JSON.parse(mockData.get('session')).sourcePresetId).toBe(JSON.parse(presetBefore)[0].id);
     expect(JSON.parse(mockData.get('session')).roster.every(p=>p.sourceMemberId)).toBe(true);
