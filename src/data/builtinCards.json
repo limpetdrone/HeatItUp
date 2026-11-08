@@ -3998,9 +3998,9 @@
     "grind"
    ],
    "text": {
-    "en": "Straddle the selected player's lap, kiss them deeply with tongue, and press your hips slowly against theirs for 25 seconds.",
-    "hu": "Ülj lovaglóülésben a kijelölt játékos ölébe, csókold meg mélyen, nyelvvel, miközben 25 másodpercig lassan hozzádörgölöd a csípődet!",
-    "de": "Setz dich rittlings auf den Schoß der gewählten Person, küsse sie tief mit Zunge und reibe deine Hüften 25 Sekunden lang langsam an ihren."
+    "en": "Sit straddling the chosen player's lap in your underwear, kiss them deeply, and grind rhythmically for 30 seconds simulating sex through your underwear!",
+    "hu": "Ülj lovaglóülésben a kijelölt játékos ölébe fehérneműben, csókold meg mélyen, miközben 30 másodpercig ritmikusan hozzádörgölőzve mozogsz a fehérneműn keresztül, szexet imitálva!",
+    "de": "Setze dich in Unterwäsche rittlings auf den Schoß der gewählten Person, küsse sie intensiv und bewege dich 30 Sekunden lang rhythmisch wie beim Sex durch die Unterwäsche!"
    },
    "category": "general",
    "role": "give",
@@ -4326,9 +4326,9 @@
     "bite"
    ],
    "text": {
-    "en": "Grip the chosen player's hips and grind your pelvis against theirs for 25 seconds while gently biting their lower lip or ear!",
-    "hu": "Ragadd meg a kijelölt játékos csípőjét, és 25 másodpercig dörgöld a csípődet az övéhez, miközben az alsó ajkát vagy a fülét harapdálod!",
-    "de": "Fasse die Hüften der gewählten Person und reibe dein Becken für 25 Sekunden an ihrem, während du sanft in ihre Unterlippe oder ihr Ohr beißt!"
+    "en": "Grip the chosen player's hips and press against them for 25 seconds simulating sex through your underwear while gently biting their lower lip!",
+    "hu": "Ragadd meg a kijelölt játékos csípőjét, és 25 másodpercig a fehérneműn keresztül préseld a csípődet az övéhez szexet imitálva, miközben az alsó ajkát harapdálod!",
+    "de": "Fasse die Hüften der gewählten Person und bewege dich 25 Sekunden lang rhythmisch an ihr wie beim Sex durch die Unterwäsche, während du sanft in ihre Lippe beißt!"
    },
    "category": "general",
    "role": "give",
@@ -4502,9 +4502,9 @@
     "whisper"
    ],
    "text": {
-    "en": "Caress and stimulate the selected player right through their underwear with your palm and fingers for 30 seconds while whispering in their ear.",
-    "hu": "A tenyereddel és az ujjaiddal 30 másodpercig izgasd és simogasd a kijelölt játékost közvetlenül a fehérneműjén keresztül, miközben a fülébe suttogsz!",
-    "de": "Streichle und stimuliere die gewählte Person 30 Sekunden lang mit Handfläche und Fingern direkt durch die Unterwäsche hindurch, während du ihr ins Ohr flüsterst."
+    "en": "Use your palm and fingers to caress and stimulate the chosen player through their underwear between their thighs for 30 seconds while whispering in their ear!",
+    "hu": "A tenyereddel és az ujjaiddal 30 másodpercig izgasd és simogasd a kijelölt játékost közvetlenül a fehérneműjén keresztül a combjai között, miközben a fülébe suttogsz!",
+    "de": "Streiche und stimuliere die gewählte Person 30 Sekunden lang mit Handfläche und Fingern durch ihre Unterwäsche zwischen den Schenkeln, während du ihr ins Ohr flüsterst!"
    },
    "category": "general",
    "role": "give",
@@ -4535,7 +4535,7 @@
   {
    "id": "spark-challenge-028",
    "kind": "challenge",
-   "intensity": 3,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 30,
@@ -4558,7 +4558,7 @@
   {
    "id": "spark-challenge-029",
    "kind": "challenge",
-   "intensity": 3,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 35,
@@ -5199,7 +5199,7 @@
   {
    "id": "trust-challenge-001",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 90,
@@ -5219,7 +5219,7 @@
   {
    "id": "trust-challenge-002",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 90,
@@ -5403,7 +5403,7 @@
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
-   "parallelSafe": false,
+   "parallelSafe": true,
    "tags": [
     "explicit"
    ],
@@ -5422,7 +5422,7 @@
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
-   "parallelSafe": false,
+   "parallelSafe": true,
    "tags": [
     "explicit"
    ],
@@ -5441,7 +5441,7 @@
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
-   "parallelSafe": false,
+   "parallelSafe": true,
    "tags": [
     "explicit"
    ],
@@ -5456,7 +5456,7 @@
   {
    "id": "trust-challenge-014",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -5476,7 +5476,7 @@
   {
    "id": "trust-challenge-015",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -5535,7 +5535,7 @@
   {
    "id": "trust-challenge-018",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -5555,7 +5555,7 @@
   {
    "id": "trust-challenge-019",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -5593,7 +5593,7 @@
   {
    "id": "trust-challenge-021",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -5617,7 +5617,7 @@
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 120,
-   "parallelSafe": false,
+   "parallelSafe": true,
    "tags": [
     "explicit"
    ],
@@ -5769,7 +5769,7 @@
   {
    "id": "trust-challenge-030",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 90,
@@ -5956,7 +5956,7 @@
   {
    "id": "trust-body-001",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -6129,9 +6129,9 @@
     "imported"
    ],
    "text": {
-    "en": "Press your palm directly over the front of the selected player's underwear between their thighs and apply slow, rhythmic pressure for 20 seconds.",
-    "hu": "Simítsd a tenyeredet közvetlenül a kijelölt játékos fehérneműjének elejére a combjai között, és 20 másodpercig lassú, ritmikus nyomással izgasd!",
-    "de": "Lege deine Handfläche direkt vorn auf die Unterwäsche zwischen die Schenkel der gewählten Person und übe 20 Sekunden lang langsamen, rhythmischen Druck aus."
+    "en": "Place your palm directly on the front of the chosen player's underwear between their legs and stimulate them rhythmically through the fabric for 25 seconds!",
+    "hu": "Simítsd a tenyeredet közvetlenül a kijelölt játékos fehérneműjének elejére a lábai között, és 25 másodpercig ritmikus mozdulatokkal izgasd a fehérneműjén keresztül!",
+    "de": "Lege deine Handfläche vorn auf die Unterwäsche der gewählten Person zwischen ihren Beinen und verwöhne sie 25 Sekunden lang rhythmisch durch den Stoff!"
    },
    "parallelDurationSeconds": 40
   },
@@ -6149,9 +6149,9 @@
     "imported"
    ],
    "text": {
-    "en": "Have the selected player lie back on the couch, climb on top of them between their legs, and make out passionately for 30 seconds while pressing your hips down.",
-    "hu": "Feküdjön hanyatt a kijelölt játékos a kanapén, feküdj rá a szétnyitott lábai közé, és 30 másodpercig csókolózzatok hevesen, miközben a csípődet az övéhez préseled!",
-    "de": "Lass die gewählte Person sich auf dem Sofa zurücklehnen, leg dich zwischen ihre geöffneten Beine auf sie und knutscht 30 Sekunden lang heftig mit engem Beckenkontakt."
+    "en": "Lie on the couch in your underwear with the chosen player on their back, position yourself between their thighs, and move rhythmically for 30 seconds simulating sex through your underwear!",
+    "hu": "Feküdjön hanyatt a kijelölt játékos fehérneműben a kanapén, feküdj rá a combjai közé, és 30 másodpercig mozogjatok ritmikusan egymáshoz préselődve, szexet imitálva a fehérneműn keresztül!",
+    "de": "Lass die gewählte Person in Unterwäsche auf dem Rücken liegen, lege dich zwischen ihre Beine und bewegt euch 30 Sekunden lang rhythmisch wie beim Sex durch die Unterwäsche!"
    },
    "parallelDurationSeconds": 60
   },
@@ -6229,9 +6229,9 @@
     "imported"
    ],
    "text": {
-    "en": "Lean the chosen player forward over the back of the sofa, stand close behind, and grind your hips slowly against their rear for 25 seconds!",
-    "hu": "Dönts előre a kijelölt játékost a kanapé támlájára, állj szorosan mögé, és 25 másodpercig lassan dörgöld a csípődet a fenekéhez!",
-    "de": "Lehne die gewählte Person über die Sofalehne, stelle dich eng hinter sie und reibe deine Hüften 25 Sekunden lang langsam an ihrem Po!"
+    "en": "Lean the chosen player forward over the couch, stand close behind them, and press your hips against their rear for 30 seconds, rhythmically moving as if having sex through your underwear!",
+    "hu": "Dönts előre a kijelölt játékost a kanapé támlájára, állj szorosan mögé, és 30 másodpercig préseld a csípődet a fenekéhez és mozogj rajta, szexet imitálva a fehérneműn keresztül!",
+    "de": "Lehne die gewählte Person über das Sofa, stelle dich eng hinter sie und bewege deine Hüften 30 Sekunden lang rhythmisch an ihrem Po wie beim Sex durch die Unterwäsche!"
    },
    "parallelDurationSeconds": 50
   },
@@ -6289,9 +6289,9 @@
     "imported"
    ],
    "text": {
-    "en": "Slide your hand between the selected player's thighs from behind and stroke their inner thighs and the outside of their underwear for 25 seconds.",
-    "hu": "Állj a kijelölt játékos mögé, nyúlj be a combjai közé, és 25 másodpercig simogasd a belső combját és a fehérneműjét kívülről!",
-    "de": "Stell dich hinter die gewählte Person, greife zwischen ihre Oberschenkel und streichle 25 Sekunden lang ihre Innenschenkel und von außen über die Unterwäsche."
+    "en": "Stand behind the chosen player, reach between their thighs, and stimulate them through their underwear from behind for 30 seconds!",
+    "hu": "Állj a kijelölt játékos mögé, nyúlj be a combjai közé, és 30 másodpercig a fehérneműjén keresztül izgasd kívülről a lábai között!",
+    "de": "Stell dich hinter die gewählte Person, greife zwischen ihre Schenkel und stimuliere sie 30 Sekunden lang von hinten durch die Unterwäsche!"
    },
    "parallelDurationSeconds": 50
   },
@@ -6508,9 +6508,9 @@
     "imported"
    ],
    "text": {
-    "en": "Press the chosen player against the wall, wrap one of their legs around your waist, and grind against them for 25 seconds while kissing!",
-    "hu": "Szorítsd a falhoz a kijelölt játékost, emeld fel az egyik lábát a derekad köré, és 25 másodpercig dörgöld hozzá a testedet, miközben csókolóztok!",
-    "de": "Drücke die gewählte Person an die Wand, lege eines ihrer Beine um deine Taille und reibe dich 25 Sekunden lang an ihr, während ihr euch küsst!"
+    "en": "Press the chosen player against the wall, wrap one of their legs around your waist, and grind rhythmically for 30 seconds simulating sex through your underwear while kissing!",
+    "hu": "Szorítsd a falhoz a kijelölt játékost, emeld fel az egyik lábát a derekad köré, és 30 másodpercig dörgölőzzetek egymáshoz szexet imitálva a fehérneműn keresztül, miközben csókolóztok!",
+    "de": "Drücke die gewählte Person an die Wand, lege eines ihrer Beine um deine Taille und reibt euch 30 Sekunden lang wie beim Sex durch die Unterwäsche aneinander, während ihr euch küsst!"
    },
    "parallelDurationSeconds": 50
   },
@@ -6548,9 +6548,9 @@
     "imported"
    ],
    "text": {
-    "en": "Guide the selected player's hand directly onto the front of your underwear between your legs and hold it there while sharing a 20-second French kiss.",
-    "hu": "Vezesd a kijelölt játékos kezét közvetlenül a saját fehérneműd elejére a lábaid közé, és tartsd ott, miközben 20 másodpercig nyelvvel csókolóztok!",
-    "de": "Führe die Hand der gewählten Person direkt vorn auf deine Unterwäsche zwischen deinen Beinen und halte sie dort während eines 20 Sekunden langen Zungenkusses."
+    "en": "Guide the chosen player's hand directly onto the front of your underwear between your legs, letting them stimulate you rhythmically through the fabric for 25 seconds!",
+    "hu": "Vezesd a kijelölt játékos kezét közvetlenül a saját fehérneműd elejére a lábaid közé, és hagyd, hogy a fehérneműdön keresztül ritmikusan izgasson 25 másodpercig!",
+    "de": "Führe die Hand der gewählten Person vorn auf deine Unterwäsche zwischen deinen Beinen und lass dich 25 Sekunden lang rhythmisch durch den Stoff stimulieren!"
    },
    "parallelDurationSeconds": 40
   },
@@ -7156,7 +7156,7 @@
   {
    "id": "trust-import-001",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7176,7 +7176,7 @@
   {
    "id": "trust-import-002",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7216,7 +7216,7 @@
   {
    "id": "trust-import-004",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7256,7 +7256,7 @@
   {
    "id": "trust-import-006",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7280,7 +7280,7 @@
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
-   "parallelSafe": false,
+   "parallelSafe": true,
    "category": "general",
    "role": "give",
    "tags": [
@@ -7295,7 +7295,7 @@
   {
    "id": "trust-import-008",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7306,9 +7306,9 @@
     "imported"
    ],
    "text": {
-    "en": "Lay the naked selected player on their back, position yourself between their thighs, and rub your intimate zones directly against each other for 45 seconds while kissing.",
-    "hu": "Fektesd hanyatt a meztelen kijelölt játékost, helyezkedj el a szétnyitott combjai között, és 45 másodpercig közvetlenül összeérve mozogjatok egymáson, miközben csókolóztok!",
-    "de": "Leg die nackte gewählte Person auf den Rücken, positioniere dich zwischen ihren Schenkeln und bewegt eure Becken 45 Sekunden lang direkt Haut an Haut beim Küssen."
+    "en": "Have the naked chosen player lie on their back, position yourself between their thighs, and move against each other skin-to-skin for 45 seconds simulating sex without penetration!",
+    "hu": "Fektesd hanyatt a meztelen kijelölt játékost, helyezkedj el a szétnyitott combjai között, és 45 másodpercig csupasz bőr-a-bőrön mozogjatok egymáshoz simulva, szexet imitálva behatolás nélkül!",
+    "de": "Lass die nackte gewählte Person auf dem Rücken liegen, platziere dich zwischen ihren Beinen und bewegt euch 45 Sekunden lang Haut an Haut wie beim Sex ohne Penetration!"
    },
    "parallelDurationSeconds": 90
   },
@@ -7334,7 +7334,7 @@
   {
    "id": "trust-import-010",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7433,7 +7433,7 @@
   {
    "id": "trust-import-015",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 50,
@@ -7493,7 +7493,7 @@
   {
    "id": "trust-import-018",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7504,9 +7504,9 @@
     "imported"
    ],
    "text": {
-    "en": "Position the selected player on their side in front of you (spooning naked), lift their upper leg slightly, and caress and rub their intimate zone from behind for 45 seconds.",
-    "hu": "Feküdjetek oldalra meztelenül kifli-pózban, emeld meg egy kicsit a kijelölt játékos felső lábát, és hátulról 45 másodpercig simogasd és izgasd az intim zónáját!",
-    "de": "Legt euch nackt in die Löffelchen-Position, hebe das obere Bein der gewählten Person leicht an und verwöhne 45 Sekunden lang von hinten ihre Intimzone."
+    "en": "Lie on your sides naked in a spooning position, lift the chosen player's top leg, and grind against each other from behind for 45 seconds without penetration!",
+    "hu": "Feküdjetek oldalra meztelenül kifli-pózban, emeld meg a kijelölt játékos felső lábát, és hátulról 45 másodpercig dörgölőzzetek egymáshoz csupasz testtel, behatolás nélkül!",
+    "de": "Legt euch nackt in Löffelstellung auf die Seite, hebe das obere Bein der gewählten Person an und reibt euch 45 Sekunden lang von hinten nackt aneinander ohne Penetration!"
    },
    "parallelDurationSeconds": 90
   },
@@ -7532,7 +7532,7 @@
   {
    "id": "trust-import-020",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -7543,16 +7543,16 @@
     "imported"
    ],
    "text": {
-    "en": "Have the selected player straddle your lap naked, wrap their legs tightly around your waist, and grind together for 60 seconds as if having sex.",
-    "hu": "Üljön az öledbe meztelenül a kijelölt játékos, kulcsolja a lábait a derekad köré, és 60 másodpercig intenzíven mozogjatok egymáson, mintha szexelnétek!",
-    "de": "Lass die gewählte Person sich nackt auf deinen Schoß setzen, die Beine um deine Taille schlingen und bewegt euch 60 Sekunden lang intensiv wie beim Sex aufeinander."
+    "en": "Have the chosen player straddle your lap completely naked, wrap their legs around your waist, and grind skin-to-skin for 45 seconds simulating sex without penetration!",
+    "hu": "Üljön az öledbe teljesen meztelenül a kijelölt játékos, kulcsolja a lábait a derekad köré, és 45 másodpercig csupasz bőr-a-bőrhöz dörgölőzve mozogjatok egymáson, szexet imitálva behatolás nélkül!",
+    "de": "Lass die gewählte Person sich völlig nackt auf deinen Schoß setzen, die Beine um deine Taille schlingen und bewegt euch 45 Sekunden lang Haut an Haut wie beim Sex ohne Penetration!"
    },
    "parallelDurationSeconds": 120
   },
   {
    "id": "trust-import-021",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 45,
@@ -7563,9 +7563,9 @@
     "imported"
    ],
    "text": {
-    "en": "Lie on your stomach naked while the selected player lies on top of your back, grinding their pelvis against your ass and kissing your neck for 45 seconds.",
-    "hu": "Feküdj hasra, miközben a kijelölt játékos rád fekszik hátulról, a csípőjét a fenekedhez préselve mozog rajtad, és a nyakadat csókolja 45 másodpercig!",
-    "de": "Leg dich nackt auf den Bauch, während sich die gewählte Person von hinten auf dich legt, ihr Becken 45 Sekunden lang an deinem Po reibt und deinen Hals küsst."
+    "en": "Lie face down naked while the chosen player lies on your back from behind, grinding their bare hips against your rear for 45 seconds without penetration!",
+    "hu": "Feküdj hasra meztelenül, miközben a kijelölt játékos rád fekszik hátulról, a csípőjét a fenekedhez préselve mozog rajtad 45 másodpercig, behatolás nélkül!",
+    "de": "Lege dich nackt auf den Bauch, während sich die gewählte Person von hinten auf dich legt und ihre Hüften 45 Sekunden lang an deinem Po reibt, ohne Penetration!"
    },
    "parallelDurationSeconds": 90
   },
@@ -7591,7 +7591,7 @@
   {
    "id": "trust-import-023",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -7687,7 +7687,7 @@
   {
    "id": "trust-blindfold-001",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,
@@ -7706,7 +7706,7 @@
   {
    "id": "trust-blindfold-002",
    "kind": "challenge",
-   "intensity": 5,
+   "intensity": 4,
    "minPlayers": 2,
    "participantCount": 2,
    "durationSeconds": 60,

@@ -33,7 +33,22 @@ function draw(s, cards, rng) {
     }
     if (deck.length > 1 && deck[0] === s.currentCardId) [deck[0], deck[1]] = [deck[1], deck[0]];
   }
-  deck=deck.map(id=>({id,weight:Math.min(...eligibleAssignments(s,pool.find(c=>c.id===id),currentTurn(s).playerId).map(choice=>choice.score))*.3+rng()})).sort((a,b)=>a.weight-b.weight).map(entry=>entry.id);
+  const activeCount = s.roster.filter(p => p.status === 'active').length;
+  deck=deck.map(id=>{
+    const card=pool.find(c=>c.id===id);
+    const choices=eligibleAssignments(s,card,currentTurn(s).playerId);
+    const minScore=choices.length?Math.min(...choices.map(choice=>choice.score)):0;
+    let weight=minScore*.3+rng();
+    if(s.settings.maxIntensity===5&&s.settings.options?.parallel){
+      if(activeCount>=4){
+        if(choices.some(c=>c.groups.length>1))weight-=100;
+        else if(card.minPlayers>=3||(card.interaction?.partnerCount&&card.interaction.partnerCount>=2))weight-=80;
+      }else if(activeCount===3){
+        if(card.minPlayers>=3||(card.interaction?.partnerCount&&card.interaction.partnerCount>=2))weight-=100;
+      }
+    }
+    return {id,weight};
+  }).sort((a,b)=>a.weight-b.weight).map(entry=>entry.id);
   const card=pool.find(c=>c.id===deck[0]);
   const choices=eligibleAssignments(s,card,currentTurn(s).playerId);
   const assignment=chooseAssignment(choices,rng);

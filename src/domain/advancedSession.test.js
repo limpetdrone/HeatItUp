@@ -89,3 +89,12 @@ test('a card family repeated in the same game comes back with a twist',()=>{
  expect(currentTurn(s).playerId).toBe('1');
  expect(currentTurn(s).twistId).toEqual(expect.any(String));
 });
+
+test('level 5 with parallel option prioritizes multi-group splits for 4+ players',()=>{
+ const pairCard={id:'pair',familyId:'pair',kind:'challenge',intensity:5,minPlayers:2,text:'Pair task',interaction:{category:'general',partnerCount:1,parallelSafe:false,durationSeconds:30}};
+ const parallelCard={id:'par',familyId:'par',kind:'challenge',intensity:5,minPlayers:2,text:'Parallel task',interaction:{category:'general',partnerCount:1,parallelSafe:true,durationSeconds:30}};
+ const groupDeck=[pairCard, parallelCard];
+ const s=choose(startSession('s',{rounds:5,maxIntensity:5,options:{parallel:true}},roster(4),groupDeck,null,()=>0.5).session, groupDeck);
+ expect(currentTurn(s).assignment.groups.length).toBe(2);
+ expect(currentTurn(s).assignment.playerIds.length).toBe(4);
+});
