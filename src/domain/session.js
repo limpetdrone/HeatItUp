@@ -169,6 +169,11 @@ export function startSession(id, input, roster, cards, sourcePresetId = null, rn
     const j = Math.floor(rng() * (i + 1));
     [levelCards[i], levelCards[j]] = [levelCards[j], levelCards[i]];
   }
+  const allMales = players.length >= 2 && players.every(p => p.gender === 'male');
+  const sessionOptions = clone(input.options || {});
+  if (allMales && sessionOptions.activities && sessionOptions.activities.maleSameGender !== false) {
+    sessionOptions.activities.maleSameGender = true;
+  }
   const session = {
     schemaVersion: 3,
     id,
@@ -179,7 +184,7 @@ export function startSession(id, input, roster, cards, sourcePresetId = null, rn
       rounds: initialRounds,
       openEnded: input.openEnded !== undefined ? Boolean(input.openEnded) : (input.rounds === undefined),
       music: clone(input.music || {}),
-      options: clone(input.options || {})
+      options: sessionOptions
     },
     turns,
     cursor: 0,

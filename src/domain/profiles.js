@@ -57,6 +57,7 @@ export function canInteract(actor, recipient, category, settings, fetishId) {
   if ((a.gender === 'female' && b.gender === 'female' && (!global.femaleSameGender||a.preferences.genderActivities.femaleSameGender===false||b.preferences.genderActivities.femaleSameGender===false) || a.gender === 'male' && b.gender === 'male' && (!global.maleSameGender||a.preferences.genderActivities.maleSameGender===false||b.preferences.genderActivities.maleSameGender===false))) return false;
   if (!activityCategories.includes(category)) return true;
   if (!global[category]) return false;
+  if (category === 'anal' && a.gender === 'female') return false;
   const ar = a.preferences.activities[category], br = b.preferences.activities[category];
   const permits = (profile, rule, role, target) => rule[role] && !rule[role+'BlockedIds'].includes(target.id) && (rule[role+'Policy'] === 'all' || rule[role+'Policy'] === 'partner' && profile.partnerId === target.id || rule[role+'Policy'] === 'selected' && rule[role+'Ids'].includes(target.id));
   if (!permits(a,ar,'give',b) || !permits(b,br,'receive',a)) return false;

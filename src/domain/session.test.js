@@ -226,3 +226,13 @@ test('switching between question and challenge preserves cards of the other kind
   const cChosen = chooseCardKind(resolved, { turnId: currentTurn(resolved).id, kind: 'challenge' }, builtinCards, Math.random).session;
   expect(builtinCards.find(c => c.id === cChosen.currentCardId).kind).toBe('challenge');
 });
+
+test('two male players can draw challenges at level 1 without getting no_cards', () => {
+  const malePair = [['m1', 'male'], ['m2', 'male']].map(([id, gender]) => ({ id, name: id.toUpperCase(), gender }));
+  const s = startSession('test-males', { rounds: 5, maxIntensity: 1, options: { activities: {} } }, malePair, builtinCards, null, Math.random).session;
+  expect(s.settings.options.activities.maleSameGender).toBe(true);
+  const cChosen = chooseCardKind(s, { turnId: currentTurn(s).id, kind: 'challenge' }, builtinCards, Math.random).session;
+  expect(cChosen.phase).toBe('playing');
+  expect(cChosen.waitReason).toBeNull();
+  expect(cChosen.currentCardId).toBeTruthy();
+});

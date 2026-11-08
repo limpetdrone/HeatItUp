@@ -81,8 +81,19 @@ export default function SetupScreen({
       ...p,
       name: p.name.trim() || t(`Játékos ${i + 1}`)
     }));
-    const validated = validateSettings({
+    const maleOnly = resolvedProfiles.length >= 2 && resolvedProfiles.every(p => p.gender === 'male');
+    const adjustedSettings = {
       ...settings,
+      options: {
+        ...settings.options,
+        activities: {
+          ...settings.options?.activities,
+          ...(maleOnly && settings.options?.activities?.maleSameGender !== false ? { maleSameGender: true } : {})
+        }
+      }
+    };
+    const validated = validateSettings({
+      ...adjustedSettings,
       profiles: resolvedProfiles,
       players: resolvedProfiles.map(p => p.name)
     });
@@ -184,7 +195,7 @@ export default function SetupScreen({
   const currentProfile = profiles[playerIdx] || profiles[0];
 
   return (
-    <ScreenShell onSettings={onSettings} label={`JÁTÉKOSOK BEÁLLÍTÁSA (${playerIdx + 1}/${profiles.length})`}>
+    <ScreenShell key={`card-${cardIndex}`} onSettings={onSettings} label={`JÁTÉKOSOK BEÁLLÍTÁSA (${playerIdx + 1}/${profiles.length})`}>
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
         <Text style={ui.title} accessibilityRole="header">
           {playerIdx + 1}. {t('játékos')}

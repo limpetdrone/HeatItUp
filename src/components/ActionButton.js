@@ -10,7 +10,9 @@ export default function ActionButton({
   disabled = false,
   secondary = false,
   selected,
-  accessibilityLabel
+  accessibilityLabel,
+  style,
+  textStyle
 }) {
   const t = useTranslation();
   const [focused, setFocused] = useState(false);
@@ -23,10 +25,10 @@ export default function ActionButton({
     pressed
   }) => [styles.button, secondary && styles.secondary, selected && styles.selected, focused && styles.focused, (disabled || pressed) && {
     opacity: disabled ? 0.45 : 0.75
-  }]}>
+  }, style]}>
     <Text verbatim={verbatim} style={[styles.label, secondary && {
       color: colors.text
-    }]}>{title}</Text>
+    }, textStyle]}>{title}</Text>
   </Pressable>;
 }
 const styles = StyleSheet.create({

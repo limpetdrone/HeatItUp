@@ -77,36 +77,35 @@ export default function GameScreen({
     onResolve('passed');
   }
 
-  // DISCREET TOP BAR: Level badge + Round + Discreet Players & Stop icons
+  // DISCREET TOP BAR: Level picker icon + Discreet Players & Finish icon buttons
   const discreetTopBar = (
     <View style={styles.topBar}>
-      <TouchableOpacity
-        accessibilityRole="button"
-        accessibilityLabel={`Szint: ${game.settings.maxIntensity} · ${t(levels[game.settings.maxIntensity])}`}
+      <ActionButton
+        title="🌶️"
+        accessibilityLabel={t('Intenzitási szint módosítása')}
+        secondary
+        selected={showLevelPicker}
         onPress={() => setShowLevelPicker(!showLevelPicker)}
-        style={styles.levelBadge}
-      >
-        <Text style={styles.levelBadgeText}>
-          🌶️ {game.settings.maxIntensity}. {t(levels[game.settings.maxIntensity])}
-        </Text>
-      </TouchableOpacity>
-
-      <Text style={[ui.eyebrow, { color: colors.focus }]}>
-        {turn?.round || 1}. {t('KÖR')}
-      </Text>
+        style={styles.iconButton}
+        textStyle={styles.iconButtonText}
+      />
 
       <View style={styles.discreetActions}>
         <ActionButton
-          title="Játékosok"
+          title="👥"
           accessibilityLabel="Játékosok"
           secondary
           onPress={onPlayers}
+          style={styles.iconButton}
+          textStyle={styles.iconButtonText}
         />
         <ActionButton
-          title="Befejezés"
+          title="🏁"
           accessibilityLabel="Játék befejezése"
           secondary
           onPress={onStop}
+          style={styles.iconButton}
+          textStyle={styles.iconButtonText}
         />
       </View>
     </View>
@@ -212,13 +211,15 @@ export default function GameScreen({
         accessibilityLiveRegion="polite"
         style={[styles.taskCard, { borderTopColor: isChallenge ? colors.accent : colors.focus }]}
       >
-        <View style={styles.cardHeaderRow}>
+        <View style={styles.cardHeader}>
           <Text style={[ui.eyebrow, { color: isChallenge ? colors.accent : colors.focus }]}>
-            {isChallenge ? '🔥 MERSZ · KIHÍVÁS' : '💬 FELELSZ · KÉRDÉS'} · {card.intensity} {t(levels[card.intensity])}
+            {isChallenge ? '🔥 MERSZ · KIHÍVÁS' : '💬 FELELSZ · KÉRDÉS'} · {card.intensity}. {t(levels[card.intensity])}
           </Text>
-          <Text verbatim style={styles.activePlayerTag}>
-            {player}
-          </Text>
+          <View style={styles.playerBadge}>
+            <Text verbatim style={styles.playerBadgeText}>
+              👤 {player}
+            </Text>
+          </View>
         </View>
 
         {/* If Challenge and roles are assigned, build roles directly into task display */}
@@ -350,22 +351,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 16,
-    flexWrap: 'wrap',
-    gap: 8
+    marginBottom: 16
   },
-  levelBadge: {
-    backgroundColor: colors.surface,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 122, 144, 0.4)'
+  iconButton: {
+    minHeight: 44,
+    minWidth: 44,
+    height: 44,
+    width: 44,
+    paddingHorizontal: 0,
+    paddingVertical: 0,
+    borderRadius: 22,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  levelBadgeText: {
-    color: colors.accent,
-    fontWeight: '800',
-    fontSize: 13
+  iconButtonText: {
+    fontSize: 20
   },
   discreetActions: {
     flexDirection: 'row',
@@ -385,17 +385,22 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
     elevation: 6
   },
-  cardHeaderRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  cardHeader: {
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(255, 255, 255, 0.08)',
-    paddingBottom: 12
+    paddingBottom: 12,
+    gap: 8
   },
-  activePlayerTag: {
+  playerBadge: {
+    alignSelf: 'flex-start',
+    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 12
+  },
+  playerBadgeText: {
     color: colors.text,
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: '800'
   },
   roleBadge: {

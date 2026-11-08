@@ -26,3 +26,9 @@ test('invalid setup options and unreciprocated couples are rejected',()=>{
  const p=people();p[0].partnerId='B';expect(profileErrors(p).length).toBeGreaterThan(0);
  expect(validateSettings({players:['A','B'],rounds:3,maxIntensity:5,options:{parallel:'yes'}}).ok).toBe(false);
 });
+test('females cannot be givers in anal tasks', () => {
+  const female = { ...people()[0], gender: 'female' };
+  const male = { ...people()[1], gender: 'male' };
+  expect(canInteract(female, male, 'anal', { activities: { anal: true } })).toBe(false);
+  expect(canInteract(male, female, 'anal', { activities: { anal: true } })).toBe(true);
+});
