@@ -2091,9 +2091,9 @@
     "lips"
    ],
    "text": {
-    "en": "Brush your lips slowly from the selected player's temple down their cheekbone until you reach the corner of their mouth, then kiss it.",
-    "hu": "Simítsd végig az ajkaidat lassan a kijelölt játékos halántékától az arccsontján át egészen a szája sarkáig, majd nyomj oda egy csókot!",
-    "de": "Streife mit deinen Lippen langsam von der Schläfe der gewählten Person über den Wangenknochen bis zum Mundwinkel und küsse ihn."
+    "en": "Brush your lips slowly from the selected player's temple down their cheek until you reach the corner of their mouth, then kiss it.",
+    "hu": "Simítsd végig az ajkaidat lassan a kijelölt játékos halántékától az arcán át egészen a szája sarkáig, majd nyomj oda egy csókot!",
+    "de": "Streife mit deinen Lippen langsam von der Schläfe der gewählten Person über die Wange bis zum Mundwinkel und küsse ihn."
    },
    "parallelDurationSeconds": 40
   },
