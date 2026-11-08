@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals';
-import { renderCard, insertPartnerName, inflectHu } from './renderCard';
+import { renderCard, insertPartnerName, inflectHu, formatParallelInvitation } from './renderCard';
 
 test('body labels retain the selected language after substitution', () => {
   const roster = [{ id: 'a', name: 'A' }, { id: 'b', name: 'B', gender: 'male' }];
@@ -109,4 +109,56 @@ test('renderCard dynamically resolves intimate terms and bodyPart based on gende
   expect(renderCard(cardActorMale, group1, roster)).toBe(
     'Hagyd, hogy Kriszta 45 másodpercig lassan simogassa a kezével a péniszedet.'
   );
+});
+
+test('formatParallelInvitation generates natural invitation notes for parallel pairs', () => {
+  const roster = [
+    { id: '1', name: 'Dávid' },
+    { id: '2', name: 'Gabi' },
+    { id: '3', name: 'Kriszta' },
+    { id: '4', name: 'Viktor' },
+    { id: '5', name: 'Anna' },
+    { id: '6', name: 'Balázs' },
+    { id: '7', name: 'Nóri' },
+    { id: '8', name: 'Tomi' }
+  ];
+
+  const group2 = { actorId: '3', giverIds: ['3'], receiverIds: ['4'], playerIds: ['3', '4'] };
+  const group3 = { actorId: '5', giverIds: ['5'], receiverIds: ['6'], playerIds: ['5', '6'] };
+  const group4 = { actorId: '7', giverIds: ['7'], receiverIds: ['8'], playerIds: ['7', '8'] };
+
+  // 1 extra pair (Hungarian)
+  expect(formatParallelInvitation([group2], roster, 'hu')).toBe(
+    'Kriszta és Viktor is csinálhatja, ha szeretné.'
+  );
+
+  // 2 extra pairs (Hungarian)
+  expect(formatParallelInvitation([group2, group3], roster, 'hu')).toBe(
+    'Kriszta és Viktor, valamint Anna és Balázs is csinálhatja, ha szeretné.'
+  );
+
+  // 3 extra pairs (Hungarian)
+  expect(formatParallelInvitation([group2, group3, group4], roster, 'hu')).toBe(
+    'Kriszta és Viktor, Anna és Balázs, valamint Nóri és Tomi is csinálhatja, ha szeretné.'
+  );
+
+  // English
+  expect(formatParallelInvitation([group2], roster, 'en')).toBe(
+    'Kriszta and Viktor can also do it if they want.'
+  );
+  expect(formatParallelInvitation([group2, group3], roster, 'en')).toBe(
+    'Kriszta and Viktor, as well as Anna and Balázs can also do it if they want.'
+  );
+
+  // German
+  expect(formatParallelInvitation([group2], roster, 'de')).toBe(
+    'Kriszta und Viktor können es auch machen, wenn sie möchten.'
+  );
+  expect(formatParallelInvitation([group2, group3], roster, 'de')).toBe(
+    'Kriszta und Viktor sowie Anna und Balázs können es auch machen, wenn sie möchten.'
+  );
+
+  // Null on empty
+  expect(formatParallelInvitation([], roster, 'hu')).toBeNull();
+  expect(formatParallelInvitation(null, roster, 'hu')).toBeNull();
 });

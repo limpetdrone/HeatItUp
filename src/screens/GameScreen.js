@@ -5,8 +5,8 @@ import ScreenShell from '../components/ScreenShell';
 import ActionButton from '../components/ActionButton';
 import RouletteWheel from '../components/RouletteWheel';
 import TaskTimer from '../components/TaskTimer';
-import { useTranslation } from '../i18n/context';
-import { renderCard } from '../domain/renderCard';
+import { useTranslation, useLanguage } from '../i18n/context';
+import { renderCard, formatParallelInvitation } from '../domain/renderCard';
 import { bodyParts, assignmentBodyParts } from '../domain/assignments';
 import { twistText } from '../domain/twists';
 import { colors, ui, levels } from '../theme';
@@ -27,6 +27,7 @@ export default function GameScreen({
   onReport
 }) {
   const t = useTranslation();
+  const { language } = useLanguage();
   const locked = useRef(false);
   const timer = useRef(null);
   const [busy, setBusy] = useState(false);
@@ -40,6 +41,8 @@ export default function GameScreen({
   useEffect(() => () => clearTimeout(timer.current), []);
 
   const a = turn?.assignment;
+  const groups = a?.groups || [];
+  const parallelNote = groups.length > 1 ? formatParallelInvitation(groups.slice(1), game.roster, language) : null;
   const pending = Boolean(a?.partnerPending || a?.bodyPending);
   const names = ids => (ids || []).map(id => game.roster.find(p => p.id === id)?.name).filter(Boolean).join(', ');
 
@@ -52,8 +55,11 @@ export default function GameScreen({
     : t('Várakozás');
 
   useEffect(() => {
-    if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(`${player || ''}. ${spokenText}`);
-  }, [player, spokenText]);
+    if (Platform.OS === 'ios') {
+      const announcement = [player, spokenText, parallelNote].filter(Boolean).join('. ');
+      AccessibilityInfo.announceForAccessibility(announcement);
+    }
+  }, [player, spokenText, parallelNote]);
 
   function resolve() {
     if (locked.current) return;
@@ -189,7 +195,6 @@ export default function GameScreen({
 
   // ACTIVE PLAYING TURN
   const isChallenge = card.kind === 'challenge';
-  const groups = a?.groups || [];
 
   // Wheel labels for partner or body spin
   const eligibleParts = assignmentBodyParts(game, a);
@@ -220,24 +225,30 @@ export default function GameScreen({
         </View>
 
         {/* If Challenge and roles are assigned, build roles directly into task display */}
-        {isChallenge && groups.length > 0 && groups.map((g, i) => {
-          const givers = names(g.giverIds) || player;
-          const receivers = names(g.receiverIds) || (a?.partnerPending ? `[${t('partner')}]` : '');
-          const groupText = renderCard(t(card.text), g, game.roster, bodyLabel);
+        {isChallenge && groups.length > 0 && (() => {
+          const mainGroup = groups[0];
+          const givers = names(mainGroup.giverIds) || player;
+          const receivers = names(mainGroup.receiverIds) || (a?.partnerPending ? `[${t('partner')}]` : '');
+          const groupText = renderCard(t(card.text), mainGroup, game.roster, bodyLabel);
           return (
-            <View key={i} style={groups.length > 1 ? styles.subGroupCard : null}>
+            <View>
               {receivers ? (
                 <View style={styles.roleBadge}>
                   <Text style={styles.roleBadgeText}>
-                    {groups.length > 1 ? `${i + 1}. Csapat: ` : ''}
                     🔥 {givers} ➔ {receivers}
                   </Text>
                 </View>
               ) : null}
               <Text verbatim style={ui.heading}>{groupText}</Text>
+              {parallelNote ? (
+                <View style={styles.parallelBox}>
+                  <Text style={styles.parallelIcon}>✨</Text>
+                  <Text verbatim style={styles.parallelText}>{parallelNote}</Text>
+                </View>
+              ) : null}
             </View>
           );
-        })}
+        })()}
 
         {/* Questions or tasks without groups */}
         {(!isChallenge || groups.length === 0) && (
@@ -409,6 +420,28 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(255, 255, 255, 0.06)'
+  },
+  parallelBox: {
+    backgroundColor: 'rgba(255, 122, 144, 0.08)',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 122, 144, 0.25)',
+    borderRadius: 14,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
+    marginTop: 12
+  },
+  parallelIcon: {
+    fontSize: 16
+  },
+  parallelText: {
+    color: colors.text,
+    fontSize: 14,
+    fontWeight: '500',
+    lineHeight: 20,
+    flex: 1
   },
   twistBox: {
     backgroundColor: 'rgba(255, 197, 110, 0.12)',

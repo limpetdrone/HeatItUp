@@ -225,3 +225,44 @@ export function renderCard(template, group, roster, bodyPart = '') {
 
   return rendered;
 }
+
+export function formatParallelInvitation(otherGroups, roster, language = 'hu') {
+  if (!otherGroups || otherGroups.length === 0) return null;
+  const nameOf = id => roster.find(p => p.id === id)?.name || '';
+
+  const groupPairNames = otherGroups.map(g => {
+    const rawIds = [...(g.giverIds || []), ...(g.receiverIds || []), ...(g.playerIds || [])];
+    const uniqueIds = rawIds.filter((id, index) => rawIds.indexOf(id) === index);
+    const memberNames = uniqueIds.map(nameOf).filter(Boolean);
+    if (memberNames.length === 0) return '';
+    if (memberNames.length === 1) return memberNames[0];
+
+    const joiner = language === 'de' ? ' und ' : language === 'en' ? ' and ' : ' és ';
+    return memberNames.slice(0, -1).join(', ') + joiner + memberNames[memberNames.length - 1];
+  }).filter(Boolean);
+
+  if (groupPairNames.length === 0) return null;
+
+  if (language === 'de') {
+    const combined = groupPairNames.length === 1
+      ? groupPairNames[0]
+      : groupPairNames.slice(0, -1).join(', ') + ' sowie ' + groupPairNames[groupPairNames.length - 1];
+    const isSingle = groupPairNames.length === 1 && (otherGroups[0]?.playerIds || []).length <= 1;
+    return isSingle
+      ? `${combined} kann es auch machen, wenn sie möchte.`
+      : `${combined} können es auch machen, wenn sie möchten.`;
+  }
+
+  if (language === 'en') {
+    const combined = groupPairNames.length === 1
+      ? groupPairNames[0]
+      : groupPairNames.slice(0, -1).join(', ') + ', as well as ' + groupPairNames[groupPairNames.length - 1];
+    return `${combined} can also do it if they want.`;
+  }
+
+  // hu:
+  const combined = groupPairNames.length === 1
+    ? groupPairNames[0]
+    : groupPairNames.slice(0, -1).join(', ') + ', valamint ' + groupPairNames[groupPairNames.length - 1];
+  return `${combined} is csinálhatja, ha szeretné.`;
+}
