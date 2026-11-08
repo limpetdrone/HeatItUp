@@ -7962,6 +7962,204 @@
         "en": "Lie down as a quartet in a closed loop with each person head by the thighs of the next: everyone simultaneously pleasures the intimate area of the person before them with mouth and fingers for 45 seconds in a continuous chain!",
         "de": "Legt euch zu viert in einer geschlossenen Schleife hin, sodass jeder Kopf an den Oberschenkeln des Nächsten liegt: Verwöhnt 45 Sekunden lang alle gleichzeitig den Intimbereich der vor euch liegenden Person mit Mund und Fingern in einer Kette!"
       }
+    },
+    {
+      "id": "intro-question-031",
+      "kind": "question",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 1,
+      "durationSeconds": 0,
+      "parallelSafe": false,
+      "tags": [
+        "room",
+        "attraction",
+        "smile"
+      ],
+      "text": {
+        "hu": "Körülnézve a szobában, kinek van a legvonzóbb mosolya vagy tekintete, és mi fog meg benne a legjobban?",
+        "en": "Looking around the room, who has the most attractive smile or gaze, and what catches your eye the most?",
+        "de": "Wenn du dich im Raum umsiehst: Wer hat das anziehendste Lächeln oder den schönsten Blick, und was gefällt dir daran am besten?"
+      }
+    },
+    {
+      "id": "intro-question-032",
+      "kind": "question",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 1,
+      "durationSeconds": 0,
+      "parallelSafe": false,
+      "tags": [
+        "compliment",
+        "charisma",
+        "trio"
+      ],
+      "text": {
+        "hu": "Ha mindkét melletted ülő játékosnak adnod kellene egy-egy őszinte bókot a kisugárzásukról, mi lenne az?",
+        "en": "If you had to give an honest compliment about their charisma to both players sitting next to you, what would it be?",
+        "de": "Wenn du beiden Personen neben dir ein ehrliches Kompliment zu ihrer Ausstrahlung machen müsstest, was wäre es?"
+      }
+    },
+    {
+      "id": "intro-question-033",
+      "kind": "question",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 1,
+      "durationSeconds": 0,
+      "parallelSafe": false,
+      "tags": [
+        "voice",
+        "allure",
+        "group"
+      ],
+      "text": {
+        "hu": "Ki az a társaságban, akinek a hangja vagy nevetése a leginkább megnyugtató vagy vonzó a számodra?",
+        "en": "Who in the group has a voice or laugh that you find most soothing or alluring?",
+        "de": "Wessen Stimme oder Lachen in der Runde findest du am beruhigendsten oder anziehendsten?"
+      }
+    },
+    {
+      "id": "intro-challenge-033",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "massage",
+        "shoulders",
+        "trio"
+      ],
+      "text": {
+        "hu": "Masszírozd meg a két kijelölt játékos vállát egyszerre, mindkét kezeddel egy-egy vállat lágyan átmozgatva 25 másodpercig!",
+        "en": "Massage the shoulders of the two selected players at the same time, gently working one shoulder with each hand for 25 seconds!",
+        "de": "Massiere gleichzeitig die Schultern der beiden gewählten Personen, jeweils mit einer Hand sanft für 25 Sekunden!"
+      }
+    },
+    {
+      "id": "intro-challenge-034",
+      "kind": "challenge",
+      "intensity": 1,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "touch",
+        "arms",
+        "trio"
+      ],
+      "text": {
+        "hu": "Hunyja be a szemed, miközben a két melletted lévő játékos egyszerre, finoman végigsimítja a két karodat 20 másodpercig!",
+        "en": "Close your eyes while the two players next to you gently stroke both of your arms simultaneously for 20 seconds!",
+        "de": "Schließe die Augen, während die beiden Personen neben dir 20 Sekunden lang sanft gleichzeitig deine beiden Arme streicheln!"
+      }
+    },
+    {
+      "id": "flirt-question-031",
+      "kind": "question",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 1,
+      "durationSeconds": 0,
+      "parallelSafe": false,
+      "tags": [
+        "spark",
+        "chemistry",
+        "room"
+      ],
+      "text": {
+        "hu": "Körülnézve a szobában, melyik két jelenlévő játékos között érzel olyan szikrát, amit érdemes lenne közelebbről is fellobbantani?",
+        "en": "Looking around the room, between which two players do you feel a spark that deserves to be ignited tonight?",
+        "de": "Wenn du dich im Raum umsiehst: Zwischen welchen zwei Personen spürst du ein Knistern, das man heute Abend entfachen sollte?"
+      }
+    },
+    {
+      "id": "flirt-question-032",
+      "kind": "question",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 1,
+      "durationSeconds": 0,
+      "parallelSafe": false,
+      "tags": [
+        "kiss",
+        "neck",
+        "fantasy"
+      ],
+      "text": {
+        "hu": "Ha választhatnál két játékost a szobában, akik felváltva adhatnának neked egy-egy forró nyakpuszit, kik lennének azok?",
+        "en": "If you could choose two players in the room to take turns giving you a warm kiss on the neck, who would they be?",
+        "de": "Wenn du zwei Personen im Raum wählen könntest, die dir abwechselnd einen heißen Kuss auf den Hals geben: Wer wäre es?"
+      }
+    },
+    {
+      "id": "flirt-question-033",
+      "kind": "question",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 1,
+      "durationSeconds": 0,
+      "parallelSafe": false,
+      "tags": [
+        "sauna",
+        "trio",
+        "spicy"
+      ],
+      "text": {
+        "hu": "Ha hármasban kellene elmennetek egy privát forró fürdőbe vagy szaunába, kiket választanál a társaságból?",
+        "en": "If you had to go to a private hot tub or sauna as a trio, which two players from the group would you choose?",
+        "de": "Wenn ihr zu dritt in einen privaten Whirlpool oder eine Sauna gehen müsstet: Welche zwei Personen aus der Runde würdest du wählen?"
+      }
+    },
+    {
+      "id": "flirt-challenge-033",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 20,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "receive",
+      "tags": [
+        "breath",
+        "neck",
+        "collarbone"
+      ],
+      "text": {
+        "hu": "A két kijelölt játékos egyszerre leheljen meleg levegőt a nyakad két oldalára, majd adjon egy-egy lassú puszit a kulcscsontodra!",
+        "en": "The two selected players breathe warm air onto both sides of your neck simultaneously, then give a slow kiss on each collarbone!",
+        "de": "Die beiden gewählten Personen hauchen gleichzeitig warme Luft an beide Seiten deines Halses und küssen sanft deine Schlüsselbeine!"
+      }
+    },
+    {
+      "id": "flirt-challenge-034",
+      "kind": "challenge",
+      "intensity": 2,
+      "minPlayers": 3,
+      "participantCount": 3,
+      "durationSeconds": 25,
+      "parallelSafe": false,
+      "category": "general",
+      "role": "give",
+      "tags": [
+        "hips",
+        "waist",
+        "proximity"
+      ],
+      "text": {
+        "hu": "Állj a két kijelölt játékos közé: mindkét kezeddel simogasd egyszerre a derekukat vagy a csípőjüket 25 másodpercig!",
+        "en": "Stand between the two selected players: gently caress their waist or hips at the same time with both hands for 25 seconds!",
+        "de": "Stell dich zwischen die beiden gewählten Personen: streichle 25 Sekunden lang mit beiden Händen gleichzeitig ihre Taille oder Hüften!"
+      }
     }
   ]
 }
