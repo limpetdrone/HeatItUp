@@ -209,3 +209,20 @@ test.each([1, 2, 3, 4, 5])('level %i draws a question and a challenge for a mixe
     expect(card.kind).toBe(kind);
   }
 });
+
+test('switching between question and challenge preserves cards of the other kind in remainingCardIds', () => {
+  const group = [['a', 'female'], ['b', 'male']].map(([id, gender]) => ({ id, name: id.toUpperCase(), gender }));
+  const s = startSession('test-preserve', { rounds: 5, maxIntensity: 1 }, group, builtinCards, null, Math.random).session;
+  expect(s.remainingCardIds.length).toBeGreaterThan(0);
+  const initialChallenges = s.remainingCardIds.filter(id => builtinCards.find(c => c.id === id).kind === 'challenge');
+  expect(initialChallenges.length).toBeGreaterThan(0);
+
+  const qChosen = chooseCardKind(s, { turnId: currentTurn(s).id, kind: 'question' }, builtinCards, Math.random).session;
+  const challengesAfterQuestion = qChosen.remainingCardIds.filter(id => builtinCards.find(c => c.id === id).kind === 'challenge');
+  expect(challengesAfterQuestion.length).toBe(initialChallenges.length);
+
+  const resolved = resolveTurn(qChosen, { turnId: currentTurn(qChosen).id, cardRevision: qChosen.cardRevision, outcome: 'completed' }, builtinCards, Math.random).session;
+  expect(resolved.phase).toBe('choosing');
+  const cChosen = chooseCardKind(resolved, { turnId: currentTurn(resolved).id, kind: 'challenge' }, builtinCards, Math.random).session;
+  expect(builtinCards.find(c => c.id === cChosen.currentCardId).kind).toBe('challenge');
+});

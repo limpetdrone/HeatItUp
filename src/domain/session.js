@@ -52,7 +52,8 @@ function draw(s, cards, rng) {
   const card=pool.find(c=>c.id===deck[0]);
   const choices=eligibleAssignments(s,card,currentTurn(s).playerId);
   const assignment=chooseAssignment(choices,rng);
-  const next={...s,phase:'playing',waitReason:null,currentCardId:card.id,remainingCardIds:deck.slice(1),cardRevision:s.cardRevision+1};
+  const otherRemaining=(s.remainingCardIds||[]).filter(id=>!freshPool.some(c=>c.id===id));
+  const next={...s,phase:'playing',waitReason:null,currentCardId:card.id,remainingCardIds:[...otherRemaining,...deck.slice(1)],cardRevision:s.cardRevision+1};
   const turn=currentTurn(next);const m=metadata(card);
   const wheelOptions=[...choices].sort((a,b)=>a.score-b.score).slice(0,8);
   turn.assignment={...assignment,wheelOptions,partnerPending:Boolean(s.settings.options?.partnerWheel&&m.partnerCount>0&&card.kind==='challenge'),bodyPending:Boolean(s.settings.options?.bodyWheel!==false&&m.bodyParts),bodyPartId:m.bodyParts&&s.settings.options?.bodyWheel===false?bodyParts.filter(p=>p.level<=s.settings.maxIntensity)[Math.floor(rng()*bodyParts.filter(p=>p.level<=s.settings.maxIntensity).length)].id:null,answeredIds:[]};
@@ -163,6 +164,11 @@ export function startSession(id, input, roster, cards, sourcePresetId = null, rn
     status: 'pending',
     omittedReason: null
   }))).flat();
+  const levelCards = (cards || []).filter(c => c.intensity === input.maxIntensity).map(c => c.id);
+  for (let i = levelCards.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [levelCards[i], levelCards[j]] = [levelCards[j], levelCards[i]];
+  }
   const session = {
     schemaVersion: 3,
     id,
@@ -181,7 +187,7 @@ export function startSession(id, input, roster, cards, sourcePresetId = null, rn
     cardRevision: 0,
     cardKind: null,
     history: [],
-    remainingCardIds: [],
+    remainingCardIds: levelCards,
     phase: 'playing',
     waitReason: null,
     endReason: null
@@ -200,7 +206,6 @@ export function chooseCardKind(session, event, cards, rng = Math.random) {
   };
   const next = clone(session);
   next.cardKind = event.kind;
-  next.remainingCardIds = next.remainingCardIds.filter(id => cards.some(c => c.id === id && c.kind === event.kind));
   return {
     ok: true,
     session: draw(next, cards, rng)
@@ -295,7 +300,7 @@ export function spinAssignment(session,part,cards,rng=Math.random,selectedIndex=
  return {ok:true,session:next};
 }
 export function setAnswered(session,id){const next=clone(session),turn=currentTurn(next);if(!turn?.assignment?.responders.includes(id))return failure('Hibás játékosazonosító.');const list=turn.assignment.answeredIds;turn.assignment.answeredIds=list.includes(id)?list.filter(x=>x!==id):[...list,id];return {ok:true,session:next};}
-export function changeLevel(session,level,cards){if(![1,2,3,4,5].includes(level)||session.phase==='finished')return failure('Hibás lépés.');const next=clone(session);next.settings.maxIntensity=level;next.levelSuggestion=null;next.cardKind=null;next.currentCardId=null;next.remainingCardIds=[];const turn=currentTurn(next);if(turn){next.lastLevelChangeRound=turn.round-1;delete turn.assignment;turn.timer=null;next.phase='choosing';}return {ok:true,session:advance(next,cards,Math.random)};}
+export function changeLevel(session,level,cards,rng=Math.random){if(![1,2,3,4,5].includes(level)||session.phase==='finished')return failure('Hibás lépés.');const next=clone(session);next.settings.maxIntensity=level;next.levelSuggestion=null;next.cardKind=null;next.currentCardId=null;const levelCards=(cards||[]).filter(c=>c.intensity===level).map(c=>c.id);for(let i=levelCards.length-1;i>0;i--){const j=Math.floor(rng()*(i+1));[levelCards[i],levelCards[j]]=[levelCards[j],levelCards[i]];}next.remainingCardIds=levelCards;const turn=currentTurn(next);if(turn){next.lastLevelChangeRound=turn.round-1;delete turn.assignment;turn.timer=null;next.phase='choosing';}return {ok:true,session:advance(next,cards,rng)};}
 export function updateWardrobe(session,id,wardrobe,cards){const next=clone(session),p=next.roster.find(p=>p.id===id);if(!p)return failure('Hibás játékosazonosító.');p.wardrobe=clone(wardrobe);return {ok:true,session:cards&&next.phase!=='finished'?advance(next,cards,Math.random):next};}
 export function timerAction(session,event){const next=clone(session),turn=currentTurn(next);if(!turn||turn.id!==event.turnId||next.cardRevision!==event.revision)return {ok:true,session};const now=event.now;if(!Number.isFinite(now))return failure('Hibás lépés.');const duration=(turn.durationSeconds||0)*1000;if(!duration)return {ok:true,session};
  if(event.action==='start'||event.action==='reset')turn.timer={remainingMs:duration,deadline:event.action==='start'?now+duration:null,notified:false};
