@@ -114,21 +114,100 @@ export function insertPartnerName(text, target) {
   return res;
 }
 
+export function resolveIntimateTerms(text, actorProfile, targetProfile) {
+  if (!text || typeof text !== 'string') return text;
+  let res = text;
+  const targetGender = targetProfile?.gender;
+  const actorGender = actorProfile?.gender;
+
+  // Actor's own intimate parts (1st person: 'részedet', 'pontodra', etc.)
+  if (actorGender === 'female') {
+    res = res.replace(/(?:az\s+)?intim\s+részedet/gi, 'a vaginádat');
+    res = res.replace(/(?:az\s+)?intim\s+részeden/gi, 'a vaginádon');
+    res = res.replace(/(?:az\s+)?intim\s+részedhez/gi, 'a vaginádhoz');
+    res = res.replace(/intim\s+helyen\s+érint\b/gi, 'a vaginádon érint');
+    res = res.replace(/legérzékenyebb\s+intim\s+pontodra/gi, 'csiklódra');
+    res = res.replace(/your\s+intimate\s+area/gi, 'your vagina');
+    res = res.replace(/deinem\s+Intimbereich/gi, 'deiner Vagina');
+    res = res.replace(/deinen\s+Intimbereich/gi, 'deine Vagina');
+  } else if (actorGender === 'male') {
+    res = res.replace(/(?:az\s+)?intim\s+részedet/gi, 'a péniszedet');
+    res = res.replace(/(?:az\s+)?intim\s+részeden/gi, 'a péniszeden');
+    res = res.replace(/(?:az\s+)?intim\s+részedhez/gi, 'a péniszedhez');
+    res = res.replace(/intim\s+helyen\s+érint\b/gi, 'a péniszeden érint');
+    res = res.replace(/legérzékenyebb\s+intim\s+pontodra/gi, 'péniszedre');
+    res = res.replace(/your\s+intimate\s+area/gi, 'your penis');
+    res = res.replace(/deinem\s+Intimbereich/gi, 'deinem Penis');
+    res = res.replace(/deinen\s+Intimbereich/gi, 'deinen Penis');
+  }
+
+  // Target's intimate parts (3rd person: 'részét', 'részén', etc.)
+  if (targetGender === 'female') {
+    res = res.replace(/(?:az\s+)?intim\s+részét\s+is/gi, 'a vagináját is');
+    res = res.replace(/(?:az\s+)?intim\s+részét/gi, 'vagináját');
+    res = res.replace(/(?:az\s+)?intim\s+részén/gi, 'vagináján');
+    res = res.replace(/(?:az\s+)?intim\s+részéhez/gi, 'vaginájához');
+    res = res.replace(/(?:az\s+)?intim\s+része\s+fölé/gi, 'vaginája fölé');
+    res = res.replace(/(?:az\s+)?intim\s+része\b/gi, 'vaginája');
+    res = res.replace(/(?:az\s+)?intim\s+zónáját/gi, 'vagináját');
+    res = res.replace(/érintsd\s+meg\s+intim\s+helyen/gi, 'érintsd meg a vagináján');
+    res = res.replace(/legintimebb\s+pontján/gi, 'vagináján');
+    res = res.replace(/(?:their|the)\s+intimate\s+area/gi, 'her vagina');
+    res = res.replace(/ihrem\s+Intimbereich/gi, 'ihrer Vagina');
+    res = res.replace(/ihren\s+Intimbereich/gi, 'ihre Vagina');
+    res = res.replace(/ihre\s+intimste\s+Stelle/gi, 'ihre Vagina');
+  } else if (targetGender === 'male') {
+    res = res.replace(/(?:az\s+)?intim\s+részét\s+is/gi, 'a péniszét is');
+    res = res.replace(/(?:az\s+)?intim\s+részét/gi, 'péniszét');
+    res = res.replace(/(?:az\s+)?intim\s+részén/gi, 'péniszén');
+    res = res.replace(/(?:az\s+)?intim\s+részéhez/gi, 'péniszéhez');
+    res = res.replace(/(?:az\s+)?intim\s+része\s+fölé/gi, 'pénisze fölé');
+    res = res.replace(/(?:az\s+)?intim\s+része\b/gi, 'pénisze');
+    res = res.replace(/(?:az\s+)?intim\s+zónáját/gi, 'péniszét');
+    res = res.replace(/érintsd\s+meg\s+intim\s+helyen/gi, 'érintsd meg a péniszén');
+    res = res.replace(/legintimebb\s+pontján/gi, 'péniszén');
+    res = res.replace(/(?:their|the)\s+intimate\s+area/gi, 'his penis');
+    res = res.replace(/ihrem\s+Intimbereich/gi, 'seinem Penis');
+    res = res.replace(/ihren\s+Intimbereich/gi, 'seinen Penis');
+    res = res.replace(/ihre\s+intimste\s+Stelle/gi, 'seinen Penis');
+  }
+
+  return res;
+}
+
 export function renderCard(template, group, roster, bodyPart = '') {
   const name = id => roster.find(p => p.id === id)?.name || '';
   const receivers = (group?.receiverIds || []).map(name).filter(Boolean);
   const givers = (group?.giverIds || []).map(name).filter(Boolean);
 
+  const targetId = (group?.receiverIds || []).find(id => id !== group?.actorId)
+    || (group?.giverIds || []).find(id => id !== group?.actorId)
+    || (group?.playerIds || []).find(id => id !== group?.actorId);
+  const targetProfile = roster.find(p => p.id === targetId);
+  const actorProfile = roster.find(p => p.id === group?.actorId);
+
+  // Dynamic resolution for bodyPart on roulette wheel if it's the intimate organ
+  let resolvedBodyPart = bodyPart;
+  if (/^(nemi szervek|genitals|genitalien|intim zóna|intimate area|intimzone)$/i.test(bodyPart.trim())) {
+    if (targetProfile?.gender === 'female') {
+      resolvedBodyPart = 'vagina';
+    } else if (targetProfile?.gender === 'male') {
+      resolvedBodyPart = 'pénisz';
+    } else {
+      resolvedBodyPart = 'intim zóna';
+    }
+  }
+
   const values = {
     actor: name(group?.actorId),
     givers: givers.join(', '),
     receivers: receivers.join(', '),
-    bodyPart
+    bodyPart: resolvedBodyPart
   };
 
   let rendered = template.replace(/\{(actor|givers|receivers|bodyPart)\}/g, (_, key) => values[key]);
 
-  // Determine partner / target name to replace generic 'selected player' references
+  // Insert target player name
   let targetIds = (group?.receiverIds || []).filter(id => id !== group?.actorId);
   if (targetIds.length === 0) {
     targetIds = (group?.giverIds || []).filter(id => id !== group?.actorId);
@@ -140,6 +219,9 @@ export function renderCard(template, group, roster, bodyPart = '') {
   if (targetNames.length > 0) {
     rendered = insertPartnerName(rendered, targetNames.join(', '));
   }
+
+  // Dynamically resolve intimate terms based on actor and target gender
+  rendered = resolveIntimateTerms(rendered, actorProfile, targetProfile);
 
   return rendered;
 }

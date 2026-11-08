@@ -58,3 +58,45 @@ test('renderCard substitutes placeholders and inserts target player name', () =>
     'Húzd Krisztát a kanapéra, és érintsd meg itt: nyak'
   );
 });
+
+test('renderCard dynamically resolves intimate terms and bodyPart based on gender', () => {
+  const roster = [
+    { id: '1', name: 'David', gender: 'male' },
+    { id: '2', name: 'Kriszta', gender: 'female' }
+  ];
+
+  // Actor: David (male), Target: Kriszta (female)
+  const group1 = { actorId: '1', giverIds: ['1'], receiverIds: ['2'], playerIds: ['1', '2'] };
+  const cardFemaleTarget = 'Simogasd lassan a kezeddel a kijelölt játékos intim részét 45 másodpercig.';
+  expect(renderCard(cardFemaleTarget, group1, roster)).toBe(
+    'Simogasd lassan a kezeddel Kriszta vagináját 45 másodpercig.'
+  );
+
+  const cardWheelFemale = 'Simogasd gyengéden a kijelölt játékost 20 másodpercig itt: {bodyPart}.';
+  expect(renderCard(cardWheelFemale, group1, roster, 'Intim zóna')).toBe(
+    'Simogasd gyengéden Krisztát 20 másodpercig itt: vagina.'
+  );
+
+  // Actor: Kriszta (female), Target: David (male)
+  const group2 = { actorId: '2', giverIds: ['2'], receiverIds: ['1'], playerIds: ['1', '2'] };
+  const cardMaleTarget = 'Simogasd lassan a kezeddel a kijelölt játékos intim részét 45 másodpercig.';
+  expect(renderCard(cardMaleTarget, group2, roster)).toBe(
+    'Simogasd lassan a kezeddel David péniszét 45 másodpercig.'
+  );
+
+  const cardWheelMale = 'Simogasd gyengéden a kijelölt játékost 20 másodpercig itt: {bodyPart}.';
+  expect(renderCard(cardWheelMale, group2, roster, 'Intim zóna')).toBe(
+    'Simogasd gyengéden Davidot 20 másodpercig itt: pénisz.'
+  );
+
+  // 1st person tasks (actor's own intimate part)
+  const cardActorFemale = 'Hagyd, hogy a kijelölt játékos 45 másodpercig lassan simogassa a kezével az intim részedet.';
+  expect(renderCard(cardActorFemale, group2, roster)).toBe(
+    'Hagyd, hogy David 45 másodpercig lassan simogassa a kezével a vaginádat.'
+  );
+
+  const cardActorMale = 'Hagyd, hogy a kijelölt játékos 45 másodpercig lassan simogassa a kezével az intim részedet.';
+  expect(renderCard(cardActorMale, group1, roster)).toBe(
+    'Hagyd, hogy Kriszta 45 másodpercig lassan simogassa a kezével a péniszedet.'
+  );
+});

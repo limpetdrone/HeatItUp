@@ -4,7 +4,7 @@ export const bodyParts = [
  {id:'shoulder',level:2,label:'Váll'},{id:'neck',level:2,label:'Nyak'},{id:'back',level:2,label:'Hát'},
  {id:'abdomen',level:3,label:'Has'},{id:'thigh',level:3,label:'Comb'},{id:'foot',level:3,label:'Lábfej'},
  {id:'chest',level:4,label:'Mellkas'},{id:'buttocks',level:4,label:'Fenék'},
- {id:'genitals',level:5,label:'Nemi szervek'}
+ {id:'genitals',level:5,label:'Intim zóna'}
 ];
 export function metadata(card) {
  return {category:'general',role:'give',partnerCount:card.minPlayers>1?1:0,parallelSafe:false,bodyParts:false,durationSeconds:0,...card.interaction};
