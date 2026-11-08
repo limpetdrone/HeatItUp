@@ -189,12 +189,12 @@ export function renderCard(template, group, roster, bodyPart = '') {
   // Dynamic resolution for bodyPart on roulette wheel if it's the intimate organ
   let resolvedBodyPart = bodyPart;
   if (/^(nemi szervek|genitals|genitalien|intim zóna|intimate area|intimzone)$/i.test(bodyPart.trim())) {
+    const bodyLanguage = /^(nemi szervek|intim zóna)$/i.test(bodyPart.trim()) ? 'hu'
+      : /^(genitalien|intimzone)$/i.test(bodyPart.trim()) ? 'de' : 'en';
     if (targetProfile?.gender === 'female') {
-      resolvedBodyPart = 'vagina';
+      resolvedBodyPart = bodyLanguage === 'de' ? 'Vagina' : 'vagina';
     } else if (targetProfile?.gender === 'male') {
-      resolvedBodyPart = 'pénisz';
-    } else {
-      resolvedBodyPart = 'intim zóna';
+      resolvedBodyPart = { hu: 'pénisz', en: 'penis', de: 'Penis' }[bodyLanguage];
     }
   }
 

@@ -1,18 +1,16 @@
 import { Text } from "./i18n/ui";
 import React, { useState, useEffect, useRef } from 'react';
-import { BackHandler, Platform, View } from 'react-native';
+import { BackHandler, Platform, View, Modal } from 'react-native';
 import { cards as builtinCards } from './data/cards';
 import { validateContent } from './domain/content';
 import { registerCardTranslations } from './i18n/core';
-import ContentScreen from './screens/ContentScreen';
 import { startSession, resolveTurn, changePlayerStatus, chooseCardKind, spinAssignment, setAnswered, changeLevel, timerAction, updateWardrobe, stopSession, currentTurn, migrateSession } from './domain/session';
 import { rekeyProfiles, normalizeProfile, removeProfile } from './domain/profiles';
 import { validatePreset, copy } from './domain/presets';
 import { repository, keys } from './storage/repository';
-import { musicDefaults, validMusic, validCatalog } from './music/selectTrack';
+import { musicDefaults, validMusic } from './music/selectTrack';
 import DeclineScreen from './screens/DeclineScreen';
 import { applyDecline, updatePresetPreferences } from './domain/decline';
-import LanguageSettingsScreen from './screens/LanguageSettingsScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import SetupScreen from './screens/SetupScreen';
 import GameScreen from './screens/GameScreen';
@@ -51,8 +49,7 @@ export default function App() {
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
   const [music, setMusic] = useState(musicDefaults);
-  const [catalog, setCatalog] = useState([]);
-  const [musicBack, setMusicBack] = useState('welcome');
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [replace, setReplace] = useState(false);
   const [deleteId, setDeleteId] = useState(null);
   const [clearRequested, setClearRequested] = useState(false);
@@ -68,7 +65,7 @@ export default function App() {
       }).ok) && new Set(v.map(p => p.id)).size === v.length, [], setPresets], [keys.session, v => Boolean(migrateSession(v, availableCards)), null, s => {
         const migrated=migrateSession(s,availableCards);sessionRef.current = migrated;
         setSession(migrated);
-      }], [keys.music, validMusic, musicDefaults, setMusic], [keys.catalog, validCatalog, [], setCatalog]];
+      }], [keys.music, validMusic, musicDefaults, setMusic]];
       for (const [key, valid, fallback, apply] of tasks) {
         try {
           const value = await repository.read(key, valid, fallback);
@@ -111,7 +108,7 @@ export default function App() {
     commit(result.session);
   }
   function goBack() {
-    if (screen === 'decline') setScreen('game');else if (screen === 'players') setScreen('game');else if (screen === 'music') setScreen(musicBack);else if (screen === 'editor') setScreen('presets');else if (screen === 'game') {
+    if (screen === 'decline') setScreen('game');else if (screen === 'players') setScreen('game');else if (screen === 'editor') setScreen('presets');else if (screen === 'game') {
       commit(stopSession(sessionRef.current));
       setScreen('summary');
     } else setScreen('welcome');
@@ -178,16 +175,12 @@ export default function App() {
     const turn=currentTurn(original);outcome(resolveTurn(result.session,{turnId:turn.id,cardRevision:original.cardRevision,outcome:'passed'},cards));setScreen('game');
   }
   function setupFromSession(){const original=sessionRef.current;let profiles=original.roster.map(normalizeProfile);for(const p of original.roster.filter(p=>p.status==='removed'))profiles=removeProfile(profiles,p.id);setSource(null);setDraft({...original.settings,players:profiles.map(p=>p.name),profiles});setScreen('setup');}
-  const openMusic = () => {
-    setMusicBack(screen);
-    setScreen('music');
-  };
   let content;
   if (!ready) content = <ScreenShell><Text style={ui.title}>Betöltés…</Text></ScreenShell>;else if (screen === 'welcome') content = <WelcomeScreen hasSession={session && session.phase !== 'finished'} onResume={() => {
     setScreen('game');
   }} onContinue={() => {
     if (session && session.phase !== 'finished') setReplace(true);else showSetup();
-  }} onClearSession={() => setClearRequested(true)} onPresets={() => setScreen('presets')} onSettings={() => setScreen('settings')} />;else if (screen === 'settings') content = <SettingsScreen onBack={goBack} />;else if (screen === 'setup' || screen === 'editor') content = <SetupScreen key={`${screen}:${editing?.id || source?.id || ''}`} draft={draft} onStart={begin} onBack={goBack} startError={error} onSavePreset={savePreset} initialPresetName={screen === 'editor' ? editing?.name || '' : ''} editing={screen === 'editor'} onSettings={() => setScreen('settings')} />;else if (screen === 'presets') content = <PresetsScreen presets={presets} onUse={p => {
+  }} onClearSession={() => setClearRequested(true)} onPresets={() => setScreen('presets')} onSettings={() => setSettingsOpen(true)} />;else if (screen === 'setup' || screen === 'editor') content = <SetupScreen key={`${screen}:${editing?.id || source?.id || ''}`} draft={draft} onStart={begin} onBack={goBack} startError={error} onSavePreset={savePreset} initialPresetName={screen === 'editor' ? editing?.name || '' : ''} editing={screen === 'editor'} onSettings={() => setSettingsOpen(true)} />;else if (screen === 'presets') content = <PresetsScreen presets={presets} onUse={p => {
     setSource(p);
     if (session && session.phase !== 'finished') {
       setDraft({
@@ -217,7 +210,7 @@ export default function App() {
       profiles: copy(p.members)
     });
     setScreen('editor');
-  }} onDelete={p => setDeleteId(p.id)} onBack={goBack} />;else if (screen === 'decline') content = <DeclineScreen session={session} card={cards.find(c=>c.id===session.currentCardId)} onConfirm={confirmDecline} onBack={()=>setScreen('game')} />;else if (screen === 'players') content = <PlayersScreen makeId={makeId} onWardrobe={(id,wardrobe)=>outcome(updateWardrobe(sessionRef.current,id,wardrobe,cards))} session={session} onChange={(id, status) => outcome(changePlayerStatus(sessionRef.current, id, status, cards))} onBack={() => setScreen(sessionRef.current.phase === 'finished' ? 'summary' : 'game')} />;else if (screen === 'summary' || session?.phase === 'finished') content = <SummaryScreen game={session} onRestart={setupFromSession} onSettings={setupFromSession} />;else content = <GameScreen game={session} card={cards.find(c => c.id === session.currentCardId)} onLevel={level=>outcome(changeLevel(sessionRef.current,level,cards))} onDismissLevel={()=>commit({...sessionRef.current,levelSuggestion:null})} onSpin={(part,index)=>{if(sessionRef.current.cardRevision===session.cardRevision&&currentTurn(sessionRef.current)?.id===currentTurn(session)?.id)outcome(spinAssignment(sessionRef.current,part,cards,Math.random,index));}} onAnswered={id=>outcome(setAnswered(sessionRef.current,id))} onTimer={(action,now)=>outcome(timerAction(sessionRef.current,{action,now,turnId:currentTurn(session)?.id,revision:session.cardRevision}))} onDecline={()=>setScreen('decline')} onChoose={kind => outcome(chooseCardKind(sessionRef.current, {
+  }} onDelete={p => setDeleteId(p.id)} onBack={goBack} />;else if (screen === 'decline') content = <DeclineScreen session={session} card={cards.find(c=>c.id===session.currentCardId)} onConfirm={confirmDecline} onBack={()=>setScreen('game')} />;else if (screen === 'players') content = <PlayersScreen makeId={makeId} onWardrobe={(id,wardrobe)=>outcome(updateWardrobe(sessionRef.current,id,wardrobe,cards))} session={session} onChange={(id, status) => outcome(changePlayerStatus(sessionRef.current, id, status, cards))} onBack={() => setScreen(sessionRef.current.phase === 'finished' ? 'summary' : 'game')} />;else if (screen === 'summary' || session?.phase === 'finished') content = <SummaryScreen game={session} onRestart={setupFromSession} onSettings={setupFromSession} />;else content = <GameScreen game={session} card={cards.find(c => c.id === session.currentCardId)} onLevel={level=>outcome(changeLevel(sessionRef.current,level,cards))} onDismissLevel={()=>commit({...sessionRef.current,levelSuggestion:null})} onSpin={(part,index)=>{if(sessionRef.current.cardRevision===session.cardRevision&&currentTurn(sessionRef.current)?.id===currentTurn(session)?.id)outcome(spinAssignment(sessionRef.current,part,cards,Math.random,index));}} onAnswered={id=>outcome(setAnswered(sessionRef.current,id))} onTimer={(action,now,deltaSeconds)=>outcome(timerAction(sessionRef.current,{action,now,deltaSeconds,turnId:currentTurn(session)?.id,revision:session.cardRevision}))} onDecline={()=>setScreen('decline')} onChoose={kind => outcome(chooseCardKind(sessionRef.current, {
     kind,
     turnId: currentTurn(session)?.id
   }, cards))} onResolve={value => outcome(resolveTurn(sessionRef.current, {
@@ -231,6 +224,11 @@ export default function App() {
   return <View style={{
     flex: 1, backgroundColor: colors.background
   }}>
+    <Modal visible={settingsOpen} onRequestClose={() => setSettingsOpen(false)} animationType="slide">
+      <View style={{ flex: 1, backgroundColor: colors.background }}>
+        <SettingsScreen onBack={() => setSettingsOpen(false)} />
+      </View>
+    </Modal>
     {!!error && <View style={{
       padding: 12
     }}><Text accessibilityRole="alert" style={ui.error}>{error}</Text>{retry.current && <ActionButton title="Mentés újrapróbálása" onPress={() => retry.current?.()} />}<ActionButton title="Bezárás" secondary onPress={() => setError('')} /></View>}

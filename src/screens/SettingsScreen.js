@@ -4,7 +4,7 @@ import { Text } from '../i18n/ui';
 import { useLanguage } from '../i18n/context';
 import ScreenShell from '../components/ScreenShell';
 import ActionButton from '../components/ActionButton';
-import { colors, ui } from '../theme';
+import { ui } from '../theme';
 
 export default function SettingsScreen({ onBack }) {
   const { preference, setPreference, error } = useLanguage();

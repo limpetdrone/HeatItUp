@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { View, Animated, Easing, StyleSheet, TouchableOpacity, Dimensions } from 'react-native';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { View, Animated, Easing, StyleSheet } from 'react-native';
 import { Text } from '../i18n/ui';
 import ActionButton from './ActionButton';
 import { ui, colors } from '../theme';
@@ -47,18 +47,8 @@ export default function RouletteWheel({
     };
   }, [angle, pointerTick]);
 
-  // Autostart spin shortly after modal appears
-  useEffect(() => {
-    if (autoSpin) {
-      const startTimer = setTimeout(() => {
-        spin();
-      }, 250);
-      return () => clearTimeout(startTimer);
-    }
-  }, [autoSpin]);
-
-  function spin() {
-    if (spinning || winner !== null) return;
+  const spin = useCallback(() => {
+    if (spinning || winner !== null || !labels.length) return;
     setSpinning(true);
     setWinner(null);
 
@@ -105,7 +95,13 @@ export default function RouletteWheel({
         }, 800);
       }
     });
-  }
+  }, [spinning, winner, labels, N, sliceAngle, angle, pointerTick, onSpin]);
+
+  useEffect(() => {
+    if (!autoSpin || spinning || winner !== null || !labels.length) return;
+    const startTimer = setTimeout(spin, 250);
+    return () => clearTimeout(startTimer);
+  }, [autoSpin, spinning, winner, labels.length, spin]);
 
   const spinRotation = angle.interpolate({
     inputRange: [0, 360],
@@ -244,7 +240,7 @@ export default function RouletteWheel({
       {/* Actions */}
       <View style={{ width: '100%', gap: 10, marginTop: 8 }}>
         {!spinning && winner === null && (
-          <ActionButton title="Pörgetés" onPress={spin} />
+          <ActionButton title="Pörgetés" onPress={spin} disabled={!labels.length} />
         )}
         {onClose && (
           <ActionButton

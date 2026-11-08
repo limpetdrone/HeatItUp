@@ -2,7 +2,8 @@ import { optionErrors } from './options';
 import { profileErrors, normalizeProfile } from './profiles';
 /** @param {import('./types').Settings} input @returns {import('./types').SetupResult} */
 export function validateSettings(input, {
-  minimumPlayers = 2
+  minimumPlayers = 2,
+  allowExtendedRounds = false
 } = {}) {
   const errors = [];
   const names = Array.isArray(input?.players) ? input.players : [];
@@ -22,7 +23,8 @@ export function validateSettings(input, {
     else errors.push(...profileErrors(input.profiles));
   }
   const rounds = input?.rounds !== undefined ? input.rounds : 50;
-  if (![3, 5, 10, 20, 50].includes(rounds)) errors.push('A körszám 3, 5, 10, 20 vagy 50 lehet.');
+  if (input?.openEnded !== undefined && typeof input.openEnded !== 'boolean') errors.push('Érvénytelen játékbeállítás.');
+  if (!(allowExtendedRounds && Number.isSafeInteger(rounds) && rounds > 0) && ![3, 5, 10, 20, 50].includes(rounds)) errors.push('A körszám 3, 5, 10, 20 vagy 50 lehet.');
   return errors.length ? {
     ok: false,
     errors
@@ -32,6 +34,7 @@ export function validateSettings(input, {
       players,
       maxIntensity: input.maxIntensity,
       rounds,
+      ...(input.openEnded !== undefined ? {openEnded: input.openEnded} : {}),
       ...(input.profiles ? {profiles: input.profiles.map((p,i) => ({...normalizeProfile(p), name: players[i]}))} : {}),
       ...(input.options ? {options: JSON.parse(JSON.stringify(input.options))} : {})
     }

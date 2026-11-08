@@ -1,13 +1,13 @@
 import { Text, Switch } from '../i18n/ui';
 import React, { useEffect, useRef, useState } from 'react';
-import { View, AccessibilityInfo, Platform, StyleSheet, TouchableOpacity, Modal } from 'react-native';
+import { View, AccessibilityInfo, Platform, StyleSheet, Modal } from 'react-native';
 import ScreenShell from '../components/ScreenShell';
 import ActionButton from '../components/ActionButton';
 import RouletteWheel from '../components/RouletteWheel';
 import TaskTimer from '../components/TaskTimer';
 import { useTranslation } from '../i18n/context';
 import { renderCard } from '../domain/renderCard';
-import { bodyParts, eligibleBodyParts } from '../domain/assignments';
+import { bodyParts, assignmentBodyParts } from '../domain/assignments';
 import { twistText } from '../domain/twists';
 import { colors, ui, levels } from '../theme';
 
@@ -191,10 +191,7 @@ export default function GameScreen({
   const groups = a?.groups || [];
 
   // Wheel labels for partner or body spin
-  const targetIds = (a?.groups || []).flatMap(g => g.receiverIds).filter(id => id !== turn.playerId);
-  const targetProfiles = targetIds.map(id => game.roster.find(p => p.id === id)).filter(Boolean);
-  const actorProfile = game.roster.find(p => p.id === turn.playerId);
-  const eligibleParts = eligibleBodyParts(game.settings.maxIntensity, [actorProfile, ...targetProfiles]);
+  const eligibleParts = assignmentBodyParts(game, a);
 
   const wheelLabels = a?.partnerPending
     ? (a.wheelOptions || []).map(option => names(option.playerIds.filter(id => id !== turn.playerId)))

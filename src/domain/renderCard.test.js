@@ -1,6 +1,16 @@
 import { test, expect } from '@jest/globals';
 import { renderCard, insertPartnerName, inflectHu } from './renderCard';
 
+test('body labels retain the selected language after substitution', () => {
+  const roster = [{ id: 'a', name: 'A' }, { id: 'b', name: 'B', gender: 'male' }];
+  const group = { actorId: 'a', giverIds: ['a'], receiverIds: ['b'], playerIds: ['a', 'b'] };
+  expect(renderCard('{bodyPart}', group, roster, 'Intimate area')).toBe('penis');
+  expect(renderCard('{bodyPart}', group, roster, 'Intimzone')).toBe('Penis');
+  roster[1].gender = null;
+  expect(renderCard('{bodyPart}', group, roster, 'Intimate area')).toBe('Intimate area');
+  expect(renderCard('{bodyPart}', group, roster, 'Intimzone')).toBe('Intimzone');
+});
+
 test('inflectHu produces correct Hungarian noun endings for names', () => {
   expect(inflectHu('Kriszta', 't')).toBe('Krisztát');
   expect(inflectHu('Kriszta', 'val')).toBe('Krisztával');

@@ -4,7 +4,6 @@ import { test,expect,jest } from '@jest/globals';
 import { TextInput } from 'react-native';
 import SetupScreen from './SetupScreen';
 import ActionButton from '../components/ActionButton';
-import ProfileEditor from '../components/ProfileEditor';
 jest.mock('@react-native-async-storage/async-storage',()=>require('@react-native-async-storage/async-storage/jest/async-storage-mock'));
 jest.mock('react-native-safe-area-context',()=>({SafeAreaView:'SafeAreaView'}));
 globalThis.IS_REACT_ACT_ENVIRONMENT=true;

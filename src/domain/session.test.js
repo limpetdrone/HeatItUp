@@ -1,6 +1,6 @@
 import { test, expect } from '@jest/globals';
 import { cards as builtinCards } from '../data/cards';
-import { startSession, chooseCardKind, currentTurn, resolveTurn, changePlayerStatus, getSessionSummary, isValidSession, migrateSession, stopSession, spinAssignment } from './session';
+import { startSession, chooseCardKind, currentTurn, resolveTurn, changePlayerStatus, getSessionSummary, isValidSession, migrateSession, stopSession } from './session';
 import { eligibleBodyParts } from './assignments';
 import { createPresetSnapshot, validatePreset } from './presets';
 // Solo cards keep the single-active-player paths testable; built-in content needs two players.

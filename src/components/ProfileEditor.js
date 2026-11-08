@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 import { Text, TextInput, Switch } from '../i18n/ui';
 import { useTranslation } from '../i18n/context';
-import { normalizeProfile, activityCategories, clothingTypes, fetishTypes } from '../domain/profiles';
+import { normalizeProfile, activityCategories, clothingTypes } from '../domain/profiles';
 import { bodyParts } from '../domain/assignments';
 import ActionButton from './ActionButton';
 import { ui, colors } from '../theme';
@@ -11,21 +11,6 @@ export const clothingLabels = {shirt:'Felső',trousers:'Nadrág',skirt:'Szoknya'
 export const fetishLabels = {blindfold:'Szemkötő',roleplay:'Szerepjáték',feet:'Láb'};
 export default function ProfileEditor({ profile, profiles, onChange, onPair, makeId, wardrobeOnly = false, globalActivities = {} }) {
   const t = useTranslation(); const p = normalizeProfile(profile); const [details,setDetails] = useState(false);
-  const nameInputRef = useRef(null);
-
-  useEffect(() => {
-    if (wardrobeOnly) return;
-    const timer = setTimeout(() => {
-      if (nameInputRef.current) {
-        nameInputRef.current.focus?.();
-        if (p.name && p.name.length > 0) {
-          nameInputRef.current.setSelection?.(0, p.name.length);
-        }
-      }
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [p.id, wardrobeOnly]);
-
   const patch = change => onChange({...p,...change});
   const preferences = change => patch({preferences:{...p.preferences,...change}});
   function rule(category, change) { preferences({activities:{...p.preferences.activities,[category]:{...p.preferences.activities[category],...change}}}); }
@@ -33,7 +18,6 @@ export default function ProfileEditor({ profile, profiles, onChange, onPair, mak
   return <View style={{gap:12}}>
     {!wardrobeOnly && <>
       <TextInput
-        ref={nameInputRef}
         autoFocus={!wardrobeOnly}
         selectTextOnFocus={true}
         accessibilityLabel="Név"
@@ -67,7 +51,7 @@ export default function ProfileEditor({ profile, profiles, onChange, onPair, mak
             return (
               <ActionButton
                 key={bp.id}
-                title={(isBlocked ? '✕ ' : '') + bp.label}
+                title={(isBlocked ? '✕ ' : '') + t(bp.label)}
                 selected={isBlocked}
                 secondary
                 onPress={() => preferences({ blockedBodyParts: toggle(p.preferences.blockedBodyParts || [], bp.id) })}

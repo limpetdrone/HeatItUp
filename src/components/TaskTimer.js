@@ -50,6 +50,7 @@ export default function TaskTimer({ turn, onAction }) {
   const seconds = (totalSeconds % 60).toString().padStart(2, '0');
 
   function adjustDuration(deltaSeconds) {
+    notified.current = null;
     onAction('adjust', Date.now(), deltaSeconds);
   }
 

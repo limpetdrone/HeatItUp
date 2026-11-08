@@ -1,8 +1,8 @@
 import React from 'react';
 import { View } from 'react-native';
 import { Text, Switch } from '../i18n/ui';
-import { activityDefaults, fetishTypes } from '../domain/profiles';
-import { categoryLabels, fetishLabels } from './ProfileEditor';
+import { activityDefaults } from '../domain/profiles';
+import { categoryLabels } from './ProfileEditor';
 import { ui } from '../theme';
 import { defaultGameOptions } from '../domain/options';
 export { defaultGameOptions } from '../domain/options';
