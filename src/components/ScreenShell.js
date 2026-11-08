@@ -7,32 +7,38 @@ export default function ScreenShell({
   children,
   label = 'KÖZELEBB EGYMÁSHOZ',
   footer,
-  onSettings
+  onSettings,
+  headerRight
 }) {
   return <SafeAreaView style={styles.safe}>
     <KeyboardAvoidingView style={styles.safe} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={styles.scroll}>
         <View style={styles.content}>
-          <View style={styles.brand}><Text verbatim style={styles.wordmark}>heat<Text verbatim style={{
+          <View style={styles.brand}>
+            <Text verbatim style={styles.wordmark}>heat<Text verbatim style={{
                 color: colors.accent
               }}>it</Text>up<Text verbatim style={{
                 color: colors.accent
               }}>.</Text></Text>
-            <View style={{flexDirection: 'row', alignItems: 'center', gap: 12}}>
-              <Text verbatim style={ui.eyebrow}>18+</Text>
-              {onSettings && (
-                <TouchableOpacity
-                  accessibilityRole="button"
-                  accessibilityLabel="Beállítások"
-                  onPress={onSettings}
-                  hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
-                >
-                  <Text verbatim style={{fontSize: 22}}>⚙️</Text>
-                </TouchableOpacity>
+            <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
+              {headerRight ? headerRight : (
+                <>
+                  <Text verbatim style={ui.eyebrow}>18+</Text>
+                  {onSettings && (
+                    <TouchableOpacity
+                      accessibilityRole="button"
+                      accessibilityLabel="Beállítások"
+                      onPress={onSettings}
+                      hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
+                    >
+                      <Text verbatim style={{fontSize: 22}}>⚙️</Text>
+                    </TouchableOpacity>
+                  )}
+                </>
               )}
             </View>
           </View>
-          <Text style={ui.eyebrow}>{label}</Text>
+          {Boolean(label) && <Text style={ui.eyebrow}>{label}</Text>}
           {children}
           <Text style={styles.footer}>A ti tempótok. A ti határaitok.</Text>
         </View>
@@ -54,19 +60,19 @@ const styles = StyleSheet.create({
     width: '100%',
     maxWidth: 560,
     alignSelf: 'center',
-    gap: 24,
-    paddingVertical: 16
+    gap: 16,
+    paddingVertical: 12
   },
   brand: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 20
+    marginBottom: 4
   },
   wordmark: {
     color: colors.text,
     fontWeight: '900',
-    fontSize: 30,
+    fontSize: 28,
     letterSpacing: -1
   },
   footer: {

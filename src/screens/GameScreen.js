@@ -77,9 +77,9 @@ export default function GameScreen({
     onResolve('passed');
   }
 
-  // DISCREET TOP BAR: Level picker icon + Discreet Players & Finish icon buttons
-  const discreetTopBar = (
-    <View style={styles.topBar}>
+  // Top bar action icons displayed in the brand header row next to the logo
+  const headerActions = (
+    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 6 }}>
       <ActionButton
         title="🌶️"
         accessibilityLabel={t('Intenzitási szint módosítása')}
@@ -89,25 +89,22 @@ export default function GameScreen({
         style={styles.iconButton}
         textStyle={styles.iconButtonText}
       />
-
-      <View style={styles.discreetActions}>
-        <ActionButton
-          title="👥"
-          accessibilityLabel="Játékosok"
-          secondary
-          onPress={onPlayers}
-          style={styles.iconButton}
-          textStyle={styles.iconButtonText}
-        />
-        <ActionButton
-          title="🏁"
-          accessibilityLabel="Játék befejezése"
-          secondary
-          onPress={onStop}
-          style={styles.iconButton}
-          textStyle={styles.iconButtonText}
-        />
-      </View>
+      <ActionButton
+        title="👥"
+        accessibilityLabel="Játékosok"
+        secondary
+        onPress={onPlayers}
+        style={styles.iconButton}
+        textStyle={styles.iconButtonText}
+      />
+      <ActionButton
+        title="🏁"
+        accessibilityLabel="Játék befejezése"
+        secondary
+        onPress={onStop}
+        style={styles.iconButton}
+        textStyle={styles.iconButtonText}
+      />
     </View>
   );
 
@@ -154,8 +151,7 @@ export default function GameScreen({
 
   if (game.phase === 'waiting') {
     return (
-      <ScreenShell label="SZÜNET">
-        {discreetTopBar}
+      <ScreenShell label="SZÜNET" headerRight={headerActions}>
         {levelDrawer}
         <Text style={ui.title}>Várunk rátok.</Text>
         <Text style={ui.muted}>
@@ -175,8 +171,7 @@ export default function GameScreen({
 
   if (game.phase === 'choosing') {
     return (
-      <ScreenShell label={`${turn.round}. KÖR`}>
-        {discreetTopBar}
+      <ScreenShell label={`${turn.round}. KÖR`} headerRight={headerActions}>
         {levelDrawer}
         <Text style={ui.muted}>Soron következő játékos:</Text>
         <Text verbatim style={[ui.title, { fontSize: 38 }]}>{player}</Text>
@@ -201,8 +196,7 @@ export default function GameScreen({
     : bodyParts.filter(p => p.level <= game.settings.maxIntensity).map(p => t(p.label));
 
   return (
-    <ScreenShell label={`${turn.round}. KÖR`}>
-      {discreetTopBar}
+    <ScreenShell label={`${turn.round}. KÖR`} headerRight={headerActions}>
       {levelDrawer}
       {suggestionBanner}
 
@@ -347,30 +341,19 @@ export default function GameScreen({
 }
 
 const styles = StyleSheet.create({
-  topBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 16
-  },
   iconButton: {
-    minHeight: 44,
-    minWidth: 44,
-    height: 44,
-    width: 44,
+    minHeight: 38,
+    minWidth: 38,
+    height: 38,
+    width: 38,
     paddingHorizontal: 0,
     paddingVertical: 0,
-    borderRadius: 22,
+    borderRadius: 19,
     alignItems: 'center',
     justifyContent: 'center'
   },
   iconButtonText: {
-    fontSize: 20
-  },
-  discreetActions: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8
+    fontSize: 18
   },
   taskCard: {
     backgroundColor: colors.surface,
