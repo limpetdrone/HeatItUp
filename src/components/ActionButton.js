@@ -36,9 +36,9 @@ const styles = StyleSheet.create({
     minHeight: 48,
     minWidth: 44,
     backgroundColor: colors.accent,
-    paddingHorizontal: 18,
-    paddingVertical: 13,
-    borderRadius: 14,
+    paddingHorizontal: 20,
+    paddingVertical: 14,
+    borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 2,
@@ -46,16 +46,17 @@ const styles = StyleSheet.create({
   },
   secondary: {
     backgroundColor: colors.surface,
-    borderColor: '#59425E'
+    borderColor: colors.border
   },
   selected: {
-    borderColor: colors.accent
+    borderColor: colors.accent,
+    backgroundColor: colors.surfaceRaised
   },
   focused: {
     borderColor: colors.focus
   },
   label: {
-    color: colors.background,
+    color: colors.ink,
     fontSize: 16,
     fontWeight: '700',
     textAlign: 'center',

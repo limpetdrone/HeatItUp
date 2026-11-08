@@ -38,7 +38,7 @@ export default function ScreenShell({
               )}
             </View>
           </View>
-          {Boolean(label) && <Text style={ui.eyebrow}>{label}</Text>}
+          {Boolean(label) && <View style={styles.sectionLabel}><View style={styles.labelMark} /><Text style={ui.eyebrow}>{label}</Text></View>}
           {children}
           <Text style={styles.footer}>A ti tempótok. A ti határaitok.</Text>
         </View>
@@ -54,21 +54,27 @@ const styles = StyleSheet.create({
   },
   scroll: {
     flexGrow: 1,
-    padding: 16
+    paddingHorizontal: 20,
+    paddingBottom: 24
   },
   content: {
     width: '100%',
     maxWidth: 560,
     alignSelf: 'center',
-    gap: 16,
-    paddingVertical: 12
+    gap: 18,
+    paddingVertical: 16
   },
   brand: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 4
+    paddingBottom: 20,
+    marginBottom: 4,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.border
   },
+  sectionLabel: { flexDirection: 'row', alignItems: 'center', gap: 9 },
+  labelMark: { width: 18, height: 2, backgroundColor: colors.accent, borderRadius: 2 },
   wordmark: {
     color: colors.text,
     fontWeight: '900',
@@ -79,7 +85,7 @@ const styles = StyleSheet.create({
     color: colors.muted,
     fontSize: 12,
     textAlign: 'center',
-    paddingTop: 12,
-    paddingBottom: 16
+    paddingTop: 20,
+    paddingBottom: 8
   }
 });

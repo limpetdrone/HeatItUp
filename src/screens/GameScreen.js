@@ -239,7 +239,7 @@ export default function GameScreen({
                   </Text>
                 </View>
               ) : null}
-              <Text verbatim style={ui.heading}>{groupText}</Text>
+              <Text verbatim style={styles.taskText}>{groupText}</Text>
               {parallelNote ? (
                 <View style={styles.parallelBox}>
                   <Text style={styles.parallelIcon}>✨</Text>
@@ -252,7 +252,7 @@ export default function GameScreen({
 
         {/* Questions or tasks without groups */}
         {(!isChallenge || groups.length === 0) && (
-          <Text verbatim style={ui.heading}>
+          <Text verbatim style={styles.taskText}>
             {renderCard(t(card.text), groups[0], game.roster, bodyLabel)}
           </Text>
         )}
@@ -359,10 +359,10 @@ export default function GameScreen({
 
 const styles = StyleSheet.create({
   iconButton: {
-    minHeight: 38,
-    minWidth: 38,
-    height: 38,
-    width: 38,
+    minHeight: 44,
+    minWidth: 44,
+    height: 44,
+    width: 44,
     paddingHorizontal: 0,
     paddingVertical: 0,
     borderRadius: 19,
@@ -374,9 +374,11 @@ const styles = StyleSheet.create({
   },
   taskCard: {
     backgroundColor: colors.surface,
-    borderRadius: 20,
+    borderRadius: 24,
     padding: 24,
-    borderTopWidth: 4,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderTopWidth: 3,
     gap: 16,
     marginBottom: 8,
     shadowColor: '#000',
@@ -385,6 +387,7 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
     elevation: 6
   },
+  taskText: { color: colors.text, fontSize: 24, lineHeight: 34, fontWeight: '600', letterSpacing: -0.2 },
   cardHeader: {
     borderBottomWidth: 1,
     borderBottomColor: 'rgba(255, 255, 255, 0.08)',
@@ -393,7 +396,7 @@ const styles = StyleSheet.create({
   },
   playerBadge: {
     alignSelf: 'flex-start',
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
+    backgroundColor: colors.surfaceRaised,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 12
