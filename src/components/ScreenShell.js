@@ -13,13 +13,13 @@ export default function ScreenShell({
     <KeyboardAvoidingView style={styles.safe} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={styles.scroll}>
         <View style={styles.content}>
-          <View style={styles.brand}><Text style={styles.wordmark}>heat<Text style={{
+          <View style={styles.brand}><Text verbatim style={styles.wordmark}>heat<Text verbatim style={{
                 color: colors.accent
-              }}>it</Text>up<Text style={{
+              }}>it</Text>up<Text verbatim style={{
                 color: colors.accent
               }}>.</Text></Text>
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 12}}>
-              <Text style={ui.eyebrow}>18+</Text>
+              <Text verbatim style={ui.eyebrow}>18+</Text>
               {onSettings && (
                 <TouchableOpacity
                   accessibilityRole="button"
@@ -27,7 +27,7 @@ export default function ScreenShell({
                   onPress={onSettings}
                   hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}
                 >
-                  <Text style={{fontSize: 22}}>⚙️</Text>
+                  <Text verbatim style={{fontSize: 22}}>⚙️</Text>
                 </TouchableOpacity>
               )}
             </View>
