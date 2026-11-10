@@ -6,13 +6,16 @@ A mentett játék a kezdőoldalról törölhető. A presetek a Preseteim oldalr�
 
 Kikapcsolt zene mellett a játék nem kezdeményez zenei lekérést. Bekapcsolt YouTube-lejátszó esetén a beágyazott YouTube szolgáltatás saját feltételei és adatkezelése érvényesül; például hálózati és eszközadatokat kezelhet. A HeatItUp nem küldi el a játékosneveket, preseteket vagy a kártyaszöveget a YouTube-nak. A külső YouTube Music megnyitása a szolgáltató felületére vezet.
 
-A végleges nyilvános kiadáshoz az üzemeltető neve, elérhetősége és a választott terjesztési csatorna szerinti adatkezelési tájékoztató még kitöltendő. Ez a fájl a jelenlegi technikai működést dokumentálja.
+A nyilvános kiadáshoz tartozó hivatalos, élő adatkezelési tájékoztató elérhetősége: https://limpetdrone.github.io/HeatItUp/privacy.html
+Üzemeltető: limpetdrone (Póka Dávid), Kapcsolat: pokadavid@gmail.com
 
 ## Önkéntes visszajelzések és javaslatok
 
-A „Hibajelzés” és a beállítások javaslatküldő űrlapja csak a Beküldés gomb megnyomásakor kezdeményez hálózati kérést. A Firebase Cloud Firestore külön `heatitup-feedback` adatbázisába kerül a jelzés típusa, a kártya azonosítója és változatlenyomata, típusa/szintje, a felület nyelve, az app verziója, időpont és az opcionálisan megadott szöveg. Javaslatnál a leírás kötelező. Játékosnevet, profilt, játékállapotot vagy megválaszolt kérdést a program nem csatol. A megjegyzésbe írt személyes adat viszont a beküldött szöveg része, ezért az űrlap kéri ennek mellőzését.
+A „Hibajelzés” és a beállítások javaslatküldő űrlapja csak a Beküldés gomb megnyomásakor kezdeményez hálózati kérést. A külön HeatItUp Firebase-projekt alapértelmezett Cloud Firestore-adatbázisának `submissions` gyűjteményébe kerül a jelzés típusa, a kártya azonosítója és változatlenyomata, típusa/szintje, a felület nyelve, az app verziója, időpont és az opcionálisan megadott szöveg. Javaslatnál a leírás kötelező. Játékosnevet, profilt, játékállapotot vagy megválaszolt kérdést a program nem csatol. A megjegyzésbe írt személyes adat viszont a beküldött szöveg része, ezért az űrlap kéri ennek mellőzését.
 
-A beküldéseket a Firebase IAM-hozzáféréssel rendelkező üzemeltetők/agentek olvashatják; az alkalmazás nem listázhatja vagy módosíthatja más beküldését. A hálózati szolgáltató a kérés továbbításához hálózati adatokat (például IP-címet) kezelhet. Automatikus offline beküldési sor nincs: hiba esetén az űrlap szövege megmarad az újrapróbáláshoz. A visszajelzések szerveroldali törlését az üzemeltető végzi.
+A Test mód kártyánként és nyelvenként helyben tárolja a jegyzetet és az átnézettségi jelölést. Feltöltés csak a kártya feltöltési gombjával vagy az „Összes függő feltöltése” gombbal indul. Az online rekord a fenti kártyaadatok mellett az átnézettséget (0/1) és az ellenőrzött kártya nyelvét tartalmazza. A program nem küldi el a teljes kártyaszöveget. A helyi jegyzet, jelölés és a sikertelen kérés azonosítója alkalmazás-újraindítás után is megmarad. Megváltozott kártyához új átnézési állapot tartozik; a régi jegyzet a helyi tárolóban megmarad, de a böngésző az aktuális változatot mutatja.
+
+A beküldéseket a Firebase IAM-hozzáféréssel rendelkező üzemeltetők/agentek olvashatják; az alkalmazás nem listázhatja vagy módosíthatja más beküldését. A hálózati szolgáltató a kérés továbbításához hálózati adatokat (például IP-címet) kezelhet. Automatikus háttérfeltöltés nincs: újrapróbáláskor a felhasználó indítja a küldést. A sima hibajelző/javaslatűrlap szövege csak az űrlap bezárásáig marad meg; a Test mód jegyzetei tartós helyi mentést kapnak. A visszajelzések szerveroldali törlését az üzemeltető végzi.
 
 ## Technikai hibajelentések (Expo Observe)
 

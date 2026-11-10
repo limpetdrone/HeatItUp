@@ -1,13 +1,128 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Támogatás & GYIK — Heat It Up</title>
-  <meta http-equiv="refresh" content="0; url=index.html#faq">
-  <link rel="canonical" href="index.html#faq">
+  <meta name="description" content="Support & Help for Heat It Up mobile application.">
+  <meta name="theme-color" content="#130D18">
+  <title>Support & Help — Heat It Up</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .support-container {
+      max-inline-size: 860px;
+      margin-inline: auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+    .support-header {
+      margin-block-end: 2.5rem;
+      border-block-end: 1px solid var(--color-surface-border);
+      padding-block-end: 1.5rem;
+    }
+    .support-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-block-end: 0.75rem;
+      background: var(--color-gradient-flame);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .support-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-surface-border);
+      border-radius: var(--border-radius-md);
+      padding: 1.75rem;
+      margin-block-end: 1.5rem;
+    }
+    .support-card h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-block-end: 0.85rem;
+    }
+    .support-card p {
+      color: var(--color-muted);
+      line-height: 1.7;
+      margin-block-end: 0.85rem;
+    }
+    .contact-box {
+      background: var(--color-surface-hover);
+      border: 1px solid var(--color-surface-border);
+      border-radius: var(--border-radius-sm);
+      padding: 1.25rem;
+      margin-block-start: 1rem;
+    }
+    .contact-box a {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="background:#130D18;color:#FFF7FA;font-family:sans-serif;padding:40px;text-align:center;">
-  <p>Átirányítás a <a href="index.html#faq" style="color:#FF7A90;">Heat It Up Támogatás & GYIK oldalhoz</a>...</p>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="Heat It Up Home">
+        <img src="assets/icon.png" alt="Heat It Up Logo" class="brand-icon" width="44" height="44">
+        <span class="brand-title">Heat It Up</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <span class="badge-18" aria-label="18+ Only">18+</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="support-container">
+    <header class="support-header">
+      <h1 class="support-title">App Support & Help</h1>
+      <p style="color: var(--color-muted);">We are here to help you get the best experience from Heat It Up.</p>
+    </header>
+
+    <section class="support-card">
+      <h2>Need Help or Have a Suggestion?</h2>
+      <p>Whether you encountered a bug, have ideas for new challenge cards, or need assistance with the app, feel free to reach out to us directly:</p>
+      <div class="contact-box">
+        <p><strong>Support Email:</strong> <a href="mailto:pokadavid@gmail.com">pokadavid@gmail.com</a></p>
+        <p><strong>Developer:</strong> limpetdrone (Dávid Póka)</p>
+        <p><strong>Response Time:</strong> We usually reply within 24–48 hours.</p>
+      </div>
+    </section>
+
+    <section class="support-card">
+      <h2>In-App Feedback</h2>
+      <p>You can also report issues directly within the Heat It Up app by using the feedback or suggestion button on any card or in the settings menu.</p>
+    </section>
+
+    <section class="support-card">
+      <h2>Frequently Asked Questions</h2>
+      <p>Looking for quick answers about game rules, 18+ content, or party modes? Visit our <a href="index.html#faq" style="color: var(--color-accent); text-decoration: underline;">FAQ Section</a> on the main page.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/icon.png" alt="Heat It Up Logo" class="footer-logo" width="36" height="36">
+        <span class="footer-title">Heat It Up</span>
+        <span class="footer-tagline">Adult party and couples game • 18+</span>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Heat It Up. All rights reserved. Strictly for adults aged 18+.</p>
+        <p><a href="index.html" style="color: var(--color-accent); text-decoration: underline;">Home</a> &bull; <a href="privacy.html" style="color: var(--color-accent); text-decoration: underline;">Privacy Policy</a> &bull; <a href="support.html" style="color: var(--color-accent); text-decoration: underline;">Support</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>

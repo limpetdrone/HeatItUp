@@ -1,13 +1,390 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adatvédelem — Heat It Up</title>
-  <meta http-equiv="refresh" content="0; url=index.html#privacy">
-  <link rel="canonical" href="index.html#privacy">
+  <meta name="description" content="Privacy Policy for Heat It Up mobile application and website.">
+  <meta name="theme-color" content="#130D18">
+  <title>Privacy Policy — Heat It Up</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .legal-container {
+      max-inline-size: 860px;
+      margin-inline: auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+    .legal-header {
+      margin-block-end: 2.5rem;
+      border-block-end: 1px solid var(--color-surface-border);
+      padding-block-end: 1.5rem;
+    }
+    .legal-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-block-end: 0.75rem;
+      background: var(--color-gradient-flame);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .legal-meta {
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: center;
+    }
+    .lang-switcher {
+      display: inline-flex;
+      gap: 0.5rem;
+      margin-block: 1rem;
+      padding: 0.35rem 0.5rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-surface-border);
+      border-radius: var(--border-radius-sm);
+    }
+    .lang-switcher a {
+      color: var(--color-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 4px;
+      transition: var(--transition-fast);
+    }
+    .lang-switcher a:hover,
+    .lang-switcher a.active {
+      color: var(--color-text);
+      background: var(--color-surface-hover);
+    }
+    .legal-section {
+      background: var(--color-surface);
+      border: 1px solid var(--color-surface-border);
+      border-radius: var(--border-radius-md);
+      padding: 1.75rem;
+      margin-block-end: 1.5rem;
+    }
+    .legal-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-block-end: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .legal-section h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-accent);
+      margin-block-start: 1.25rem;
+      margin-block-end: 0.5rem;
+    }
+    .legal-section p {
+      color: var(--color-muted);
+      line-height: 1.7;
+      margin-block-end: 0.85rem;
+    }
+    .legal-section p:last-child {
+      margin-block-end: 0;
+    }
+    .legal-section ul {
+      margin-inline-start: 1.25rem;
+      margin-block-end: 0.85rem;
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+    .legal-section li {
+      margin-block-end: 0.35rem;
+    }
+    .highlight-card {
+      background: rgba(255, 122, 144, 0.08);
+      border-inline-start: 4px solid var(--color-accent);
+      padding: 1rem 1.25rem;
+      border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+      margin-block: 1rem;
+    }
+    .highlight-card p {
+      color: var(--color-text);
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .contact-card {
+      background: var(--color-surface-hover);
+      border: 1px solid var(--color-surface-border);
+      border-radius: var(--border-radius-sm);
+      padding: 1.25rem;
+      margin-block-start: 1rem;
+    }
+    .contact-card p {
+      margin-block-end: 0.25rem;
+    }
+    .contact-card a {
+      color: var(--color-accent);
+      text-decoration: underline;
+    }
+    .divider {
+      border: 0;
+      border-block-start: 2px dashed var(--color-surface-border);
+      margin-block: 3.5rem;
+    }
+  </style>
 </head>
-<body style="background:#130D18;color:#FFF7FA;font-family:sans-serif;padding:40px;text-align:center;">
-  <p>Átirányítás a <a href="index.html#privacy" style="color:#FF7A90;">Heat It Up Adatvédelmi Nyilatkozathoz</a>...</p>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="Heat It Up Home">
+        <img src="assets/icon.png" alt="Heat It Up Logo" class="brand-icon" width="44" height="44">
+        <span class="brand-title">Heat It Up</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="privacy.html" style="color: var(--color-accent);">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <span class="badge-18" aria-label="18+ Only">18+</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="legal-container">
+    
+    <!-- Language Switcher Bar -->
+    <div class="lang-switcher" role="navigation" aria-label="Language selection">
+      <a href="#english" class="active">🇬🇧 English</a>
+      <a href="#hungarian">🇭🇺 Magyar változat</a>
+    </div>
+
+    <!-- ====================================================================
+         ENGLISH PRIVACY POLICY (Primary for Google Play & Global Reviewers)
+         ==================================================================== -->
+    <article id="english">
+      <header class="legal-header">
+        <h1 class="legal-title">Privacy Policy</h1>
+        <div class="legal-meta">
+          <span><strong>Application:</strong> Heat It Up</span>
+          <span><strong>Package:</strong> com.limpetdrone.heatitup</span>
+          <span><strong>Developer:</strong> limpetdrone</span>
+          <span><strong>Last updated:</strong> November 10, 2026</span>
+        </div>
+      </header>
+
+      <div class="highlight-card">
+        <p><strong>Core Privacy Principle:</strong> Heat It Up is built with privacy-by-design. The game runs offline-first. We do not require accounts or logins, we do not track you with advertising analytics, and your private game sessions and player names never leave your device.</p>
+      </div>
+
+      <section class="legal-section">
+        <h2>1. Overview and Scope</h2>
+        <p>This Privacy Policy explains how <strong>limpetdrone</strong> ("we", "us", or "our") handles information in connection with the <strong>Heat It Up</strong> mobile application for Android and iOS, as well as the related web application. We are committed to complete discretion, transparency, and protecting user privacy.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. Data Stored Locally on Your Device (On-Device Data)</h2>
+        <p>Heat It Up operates primarily on your device. The following data is processed and stored exclusively in your local device storage (using standard mobile app local storage / AsyncStorage):</p>
+        <ul>
+          <li><strong>Player profiles and names:</strong> Nicknames or names entered for participants, player gender indications, and optional player avatar choices.</li>
+          <li><strong>Game settings and presets:</strong> Custom configurations, chosen difficulty levels, category filters, and personal limit preferences (e.g. excluded body parts or partner exclusions).</li>
+          <li><strong>Game state and history:</strong> Active session progress, recently shown challenge cards (to prevent immediate repetitions), and custom music pairing links.</li>
+        </ul>
+        <p><strong>This data is never transmitted to our servers or third parties.</strong> It remains on your device at all times and is not encrypted beyond the security provided by your device's operating system.</p>
+        <p><strong>How to delete local data:</strong> You can clear active games directly from the app's home screen, delete custom presets in the Presets screen, or permanently wipe all local data at any time by clearing the app's storage in your device settings or uninstalling the app.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Voluntary Feedback and Bug Reports (Firebase Firestore)</h2>
+        <p>The application includes an optional feedback and bug report form accessible in the settings and card screens. A network request is initiated <strong>only when you explicitly tap the "Submit" button</strong>.</p>
+        <p>When submitted, data is sent to our Google Cloud Firestore database (`heatitup-feedback` project) and includes:</p>
+        <ul>
+          <li>Type of submission (bug report or suggestion).</li>
+          <li>Card identifier, version hash, level, and card type (to identify which card the feedback refers to).</li>
+          <li>Application version and current UI language.</li>
+          <li>Timestamp of the submission.</li>
+          <li>Optional comment or text written by the user.</li>
+        </ul>
+        <p><strong>What is NOT collected:</strong> The form does NOT attach player names, player profiles, gameplay answers, or session history. The submission form explicitly reminds users not to include personal names or sensitive private information in the comment field.</p>
+        <p><strong>Access & Retention:</strong> Submissions are accessible only by authorized project administrators to resolve bugs and improve game cards. Submissions are retained for maintenance purposes. You can request the manual deletion of any submitted feedback by contacting us via email.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Technical Crash Reporting and Diagnostics (Expo Observe)</h2>
+        <p>To identify crashes and stability issues across various device models and Android versions, the native app integrates the <strong>Expo Observe</strong> diagnostic SDK (version 57.0.27 by 650 Industries, Inc.).</p>
+        <ul>
+          <li><strong>Collected technical information:</strong> Unhandled exceptions, stack traces, native crash logs, device model, operating system version, and an anonymous installation identifier.</li>
+          <li><strong>Privacy protection:</strong> General performance telemetry is disabled. Crash reports do NOT include player names, game answers, custom presets, or card texts.</li>
+          <li><strong>Retention period:</strong> Crash logs are stored securely by Expo for a maximum retention period of <strong>90 days</strong>, after which they are automatically deleted.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Optional Third-Party Media (YouTube Integration)</h2>
+        <p>The application allows players to optionally pair music with challenges using HTTPS links to YouTube:</p>
+        <ul>
+          <li>If the music feature is disabled, no media requests are made.</li>
+          <li>When enabled, playback is provided using the official embedded YouTube player under Google / YouTube's own Terms of Service and Privacy Policy (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--color-accent);">Google Privacy Policy</a>).</li>
+          <li>Heat It Up does not share player profiles, game status, or card text with YouTube.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Device Permissions</h2>
+        <p>Heat It Up is designed to require minimal device permissions:</p>
+        <ul>
+          <li><code>android.permission.MODIFY_AUDIO_SETTINGS</code>: Used strictly to manage in-game sound volume and timer chime notifications.</li>
+          <li><strong>No sensitive permissions:</strong> The application does NOT request or access camera, microphone, contacts, location, SMS, photos/media storage, or device phone state.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Children's Privacy</h2>
+        <p>Heat It Up is strictly intended for adults (aged 18 and older). We do not knowingly market to or collect personal data from children or individuals under the age of 18. If you believe that an individual under 18 has submitted information to us, please contact us immediately, and we will promptly delete the data.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Data Security and Transmission</h2>
+        <p>All data transmitted to external services (crash reports and voluntary feedback submissions) is encrypted in transit using industry-standard Transport Layer Security (HTTPS/TLS).</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>9. Your Rights and Data Deletion</h2>
+        <p>Under applicable privacy laws (including GDPR and CCPA where applicable), you have rights regarding your data:</p>
+        <ul>
+          <li><strong>On-Device Data:</strong> Because local data is stored exclusively on your device, you have direct, immediate control. You can delete it at any time by resetting the game in the app or clearing the app storage in your device settings.</li>
+          <li><strong>Server-side Data (Feedback):</strong> You may request the review or deletion of any feedback comment you submitted by emailing us at the address below with details of your submission.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>10. Developer & Contact Information</h2>
+        <p>If you have questions, feedback, or data deletion requests regarding this Privacy Policy, please contact the developer:</p>
+        <div class="contact-card">
+          <p><strong>Developer / Operator:</strong> limpetdrone (Dávid Póka)</p>
+          <p><strong>Email:</strong> <a href="mailto:pokadavid@gmail.com">pokadavid@gmail.com</a></p>
+          <p><strong>Application:</strong> Heat It Up (com.limpetdrone.heatitup)</p>
+        </div>
+      </section>
+    </article>
+
+    <hr class="divider">
+
+    <!-- ====================================================================
+         HUNGARIAN PRIVACY POLICY (Magyar nyelvű adatkezelési tájékoztató)
+         ==================================================================== -->
+    <article id="hungarian">
+      <header class="legal-header">
+        <h2 class="legal-title" style="font-size: 2rem;">Adatkezelési Tájékoztató</h2>
+        <div class="legal-meta">
+          <span><strong>Alkalmazás:</strong> Heat It Up</span>
+          <span><strong>Csomagazonosító:</strong> com.limpetdrone.heatitup</span>
+          <span><strong>Üzemeltető / Fejlesztő:</strong> limpetdrone</span>
+          <span><strong>Utolsó frissítés:</strong> 2026. november 10.</span>
+        </div>
+      </header>
+
+      <div class="highlight-card">
+        <p><strong>Fő adatvédelmi alapelvünk:</strong> A Heat It Up a beépített adatvédelem (privacy-by-design) elve alapján készült. A játék helyben, offline működik. Nincs regisztráció vagy fiókkészítés, nincs reklám- és analitikai követőkód, a privát játékmenetek és játékosnevek pedig soha nem hagyják el a készülékedet.</p>
+      </div>
+
+      <section class="legal-section">
+        <h2>1. Áttekintés és hatály</h2>
+        <p>Jelen Adatkezelési Tájékoztató bemutatja, hogyan kezeli a <strong>limpetdrone</strong> (Dávid Póka, „mi”, „üzemeltető”) a személyes és technikai adatokat a <strong>Heat It Up</strong> Android és iOS mobilalkalmazásban, valamint a kapcsolódó webes felületen. Célunk a teljes diszkréció és átláthatóság biztosítása.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>2. A készüléken helyben tárolt adatok</h2>
+        <p>A Heat It Up elsődlegesen offline működik. Az alábbi adatokat kizárólag a telefonod helyi alkalmazástárolója (AsyncStorage) rögzíti:</p>
+        <ul>
+          <li><strong>Játékosprofilok és nevek:</strong> A résztvevők által megadott nevek/becenevek, nemek és avatarok.</li>
+          <li><strong>Beállítások és egyéni határok:</strong> Kiválasztott nehézségi szintek, egyéni szabályok, kizárt testrészek vagy partnerek.</li>
+          <li><strong>Játékállás és kártyaelőzmények:</strong> Az aktuális játékmenet állapota, a közelmúltban megjelent feladatok (az ismétlések elkerülése érdekében), valamint a megadott YouTube zenei linkpárosítások.</li>
+        </ul>
+        <p><strong>Ezek az adatok soha nem kerülnek feltöltésre sem a mi, sem harmadik fél szervereire.</strong> Az adatok mindvégig a készülékeden maradnak.</p>
+        <p><strong>Helyi adatok törlése:</strong> A folyamatban lévő játék a kezdőoldalról törölhető, a presetek a Beállítások felületen eltávolíthatók, az összes helyi adat pedig bármikor azonnal törölhető a telefon Beállítások &gt; Alkalmazások &gt; Tárhely törlése menüpontjában, vagy az app törlésével.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>3. Önkéntes visszajelzések és hibajelentések (Google Firebase)</h2>
+        <p>Az applikációban található hibajelző és javaslatküldő űrlap kizárólag akkor kezdeményez hálózati kérést, amikor a felhasználó kifejezetten megnyomja a „Beküldés” gombot.</p>
+        <p>Beküldéskor az adatok a Google Cloud Firestore adatbázisunkba (`heatitup-feedback` projekt, `submissions` gyűjtemény) érkeznek:</p>
+        <ul>
+          <li>A jelzés típusa (hibajelzés vagy fejlesztési javaslat).</li>
+          <li>A kártya azonosítója, változatlenyomata, szintje és típusa.</li>
+          <li>Az alkalmazás verziója és a felület aktuális nyelve.</li>
+          <li>A beküldés időbélyege.</li>
+          <li>A felhasználó által opcionálisan megadott szöveges megjegyzés.</li>
+        </ul>
+        <p><strong>Nem továbbított adatok:</strong> A rendszer semmilyen játékosnevet, profilt, játékállást vagy feladatra adott választ nem csatol a beküldéshez. Az űrlap kéri a felhasználót, hogy a szövegben se adjon meg személyes adatokat.</p>
+        <p><strong>Megőrzés és hozzáférés:</strong> A visszajelzéseket kizárólag az üzemeltető olvashatja a hibák javításához. Törlési kérését a megadott e-mail címen jelezheti.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>4. Technikai hibajelentések és diagnosztika (Expo Observe)</h2>
+        <p>Az app stabilitásának javítása és az esetleges összeomlások (crashek) felderítése érdekében a natív alkalmazás az <strong>Expo Observe</strong> diagnosztikai SDK-t alkalmazza:</p>
+        <ul>
+          <li><strong>Gyűjtött technikai adatok:</strong> Kezeletlen kivételek, hívási stackek, készüléktípus, operációs rendszer verzió és egy anonim telepítési azonosító.</li>
+          <li><strong>Adatvédelem:</strong> Általános analitika ki van kapcsolva. A hibajelentések semmilyen játékosnevet, presetet, választ vagy kártyaszöveget nem tartalmaznak.</li>
+          <li><strong>Megőrzési idő:</strong> A hibanaplókat az Expo rendszere legfeljebb <strong>90 napig</strong> őrzi meg, ezt követően automatikusan törlődnek.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>5. Opcionális beágyazott zene (YouTube)</h2>
+        <p>A játékosok saját YouTube-linkeket társíthatnak a feladatokhoz:</p>
+        <ul>
+          <li>Kikapcsolt zene esetén az app semmilyen zenei hálózati kérést nem indít.</li>
+          <li>Bekapcsolt lejátszás esetén a YouTube beágyazott hivatalos lejátszója működik, amelyre a Google Adatvédelmi Irányelvei érvényesek.</li>
+          <li>A Heat It Up nem oszt meg játékosadatokat vagy kártyatartalmat a YouTube-bal.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>6. Engedélyek</h2>
+        <p>Az applikáció minimális engedélyt kér a működéshez:</p>
+        <ul>
+          <li><code>android.permission.MODIFY_AUDIO_SETTINGS</code>: Kizárólag a játékon belüli hangeffektek és a visszaszámláló hangjelzésének vezérlésére szolgál.</li>
+          <li><strong>Érzékeny engedélyek hiánya:</strong> Az alkalmazás nem fér hozzá a kamerához, mikrofonhoz, névjegyekhez, helymeghatározáshoz vagy a fotótárhoz.</li>
+        </ul>
+      </section>
+
+      <section class="legal-section">
+        <h2>7. Korhatár és gyermekek védelme</h2>
+        <p>A Heat It Up kizárólag felnőttek (18 éven felüliek) számára készült. Tudatosan nem gyűjtünk adatokat 18 év alatti személyektől.</p>
+      </section>
+
+      <section class="legal-section">
+        <h2>8. Kapcsolat és jogorvoslat</h2>
+        <p>Adatkezeléssel kapcsolatos kérdések vagy törlési kérelem esetén az alábbi elérhetőségen állunk rendelkezésre:</p>
+        <div class="contact-card">
+          <p><strong>Üzemeltető / Fejlesztő:</strong> limpetdrone (Póka Dávid)</p>
+          <p><strong>E-mail cím:</strong> <a href="mailto:pokadavid@gmail.com">pokadavid@gmail.com</a></p>
+          <p><strong>Alkalmazás:</strong> Heat It Up (com.limpetdrone.heatitup)</p>
+        </div>
+      </section>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="assets/icon.png" alt="Heat It Up Logo" class="footer-logo" width="36" height="36">
+        <span class="footer-title">Heat It Up</span>
+        <span class="footer-tagline">Adult party and couples game • 18+</span>
+      </div>
+      <div class="footer-copy">
+        <p>&copy; 2026 Heat It Up. All rights reserved. Strictly for adults aged 18+.</p>
+        <p><a href="index.html" style="color: var(--color-accent); text-decoration: underline;">Home</a> &bull; <a href="privacy.html" style="color: var(--color-accent); text-decoration: underline;">Privacy Policy</a> &bull; <a href="support.html" style="color: var(--color-accent); text-decoration: underline;">Support</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
